@@ -1,0 +1,1306 @@
+﻿Log file open, 07/17/20 13:11:22
+LogPakFile: Display: Found Pak file ../../../DungeonEditor/Content/Paks/pakchunk0-WindowsNoEditor.pak attempting to mount.
+LogPakFile: Display: Mounting pak file ../../../DungeonEditor/Content/Paks/pakchunk0-WindowsNoEditor.pak.
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 47 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.042957
+LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +1:00, Platform Override: ''
+LogPluginManager: Mounting plugin Niagara
+LogPluginManager: Mounting plugin NiagaraExtras
+LogPluginManager: Mounting plugin HTTPChunkInstaller
+LogPluginManager: Mounting plugin OnlineFramework
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin PerformanceMonitor
+LogPluginManager: Mounting plugin WebBrowserWidget
+LogPluginManager: Mounting plugin RawInput
+LogPluginManager: Mounting plugin Composure
+LogPluginManager: Mounting plugin LensDistortion
+LogPluginManager: Mounting plugin BlueprintMaterialTextureNodes
+LogPluginManager: Mounting plugin MediaIOFramework
+LogPluginManager: Mounting plugin OpenColorIO
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GeometryMode
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin ScreenshotTools
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin ChaosClothEditor
+LogPluginManager: Mounting plugin ChaosCloth
+LogPluginManager: Mounting plugin ChaosEditor
+LogPluginManager: Mounting plugin PlanarCut
+LogPluginManager: Mounting plugin GeometryProcessing
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin GeometryCollectionPlugin
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin ChaosSolverPlugin
+LogPluginManager: Mounting plugin ChaosNiagara
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin MagicLeapPassableWorld
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin MLSDK
+LogPluginManager: Mounting plugin MagicLeapLightEstimation
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin MeshPainting
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin TemplateSequence
+LogPluginManager: Mounting plugin MovieRenderPipeline
+LogPluginManager: Mounting plugin EditorScriptingUtilities
+LogPluginManager: Mounting plugin NetcodeUnitTest
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AssetTags
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GooglePAD
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SoundFields
+LogPluginManager: Mounting plugin SteamVR
+LogPluginManager: Mounting plugin Synthesis
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+LogInit: Build: ++UE4+Release-4.25-CL-13594126
+LogInit: Engine Version: 4.25.1-13594126+++UE4+Release-4.25
+LogInit: Compatible Engine Version: 4.25.0-13144385+++UE4+Release-4.25
+LogInit: Net CL: 13144385
+LogInit: OS: Windows 10 (Release 2004) (), CPU: Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz, GPU: NVIDIA GeForce RTX 2080 SUPER
+LogInit: Compiled (64-bit): Jun  2 2020 06:19:14
+LogInit: Compiled with Visual C++: 19.16.27032.01
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.25
+LogInit: Command Line: 
+LogInit: Base Directory: D:/DungeonEditor/Saved/StagedBuilds/WindowsNoEditor/DungeonEditor/Binaries/Win64/
+LogInit: Allocator: binned2
+LogInit: Installed Engine Build: 0
+LogDevObjectVersion: Number of dev versions registered: 26
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 4
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 38
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 37
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 2
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 4
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 43
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 12
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 3
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 7
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 31
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 10
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 10
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 37
+LogDevObjectVersion:   Dev-PhysicsMaterial-Chaos (B68FC16E-8B1B-42E2-B453-215C058844FE): 1
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogInit: Presizing for max 2097152 objects, including 1 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Engine.ini]
+LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+LogStreaming: Display: Async Loading initialized: Event Driven Loader: true, Async Loading Thread: false, Async Post Load: true
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+LogConfig: Setting CVar [[fx.NiagaraAllowRuntimeScalabilityChanges:1]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[r.setres:1280x720]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[fx.NiagaraAllowRuntimeScalabilityChanges:1]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Engine.ini]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Engine.ini]
+[2020.07.17-11.11.22:625][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Engine.ini]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Engine.ini]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2020.07.17-11.11.22:625][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Engine.ini]
+[2020.07.17-11.11.22:627][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:627][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2020.07.17-11.11.22:627][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2020.07.17-11.11.22:627][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:627][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2020.07.17-11.11.22:627][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:627][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2020.07.17-11.11.22:627][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2020.07.17-11.11.22:627][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2020.07.17-11.11.22:627][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2020.07.17-11.11.22:627][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2020.07.17-11.11.22:627][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2020.07.17-11.11.22:627][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2020.07.17-11.11.22:627][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2020.07.17-11.11.22:627][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountPerSlice:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:32.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:32.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[fx.Niagara.QualityLevel:3]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.SampleCount:16]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.JitterIntegration:0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:16]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.HairStrands.DeepShadow.SuperSampling:0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.HairStrands.VisibilityPPLL:0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.HairStrands.RasterizationScale:0.5]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.HairStrands.VelocityRasterizationScale:1]]
+[2020.07.17-11.11.22:628][  0]LogInit: Selected Device Profile: [WindowsNoEditor]
+[2020.07.17-11.11.22:628][  0]LogInit: Applying CVar settings loaded from the selected device profile: [WindowsNoEditor]
+[2020.07.17-11.11.22:628][  0]LogHAL: Display: Platform has ~ 16 GB [17114865664 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2020.07.17-11.11.22:628][  0]LogInit: Going up to parent DeviceProfile [Windows]
+[2020.07.17-11.11.22:628][  0]LogInit: Going up to parent DeviceProfile []
+[2020.07.17-11.11.22:628][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2020.07.17-11.11.22:628][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountPerSlice:1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:32.0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:32.0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[fx.Niagara.QualityLevel:3]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Scalability.ini]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.SampleCount:16]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.JitterIntegration:0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:16]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.HairStrands.DeepShadow.SuperSampling:0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.HairStrands.VisibilityPPLL:0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.HairStrands.RasterizationScale:0.5]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[r.HairStrands.VelocityRasterizationScale:1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2020.07.17-11.11.22:629][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [../../../DungeonEditor/Saved/Config/WindowsNoEditor/Engine.ini]
+[2020.07.17-11.11.22:629][  0]LogInit: Computer: PCJOJO
+[2020.07.17-11.11.22:629][  0]LogInit: User: Utilisateur
+[2020.07.17-11.11.22:629][  0]LogInit: CPU Page size=4096, Cores=8
+[2020.07.17-11.11.22:629][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2020.07.17-11.11.22:630][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2020.07.17-11.11.22:630][  0]LogMemory: Platform Memory Stats for WindowsNoEditor
+[2020.07.17-11.11.22:630][  0]LogMemory: Process Physical Memory: 69.38 MB used, 69.38 MB peak
+[2020.07.17-11.11.22:630][  0]LogMemory: Process Virtual Memory: 76.77 MB used, 76.77 MB peak
+[2020.07.17-11.11.22:630][  0]LogMemory: Physical Memory: 3750.89 MB used,  12571.11 MB free, 16322.01 MB total
+[2020.07.17-11.11.22:630][  0]LogMemory: Virtual Memory: 4953.08 MB used,  134212776.00 MB free, 134217728.00 MB total
+[2020.07.17-11.11.22:632][  0]LogWindows: WindowsPlatformFeatures enabled
+[2020.07.17-11.11.22:645][  0]LogInit: Physics initialised using underlying interface: PhysX
+[2020.07.17-11.11.22:647][  0]LogInit: Using OS detected language (fr-FR).
+[2020.07.17-11.11.22:647][  0]LogInit: Using OS detected locale (fr-FR).
+[2020.07.17-11.11.22:648][  0]LogTextLocalizationResource: LocRes '../../../Engine/Content/Localization/Engine/fr-FR/Engine.locres' could not be opened for reading!
+[2020.07.17-11.11.22:648][  0]LogTextLocalizationResource: LocRes '../../../Engine/Plugins/Runtime/HTTPChunkInstaller/Content/Localization/HTTPChunkInstaller/fr-FR/HTTPChunkInstaller.locres' could not be opened for reading!
+[2020.07.17-11.11.22:648][  0]LogTextLocalizationResource: LocRes '../../../Engine/Plugins/Online/OnlineFramework/Content/Localization/OnlineFramework/fr-FR/OnlineFramework.locres' could not be opened for reading!
+[2020.07.17-11.11.22:648][  0]LogTextLocalizationResource: LocRes '../../../Engine/Plugins/Online/OnlineSubsystem/Content/Localization/OnlineSubsystem/fr-FR/OnlineSubsystem.locres' could not be opened for reading!
+[2020.07.17-11.11.22:648][  0]LogTextLocalizationResource: LocRes '../../../Engine/Plugins/Online/OnlineSubsystemUtils/Content/Localization/OnlineSubsystemUtils/fr-FR/OnlineSubsystemUtils.locres' could not be opened for reading!
+[2020.07.17-11.11.22:648][  0]LogTextLocalizationResource: LocRes '../../../Engine/Content/Localization/Engine/fr/Engine.locres' could not be opened for reading!
+[2020.07.17-11.11.22:664][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2020.07.17-11.11.22:664][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2020.07.17-11.11.22:673][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2020.07.17-11.11.22:674][  0]LogD3D11RHI: D3D11 min allowed feature level: 11_0
+[2020.07.17-11.11.22:674][  0]LogD3D11RHI: D3D11 max allowed feature level: 11_0
+[2020.07.17-11.11.22:674][  0]LogD3D11RHI: D3D11 adapters:
+[2020.07.17-11.11.22:753][  0]LogD3D11RHI:    0. 'NVIDIA GeForce RTX 2080 SUPER' (Feature Level 11_0)
+[2020.07.17-11.11.22:753][  0]LogD3D11RHI:       8010/0/8161 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x10de
+[2020.07.17-11.11.22:755][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2020.07.17-11.11.22:755][  0]LogD3D11RHI:       0/0/8161 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2020.07.17-11.11.22:755][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2020.07.17-11.11.22:759][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2020.07.17-11.11.22:759][  0]LogD3D11RHI:     GPU DeviceId: 0x1e81 (for the marketing name, search the web for "GPU Device Id")
+[2020.07.17-11.11.22:759][  0]LogWindows: EnumDisplayDevices:
+[2020.07.17-11.11.22:759][  0]LogWindows:    0. 'NVIDIA GeForce RTX 2080 SUPER' (P:1 D:1)
+[2020.07.17-11.11.22:759][  0]LogWindows:    1. 'NVIDIA GeForce RTX 2080 SUPER' (P:0 D:0)
+[2020.07.17-11.11.22:760][  0]LogWindows:    2. 'NVIDIA GeForce RTX 2080 SUPER' (P:0 D:0)
+[2020.07.17-11.11.22:760][  0]LogWindows:    3. 'NVIDIA GeForce RTX 2080 SUPER' (P:0 D:0)
+[2020.07.17-11.11.22:760][  0]LogWindows: DebugString: FoundDriverCount:4 
+[2020.07.17-11.11.22:760][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce RTX 2080 SUPER
+[2020.07.17-11.11.22:760][  0]LogD3D11RHI:   Driver Version: 451.67 (internal:27.21.14.5167, unified:451.67)
+[2020.07.17-11.11.22:760][  0]LogD3D11RHI:      Driver Date: 7-5-2020
+[2020.07.17-11.11.22:760][  0]LogRHI: Texture pool is 5607 MB (70% of 8010 MB)
+[2020.07.17-11.11.22:804][  0]LogD3D11RHI: RHI has support for 64 bit atomics
+[2020.07.17-11.11.22:804][  0]LogD3D11RHI: Async texture creation enabled
+[2020.07.17-11.11.22:804][  0]LogD3D11RHI: Array index from any shader is supported
+[2020.07.17-11.11.22:817][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
+[2020.07.17-11.11.22:852][  0]LogSlate: Using FreeType 2.10.0
+[2020.07.17-11.11.22:853][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2020.07.17-11.11.22:966][  0]LogInit: Using OS detected language (fr-FR).
+[2020.07.17-11.11.22:966][  0]LogInit: Using OS detected locale (fr-FR).
+[2020.07.17-11.11.22:967][  0]LogTextLocalizationResource: LocRes '../../../DungeonEditor/Content/Localization/Game/fr/Game.locres' could not be opened for reading!
+[2020.07.17-11.11.22:967][  0]LogTextLocalizationManager: Compacting localization data took   0.06ms
+[2020.07.17-11.11.22:972][  0]LogAssetRegistry: FAssetRegistry took 0.0049 seconds to start up
+[2020.07.17-11.11.23:017][  0]LogStreaming: Display: Flushing async loaders.
+[2020.07.17-11.11.23:017][  0]LogPackageLocalizationCache: Processed 23 localized package path(s) for 2 prioritized culture(s) in 0.000075 seconds
+[2020.07.17-11.11.23:017][  0]LogPakFile: New pak file ../../../DungeonEditor/Content/Paks/pakchunk0-WindowsNoEditor.pak added to pak precacher.
+[2020.07.17-11.11.23:019][  0]LogInit: Selected Device Profile: [WindowsNoEditor]
+[2020.07.17-11.11.23:028][  0]LogNetVersion: DungeonEditor 1.0.0, NetCL: 13144385, EngineNetVer: 14, GameNetVer: 0 (Checksum: 2815238280)
+[2020.07.17-11.11.23:053][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2020.07.17-11.11.23:053][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2020.07.17-11.11.23:069][  0]LogAISub: UAISubsystem::UAISubsystem AISubsystem (000001F56DD416C0), frame # 0
+[2020.07.17-11.11.23:069][  0]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000001F57BE3C900), frame # 0
+[2020.07.17-11.11.23:070][  0]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000001F57D9DCA00), frame # 0
+[2020.07.17-11.11.23:074][  0]LogMoviePlayer: Initializing movie player
+[2020.07.17-11.11.23:109][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2020.07.17-11.11.23:109][  0]LogOcInput: OculusInput pre-init called
+[2020.07.17-11.11.23:112][  0]LogUObjectArray: 14638 objects as part of root set at end of initial load.
+[2020.07.17-11.11.23:112][  0]LogUObjectArray: 2 objects are not in the root set, but can never be destroyed because they are in the DisregardForGC set.
+[2020.07.17-11.11.23:112][  0]LogUObjectAllocator: 2959256 out of 0 bytes used by permanent object pool.
+[2020.07.17-11.11.23:112][  0]LogUObjectArray: CloseDisregardForGC: 14638/14638 objects in disregard for GC pool
+[2020.07.17-11.11.23:113][  0]LogEngine: Initializing Engine...
+[2020.07.17-11.11.23:114][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2020.07.17-11.11.23:114][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2020.07.17-11.11.23:175][  0]LogInit: Initializing FReadOnlyCVARCache
+[2020.07.17-11.11.23:176][  0]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2020.07.17-11.11.23:176][  0]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2020.07.17-11.11.23:176][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2020.07.17-11.11.23:176][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2020.07.17-11.11.23:176][  0]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2020.07.17-11.11.23:176][  0]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2020.07.17-11.11.23:176][  0]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2020.07.17-11.11.23:176][  0]LogAudio: Display: AudioDevice MaxSources: 32
+[2020.07.17-11.11.23:176][  0]LogAudio: Display: Using built-in audio occlusion.
+[2020.07.17-11.11.23:176][  0]LogAudioMixer: Display: Initializing audio mixer.
+[2020.07.17-11.11.23:184][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2020.07.17-11.11.23:187][  0]LogAudioMixer: Display: 0: FrontLeft
+[2020.07.17-11.11.23:187][  0]LogAudioMixer: Display: 1: FrontRight
+[2020.07.17-11.11.23:244][  0]LogAudioMixer: Display: Using Audio Device SAMSUNG (NVIDIA High Definition Audio)
+[2020.07.17-11.11.23:245][  0]LogAudioMixer: Display: Initializing Sound Submixes...
+[2020.07.17-11.11.23:245][  0]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2020.07.17-11.11.23:245][  0]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2020.07.17-11.11.23:246][  0]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2020.07.17-11.11.23:246][  0]LogInit: FAudioDevice initialized.
+[2020.07.17-11.11.23:247][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2020.07.17-11.11.23:247][  0]LogInit: Texture streaming: Enabled
+[2020.07.17-11.11.23:288][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.07.17-11.11.23:289][  0]LogInit: Display: Game Engine Initialized.
+[2020.07.17-11.11.23:289][  0]LogInit: Display: Starting Game.
+[2020.07.17-11.11.23:289][  0]LogNet: Browse: /Game/Levels/MainMenu?Name=Player
+[2020.07.17-11.11.23:289][  0]LogLoad: LoadMap: /Game/Levels/MainMenu?Name=Player
+[2020.07.17-11.11.23:289][  0]LogWorld: BeginTearingDown for /Temp/Untitled_0
+[2020.07.17-11.11.23:290][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2020.07.17-11.11.23:290][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.07.17-11.11.23:293][  0]LogUObjectHash: Compacting FUObjectHashTables data took   0.53ms
+[2020.07.17-11.11.23:315][  0]LogAIModule: Creating AISystem for world MainMenu
+[2020.07.17-11.11.23:315][  0]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000001F56BDF1400), frame # 0
+[2020.07.17-11.11.23:315][  0]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000001F56B65E700), frame # 0
+[2020.07.17-11.11.23:316][  0]LogLoad: Game class is 'TopDownGameMode_C'
+[2020.07.17-11.11.23:317][  0]LogWorld: Bringing World /Game/Levels/MainMenu.MainMenu up for play (max tick rate 0) at 2020.07.17-13.11.23
+[2020.07.17-11.11.23:317][  0]LogWorld: Bringing up level for play took: 0.000833
+[2020.07.17-11.11.23:317][  0]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2020.07.17-11.11.23:318][  0]LogUMG: Display: Widget Class MainMenu_C - Loaded Fast Template.
+[2020.07.17-11.11.23:319][  0]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2020.07.17-11.11.23:319][  0]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2020.07.17-11.11.23:319][  0]LogLoad: Took 0.029573 seconds to LoadMap(/Game/Levels/MainMenu)
+[2020.07.17-11.11.23:320][  0]LogSlate: Took 0.000828 seconds to synchronously load lazily loaded font '../../../Engine/Content/EngineFonts/Faces/RobotoBold.ufont' (160K)
+[2020.07.17-11.11.23:330][  0]LogSlate: Took 0.000686 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2020.07.17-11.11.23:333][  0]LogRenderer: Reallocating scene render targets to support 1920x1080 Format 10 NumSamples 1 (Frame:1).
+[2020.07.17-11.11.23:333][  0]LogLoad: (Engine Initialization) Total time: 1.19 seconds
+[2020.07.17-11.11.23:348][  0]LogRawInputWindows: Warning: Found device 11 devices
+[2020.07.17-11.11.23:348][  0]LogRawInputWindows: Warning: Found device 11 devices
+[2020.07.17-11.11.23:348][  0]LogRawInputWindows: Warning: Device was registered succesfully but not connected (Usage:4 UsagePage:1)
+[2020.07.17-11.11.23:348][  0]LogRawInputWindows: Warning: Found device 11 devices
+[2020.07.17-11.11.23:348][  0]LogRawInputWindows: Warning: Device was registered succesfully but not connected (Usage:5 UsagePage:1)
+[2020.07.17-11.11.23:350][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2020.07.17-11.11.23:353][  1]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:362][  2]LogRenderer: Reallocating scene render targets to support 128x128 Format 10 NumSamples 1 (Frame:1).
+[2020.07.17-11.11.23:376][  2]LogRenderer: Reallocating scene render targets to support 1920x1080 Format 10 NumSamples 1 (Frame:2).
+[2020.07.17-11.11.23:381][  2]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:384][  3]LogHTTPChunkInstaller: Enumerating manifest files
+[2020.07.17-11.11.23:384][  3]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:400][  4]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:408][  5]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:414][  6]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:419][  7]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:421][  8]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:424][  9]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:427][ 10]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:430][ 11]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:433][ 12]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:437][ 13]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:441][ 14]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:443][ 15]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:447][ 16]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:450][ 17]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:453][ 18]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:456][ 19]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:459][ 20]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:462][ 21]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:465][ 22]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:468][ 23]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:471][ 24]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:473][ 25]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:476][ 26]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:479][ 27]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:482][ 28]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:484][ 29]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:487][ 30]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:490][ 31]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:493][ 32]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:496][ 33]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:499][ 34]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:501][ 35]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:504][ 36]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:507][ 37]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:510][ 38]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:513][ 39]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:516][ 40]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:518][ 41]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:521][ 42]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:524][ 43]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:527][ 44]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:530][ 45]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:533][ 46]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:536][ 47]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:539][ 48]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:542][ 49]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:545][ 50]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:548][ 51]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:551][ 52]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:554][ 53]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:557][ 54]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:561][ 55]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:564][ 56]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:567][ 57]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:570][ 58]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:573][ 59]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:576][ 60]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:579][ 61]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:582][ 62]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:586][ 63]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:589][ 64]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:592][ 65]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:595][ 66]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:598][ 67]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:600][ 68]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:603][ 69]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:607][ 70]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:609][ 71]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:612][ 72]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:615][ 73]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:618][ 74]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:621][ 75]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:624][ 76]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:627][ 77]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:630][ 78]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:633][ 79]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:635][ 80]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:638][ 81]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:641][ 82]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:644][ 83]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:647][ 84]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:650][ 85]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:653][ 86]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:656][ 87]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:659][ 88]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:662][ 89]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:664][ 90]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:667][ 91]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:670][ 92]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:672][ 93]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:675][ 94]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:678][ 95]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:681][ 96]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:684][ 97]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:686][ 98]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:689][ 99]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:692][100]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:695][101]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:698][102]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:700][103]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:703][104]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:706][105]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:709][106]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:712][107]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:714][108]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:717][109]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:720][110]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:723][111]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:725][112]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:728][113]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:731][114]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:733][115]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:736][116]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:739][117]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:742][118]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:745][119]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:748][120]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:750][121]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:753][122]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:756][123]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:759][124]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:763][125]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:766][126]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:769][127]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:772][128]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:775][129]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:778][130]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:781][131]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:784][132]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:787][133]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:790][134]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:793][135]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:796][136]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:799][137]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:802][138]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:806][139]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:808][140]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:811][141]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:814][142]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:817][143]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:821][144]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:823][145]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:827][146]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:830][147]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:833][148]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:836][149]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:839][150]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:842][151]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:845][152]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:848][153]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:851][154]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:854][155]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:857][156]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:860][157]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:863][158]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:866][159]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:869][160]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:872][161]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:875][162]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:878][163]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:881][164]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:885][165]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:888][166]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:891][167]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:894][168]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:897][169]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:900][170]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:903][171]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:906][172]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:909][173]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:912][174]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:915][175]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:918][176]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:921][177]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:924][178]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:927][179]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:930][180]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:933][181]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:936][182]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:940][183]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:943][184]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:946][185]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:949][186]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:952][187]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:955][188]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:959][189]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:962][190]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:966][191]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:969][192]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:972][193]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:975][194]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:979][195]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:982][196]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:985][197]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:989][198]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:992][199]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:995][200]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.23:999][201]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:002][202]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:006][203]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:009][204]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:012][205]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:016][206]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:019][207]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:022][208]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:026][209]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:029][210]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:032][211]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:035][212]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:039][213]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:042][214]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:045][215]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:049][216]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:052][217]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:055][218]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:059][219]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:062][220]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:065][221]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:069][222]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:072][223]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:076][224]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:079][225]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:083][226]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:086][227]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:089][228]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:093][229]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:096][230]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:099][231]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:103][232]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:106][233]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:110][234]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:113][235]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:116][236]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:120][237]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:123][238]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:127][239]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:130][240]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:133][241]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:137][242]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:140][243]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:144][244]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:147][245]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:151][246]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:154][247]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:158][248]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:161][249]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:164][250]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:168][251]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:172][252]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:176][253]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:179][254]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:183][255]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:187][256]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:190][257]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:194][258]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:198][259]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:202][260]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:205][261]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:209][262]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:213][263]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:217][264]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:220][265]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:223][266]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:227][267]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:231][268]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:234][269]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:238][270]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:241][271]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:245][272]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:249][273]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:252][274]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:256][275]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:260][276]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:263][277]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:267][278]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:271][279]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:274][280]LogUMG: Display: Widget Class OpenWorldHUD_C - Loaded Fast Template.
+[2020.07.17-11.11.24:275][280]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:278][281]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:282][282]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:285][283]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:288][284]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:292][285]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:296][286]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:299][287]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:303][288]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:306][289]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:310][290]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:314][291]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:317][292]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:321][293]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:324][294]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:328][295]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:331][296]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:335][297]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:338][298]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:342][299]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:345][300]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:348][301]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:352][302]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:355][303]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:359][304]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:363][305]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:366][306]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:370][307]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:374][308]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:377][309]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:381][310]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:385][311]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:388][312]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:392][313]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:396][314]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:400][315]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:403][316]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:407][317]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:410][318]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:414][319]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:418][320]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:421][321]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:425][322]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:429][323]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:432][324]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:436][325]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:440][326]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:444][327]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:447][328]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:451][329]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:455][330]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:459][331]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:463][332]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:466][333]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:470][334]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:473][335]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:477][336]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:481][337]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:484][338]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:488][339]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:492][340]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:495][341]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:499][342]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:503][343]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:506][344]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:510][345]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:514][346]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:517][347]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:521][348]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:525][349]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:528][350]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:532][351]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:535][352]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:539][353]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:542][354]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:546][355]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:549][356]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:553][357]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:557][358]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:561][359]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:564][360]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:568][361]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:572][362]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:576][363]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:580][364]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:584][365]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:588][366]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:592][367]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:595][368]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:599][369]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:603][370]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:606][371]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:610][372]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:614][373]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:618][374]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:622][375]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:625][376]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:630][377]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:633][378]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:637][379]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:641][380]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:645][381]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:649][382]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:652][383]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:656][384]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:660][385]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:664][386]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:667][387]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:671][388]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:675][389]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:679][390]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:683][391]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:686][392]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:690][393]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:694][394]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:697][395]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:701][396]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:704][397]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:708][398]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:712][399]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:715][400]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:719][401]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:722][402]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:725][403]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:729][404]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:732][405]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:736][406]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:739][407]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:743][408]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:746][409]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:750][410]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:753][411]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:757][412]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:760][413]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:764][414]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:768][415]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:772][416]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:776][417]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:779][418]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:783][419]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:787][420]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:790][421]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:794][422]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:797][423]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:801][424]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:805][425]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:808][426]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:812][427]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:816][428]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:819][429]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:823][430]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:826][431]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:830][432]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:834][433]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:837][434]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:841][435]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:844][436]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:848][437]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:852][438]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:855][439]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:859][440]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:862][441]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:866][442]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:870][443]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:873][444]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:877][445]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:880][446]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:884][447]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:888][448]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:891][449]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:895][450]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:898][451]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:902][452]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:906][453]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:909][454]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:912][455]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:916][456]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:919][457]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:923][458]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:926][459]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:929][460]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:933][461]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:936][462]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:939][463]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:943][464]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:946][465]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:950][466]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:953][467]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:956][468]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:960][469]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:963][470]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:967][471]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:971][472]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:974][473]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:978][474]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:981][475]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:985][476]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:988][477]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:992][478]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:995][479]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.24:999][480]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:002][481]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:006][482]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:010][483]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:013][484]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:017][485]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:021][486]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:024][487]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:028][488]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:031][489]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:035][490]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:039][491]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:042][492]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:046][493]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:049][494]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:053][495]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:056][496]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:060][497]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:064][498]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:067][499]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:071][500]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:074][501]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:078][502]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:082][503]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:085][504]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:089][505]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:092][506]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:096][507]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:100][508]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:103][509]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:107][510]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:110][511]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:114][512]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:117][513]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:121][514]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:124][515]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:128][516]LogEngine: Onscreen warnings/messages are now DISABLED
+[2020.07.17-11.11.25:132][517]LogNet: Browse: /Game/Levels/CreateWorld?Name=Player
+[2020.07.17-11.11.25:132][517]LogLoad: LoadMap: /Game/Levels/CreateWorld?Name=Player
+[2020.07.17-11.11.25:132][517]LogWorld: BeginTearingDown for /Game/Levels/MainMenu
+[2020.07.17-11.11.25:132][517]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2020.07.17-11.11.25:132][517]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.07.17-11.11.25:161][517]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (000001F56BDF1400), frame # 517
+[2020.07.17-11.11.25:161][517]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (000001F56B65E700), frame # 517
+[2020.07.17-11.11.25:162][517]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2020.07.17-11.11.25:165][517]LogStreaming: Display: Flushing async loaders.
+[2020.07.17-11.11.25:168][517]LogAIModule: Creating AISystem for world CreateWorld
+[2020.07.17-11.11.25:168][517]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000001F5215D7000), frame # 517
+[2020.07.17-11.11.25:168][517]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000001F5780E7B80), frame # 517
+[2020.07.17-11.11.25:168][517]LogLoad: Game class is 'DEGameMode_C'
+[2020.07.17-11.11.25:169][517]LogWorld: Bringing World /Game/Levels/CreateWorld.CreateWorld up for play (max tick rate 0) at 2020.07.17-13.11.25
+[2020.07.17-11.11.25:169][517]LogWorld: Bringing up level for play took: 0.000290
+[2020.07.17-11.11.25:169][517]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2020.07.17-11.11.25:170][517]LogGameMode: Display: Match State Changed from EnteringMap to WaitingToStart
+[2020.07.17-11.11.25:170][517]LogGameState: Match State Changed from EnteringMap to WaitingToStart
+[2020.07.17-11.11.25:170][517]LogGameMode: Display: Match State Changed from WaitingToStart to InProgress
+[2020.07.17-11.11.25:170][517]LogBlueprintUserMessages: [EditorPawn_C_2147482478] Spawnpoint_S_2
+[2020.07.17-11.11.25:170][517]Set new viewmode: Unlit
+[2020.07.17-11.11.25:170][517]Debug viewmodes not allowed on consoles by default.  See AllowDebugViewmodes().
+[2020.07.17-11.11.25:170][517]LogUMG: Display: Widget Class EditorMenu_C - Loaded Fast Template.
+[2020.07.17-11.11.25:171][517]LogUMG: Display: Widget Class EditorInvItem_C - Loaded Fast Template.
+[2020.07.17-11.11.25:171][517]PIE: Warning: The widget 'EditorMenu_C' was already added to the screen.
+[2020.07.17-11.11.25:171][517]LogGameState: Match State Changed from WaitingToStart to InProgress
+[2020.07.17-11.11.25:172][517]LogLoad: Took 0.039685 seconds to LoadMap(/Game/Levels/CreateWorld)
+[2020.07.17-11.11.26:546][239]Set new viewmode: Unlit
+[2020.07.17-11.11.26:547][239]Debug viewmodes not allowed on consoles by default.  See AllowDebugViewmodes().
+[2020.07.17-11.11.31:803][136]LogSlate: Request Window 'DungeonEditor (64-bit Development PCD3D_SM5) ' being destroyed
+[2020.07.17-11.11.31:807][136]LogSlate: Window 'DungeonEditor (64-bit Development PCD3D_SM5) ' being destroyed
+[2020.07.17-11.11.31:808][136]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2020.07.17-11.11.31:810][137]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.07.17-11.11.31:810][137]LogEngine: All Windows Closed
+[2020.07.17-11.11.31:810][137]LogWindows: FPlatformMisc::RequestExit(0)
+[2020.07.17-11.11.31:810][137]LogCore: Engine exit requested (reason: Win RequestExit)
+[2020.07.17-11.11.31:810][138]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2020.07.17-11.11.31:810][138]LogAudio: Display: Shutting down audio device while 2 references to it are still alive. For more information, compile with INSTRUMENT_AUDIODEVICE_HANDLES.
+[2020.07.17-11.11.31:847][138]LogInit: Display: PreExit Game.
+[2020.07.17-11.11.31:865][138]LogWorld: BeginTearingDown for /Game/Levels/CreateWorld
+[2020.07.17-11.11.31:865][138]LogWorld: UWorld::CleanupWorld for CreateWorld, bSessionEnded=true, bCleanupResources=true
+[2020.07.17-11.11.31:865][138]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.07.17-11.11.32:122][138]LogExit: Preparing to exit.
+[2020.07.17-11.11.32:123][138]LogMoviePlayer: Shutting down movie player
+[2020.07.17-11.11.32:125][138]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.07.17-11.11.32:126][138]LogDemo: Cleaned up 0 splitscreen connections with owner deletion
+[2020.07.17-11.11.32:126][138]LogExit: Game engine shut down
+[2020.07.17-11.11.32:128][138]LogAISub: UAISubsystem::~UAISubsystem AISubsystem (000001F56DD416C0), frame # 4138
+[2020.07.17-11.11.32:128][138]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (000001F57BE3C900), frame # 4138
+[2020.07.17-11.11.32:128][138]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (000001F57D9DCA00), frame # 4138
+[2020.07.17-11.11.32:129][138]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (000001F5780E7B80), frame # 4138
+[2020.07.17-11.11.32:129][138]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (000001F5215D7000), frame # 4138
+[2020.07.17-11.11.32:138][138]LogExit: Object subsystem successfully closed.
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module BuildPatchServices (352)
+[2020.07.17-11.11.32:148][138]BuildPatchServicesModule: Shutting Down
+[2020.07.17-11.11.32:148][138]VeryVerbose: BuildPatchServicesModule: Removing Ticker
+[2020.07.17-11.11.32:148][138]VeryVerbose: BuildPatchServicesModule: Finished shutting down
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module AutomationController (350)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module AutomationWorker (348)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module Voice (346)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module AIModule (344)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module GameplayDebugger (343)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module NavigationSystem (341)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module WebMMediaFactory (338)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module WebMMedia (336)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module OculusMR (334)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (332)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module OpenExrWrapper (330)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (328)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (326)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module CharacterAI (324)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module PlanarCut (322)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module SessionServices (320)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module LiveCoding (318)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module LevelSequence (316)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (314)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module MovieScene (312)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (310)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module AudioMixerXAudio2 (308)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module AudioMixerCore (307)
+[2020.07.17-11.11.32:148][138]LogModuleManager: Shutting down and abandoning module ImageWriteQueue (304)
+[2020.07.17-11.11.32:149][138]LogModuleManager: Shutting down and abandoning module ProfilerService (302)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module TaskGraph (300)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module Synthesis (298)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module OculusInput (296)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (294)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module GooglePAD (292)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (290)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module CableComponent (288)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module AudioCapture (286)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module AudioCaptureRtAudio (285)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module AssetTags (282)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (280)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module AppleImageUtils (278)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module AndroidPermission (276)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module TemplateSequence (274)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MediaCompositing (272)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module ImgMedia (270)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapLightEstimation (268)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapHelperVulkan (266)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapHelperOpenGL (264)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapAudio (262)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapSharedWorld (260)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module ChaosNiagara (258)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (256)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module GeometryCollectionTracks (254)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module EditableMesh (252)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MeshSolverUtilities (250)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MeshConversion (248)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module DynamicMesh (246)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module GeometryAlgorithms (244)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module GeometricObjects (242)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module ChaosCloth (240)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module BackChannel (238)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module AutomationUtils (236)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module GeometryCacheTracks (234)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module GeometryCache (232)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module UObjectPlugin (230)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MediaIOCore (228)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module Composure (226)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module RawInput (224)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module PerformanceMonitor (222)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module LoginFlow (220)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module PlayTimeLimit (218)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module Rejoin (216)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module Hotfix (214)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module Lobby (212)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module Party (210)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module Qos (208)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module DungeonEditor (206)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module SoundFields (204)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module RuntimePhysXCooking (202)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module LocationServicesBPLibrary (198)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module ActorSequence (196)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module UdpMessaging (194)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module TcpMessaging (192)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapHandMeshing (190)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapSecureStorage (188)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapPrivileges (186)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapPlanes (184)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapImageTracker (182)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapIdentity (180)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapHandTracking (178)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapEyeTracker (176)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapController (174)
+[2020.07.17-11.11.32:378][138]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapARPinImpl (172)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapAR (170)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module AugmentedReality (169)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module MagicLeapARPin (166)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module FacialAnimation (164)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module SignificanceManager (162)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module AnimationSharing (160)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (158)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module Paper2D (156)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module WebBrowserWidget (154)
+[2020.07.17-11.11.32:378][138]LogModuleManager: Shutting down and abandoning module WebBrowser (153)
+[2020.07.17-11.11.32:384][138]LogModuleManager: Shutting down and abandoning module NiagaraAnimNotifies (150)
+[2020.07.17-11.11.32:384][138]LogModuleManager: Shutting down and abandoning module Niagara (148)
+[2020.07.17-11.11.32:384][138]LogModuleManager: Shutting down and abandoning module SignalProcessing (147)
+[2020.07.17-11.11.32:384][138]LogModuleManager: Shutting down and abandoning module NiagaraCore (144)
+[2020.07.17-11.11.32:384][138]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (142)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module WebMMoviePlayer (140)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module NetworkReplayStreaming (138)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module PacketHandler (136)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntimeNv (134)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module MediaAssets (132)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module Overlay (130)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module FunctionalTesting (128)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module MessageLog (126)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module UMG (124)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module SlateReflector (122)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module Slate (120)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module SlateCore (118)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module MRMesh (116)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module Messaging (114)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (112)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module XAudio2 (110)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module Networking (108)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module Core (106)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module ImageWrapper (102)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module InputCore (100)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module Settings (98)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module PhysXCooking (96)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module ChaosSolvers (94)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module FieldSystemEngine (93)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module Chaos (90)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module WindowsPlatformFeatures (88)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module GameplayMediaEncoder (87)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module AVEncoder (86)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module SteamVRInputDevice (82)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module SteamVRInput (80)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module SteamVR (78)
+[2020.07.17-11.11.32:385][138]LogHMD: Freeing OpenVRDLLHandle.
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module OculusHMD (76)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (74)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module LauncherChunkInstaller (72)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module WmfMedia (70)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module Media (69)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module MagicLeap (66)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module VariantManagerContent (64)
+[2020.07.17-11.11.32:385][138]LogModuleManager: Shutting down and abandoning module DatasmithContent (62)
+[2020.07.17-11.11.32:386][138]LogModuleManager: Shutting down and abandoning module AISupportModule (60)
+[2020.07.17-11.11.32:386][138]LogModuleManager: Shutting down and abandoning module OpenColorIO (58)
+[2020.07.17-11.11.32:386][138]LogModuleManager: Shutting down and abandoning module LensDistortion (56)
+[2020.07.17-11.11.32:386][138]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (52)
+[2020.07.17-11.11.32:386][138]LogModuleManager: Shutting down and abandoning module HTTP (47)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module SSL (46)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module HTTPChunkInstaller (42)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module NiagaraVertexFactories (40)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module NiagaraShader (38)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module PlatformCryptoOpenSSL (36)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module PlatformCryptoTypes (34)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module PlatformCrypto (32)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module RenderCore (30)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module Landscape (28)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (26)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module OpenGLDrv (24)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module D3D11RHI (22)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (20)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module Renderer (18)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module Engine (16)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module CoreUObject (14)
+[2020.07.17-11.11.32:416][138]LogModuleManager: Shutting down and abandoning module NetworkFile (12)
+[2020.07.17-11.11.32:417][138]LogModuleManager: Shutting down and abandoning module CookedIterativeFile (10)
+[2020.07.17-11.11.32:417][138]LogModuleManager: Shutting down and abandoning module StreamingFile (8)
+[2020.07.17-11.11.32:417][138]LogModuleManager: Shutting down and abandoning module SandboxFile (6)
+[2020.07.17-11.11.32:417][138]LogModuleManager: Shutting down and abandoning module PakFile (4)
+[2020.07.17-11.11.32:417][138]LogModuleManager: Shutting down and abandoning module RSA (3)
+[2020.07.17-11.11.32:417][138]LogContentStreaming: Display: There are 1 unreleased StreamingManagers
+[2020.07.17-11.11.32:418][138]LogD3D11RHI: Shutdown
+[2020.07.17-11.11.32:418][138]LogD3D11RHI: CleanupD3DDevice
+[2020.07.17-11.11.32:423][138]LogExit: Exiting.
+[2020.07.17-11.11.32:470][138]Log file closed, 07/17/20 13:11:32
