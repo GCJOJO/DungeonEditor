@@ -1,4 +1,4 @@
- @font-face { font-family: arial; src: url('Resources/Arial.ttf');}
+ @font-face { font-family: arial; src: url('Resources/arial.ttf');}
 
 body {
 	background-color: #222222;
@@ -31,6 +31,28 @@ p {
 	transform: translate(-50%, -50%);
 	/*outline: 2px solid #555555;*/
 }
+.github {
+
+	bottom : 20%;
+	left : 43.5%;
+	background-color: #03a60e;
+	border-radius: 50px;
+	transition: 0.3s background-color ease;
+	transition: 0.1s border-radius, 0.3s background-color;
+
+}
+
+.github:hover {
+	background-color: #02c90f;
+	border-radius: 0px;
+	transition: 0.1s border-radius, 0.3s background-color;
+}
+
+.AboutDE {
+	bottom: 30%;
+	width: 25%;
+	left : 37%;
+}
 
 button {
 	background-color: #4CAFFF;
@@ -38,7 +60,7 @@ button {
 	font-family: arial;
 	text-align: center;
 	font-size: 25px;
-	padding: 10px 0px;
+	padding: 10px 10px;
 	color: white;
 
 	outline-style:none;
@@ -62,7 +84,7 @@ button {
 
 	border-radius: 50px;
 
-	transition: 0.1s border-radius;
+	transition: 0.3s border-radius;
 	}
 
 button:hover {
@@ -70,8 +92,21 @@ button:hover {
 
   border-radius: 0px;
 
-  transition: 0.1s border-radius;
+  transition: 0.1s border-radius linear, 0.1s background-color;
 }
 button:active {
   background-color: #5591ff;
 }
+
+
+/* 
+À = Alt + 183 
+Æ = Alt + 146 
+æ = Alt + 145 
+Ç = Alt + 128 
+É = Alt + 144 
+È = Alt + 212 
+Œ = Alt + 0140 
+œ = Alt + 0156 
+Ù = Alt + 235
+*/
