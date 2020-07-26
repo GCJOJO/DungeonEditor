@@ -159,6 +159,14 @@ font-family: arial;
 	top : 25%;
 }
 
+.gamePNG {
+	position: fixed;
+	top: 25%;
+	left : 39%;
+	width: 400px;
+	height: 300px;
+}
+
 .AboutDE {
 
 	background-color: #4CAFFF;
