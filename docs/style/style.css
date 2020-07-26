@@ -33,8 +33,9 @@ p {
 }
 .github {
 	position: fixed;
+	width: 14%;
 	bottom : 20%;
-	left : 43.5%;
+	left : 43%;
 	background-color: #03a60e;
 	border-radius: 50px;
 	transition: 0.3s background-color ease;
