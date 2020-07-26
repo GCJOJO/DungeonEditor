@@ -21,9 +21,6 @@ header nav.menu {
 
 header nav.menu ul li.menuBtn{
 	display: inline-block;
-}
-
-header nav.menu ul li.menuBtn {
 	list-style-type: none;
 }
 
