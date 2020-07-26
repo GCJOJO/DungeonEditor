@@ -19,15 +19,15 @@ nav.menu {
 	left : 34%;
 }
 
-nav.menu ul li.menuBtn{
+.menuBtn{
 	display: inline-block;
 }
 
-nav.menu ul li.menuBtn {
+.menuBtn {
 	list-style-type: none;
 }
 
-nav.menu ul li.menuBtn a {
+.menuBtn a {
 	outline-style: none;
 	text-decoration-line: none;
 	color : white;
@@ -37,7 +37,7 @@ nav.menu ul li.menuBtn a {
 	font-family: arial;
 }
 
-nav.menu ul li.menuBtn a:hover {
+.menuBtn a:hover {
 	color : #5dc2f5;
 	padding: 10px;
 	transition: 0.3s all;
