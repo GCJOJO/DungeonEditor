@@ -27,7 +27,7 @@ nav.menu {
 	list-style-type: none;
 }
 
-.menuBtn a {
+a {
 	outline-style: none;
 	text-decoration-line: none;
 	color : white;
@@ -37,7 +37,7 @@ nav.menu {
 	font-family: arial;
 }
 
-.menuBtn a:hover {
+a:hover {
 	color : #5dc2f5;
 	padding: 10px;
 	transition: 0.3s all;
