@@ -31,7 +31,7 @@ p {
 	transform: translate(-50%, -50%);
 	/*outline: 2px solid #555555;*/
 }
-.github {
+button.github {
 	position: fixed;
 	width: 14%;
 	bottom : 20%;
@@ -43,13 +43,13 @@ p {
 
 }
 
-.github:hover {
+button.github:hover {
 	background-color: #02c90f;
 	border-radius: 0px;
 	transition: 0.1s border-radius, 0.3s background-color;
 }
 
-.AboutDE {
+button.AboutDE {
 	position: fixed;
 	bottom: 30%;
 	width: 25%;
