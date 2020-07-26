@@ -32,6 +32,33 @@ p {
 	/*outline: 2px solid #555555;*/
 }
 button.github {
+
+
+font-family: arial;
+	text-align: center;
+	font-size: 25px;
+	padding: 10px 10px;
+	color: white;
+
+	outline-style:none;
+	border:none;
+	cursor:pointer;
+
+	position:fixed;
+
+	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome, Opera and Firefox */
+
+	/* 
+	Prevent double-tapping on button from zooming page on mobile
+	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
+	*/
+	touch-action: manipulation; 
+
 	position: fixed;
 	width: 14%;
 	bottom : 20%;
@@ -50,15 +77,9 @@ button.github:hover {
 }
 
 button.AboutDE {
-	position: fixed;
-	bottom: 30%;
-	width: 25%;
-	left : 37%;
-}
 
- {
 	background-color: #4CAFFF;
-	
+
 	font-family: arial;
 	text-align: center;
 	font-size: 25px;
@@ -84,10 +105,15 @@ button.AboutDE {
 	*/
 	touch-action: manipulation; 
 
-	border-radius: 50px;
 
+	position: fixed;
+	bottom: 30%;
+	width: 25%;
+	left : 37%;
+
+	border-radius: 50px;
 	transition: 0.3s border-radius;
-	}
+}
 
 button:hover {
   background-color: #5dc2f5;
