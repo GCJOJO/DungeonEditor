@@ -4,7 +4,7 @@ body {
 	background-color: #222222;
 }
 
-.underConstruction {
+h1.underConstruction {
 	font-family: arial;
 	color: red;
 	text-align: center;
