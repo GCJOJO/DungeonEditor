@@ -6,10 +6,6 @@ body {
 
 .customHeader {
 	/*z-index: 32;*/
-	position: fixed;
-	top: 0%;
-	width: 100%;
-	left: 0%;
 	height: 16px;
     padding: 32px;
     font-size: 14px;
@@ -19,9 +15,7 @@ body {
 }
 
 .menu {
-	position: fixed;
-	top: 1%;
-	left : 34%;
+	transform: translate(34%, -50%);
 }
 
 .menuBtn{
@@ -42,6 +36,7 @@ body {
 .menuBtn a:hover {
 	color : #5dc2f5;
 	padding: 10px;
+	font-size: 30px;
 	transition: 0.3s all;
 }
 
@@ -50,12 +45,6 @@ h1.underConstruction {
 	color: red;
 	text-align: center;
 	font-size:25px;
-
-	position: fixed;
-	width: 90%;
-	top: 10%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	/*outline: 2px solid #555555;*/
 }
 
@@ -64,12 +53,6 @@ h1.welcome {
 	color: white;
 	text-align: center;
 	font-size:25px;
-
-	position: fixed;
-	width: 90%;
-	top: 15%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	/*outline: 2px solid #555555;*/
 }
 
@@ -78,12 +61,6 @@ h1.welcome {
 	color: white;
 	text-align: center;
 	font-size:25px;
-
-	position: fixed;
-	width: 90%;
-	top: 15%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	/*outline: 2px solid #555555;*/
 }
 
@@ -92,79 +69,37 @@ p {
 	color: white;
 	text-align: center;
 	font-size:25px;
-
-	position: fixed;
-	width: 90%;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	/*transform: translate(-50%, -50%);/*
 	/*outline: 2px solid #555555;*/
-}
-.github {
-
-
-font-family: arial;
-	text-align: center;
-	font-size: 25px;
-	padding: 10px 10px;
-	color: white;
-
-	outline-style:none;
-	border:none;
-	cursor:pointer;
-
-	position:fixed;
-
-	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
-	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none; /* Safari */
-	-moz-user-select: none; /* Old versions of Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none; /* Chrome, Opera and Firefox */
-
-	/* 
-	Prevent double-tapping on button from zooming page on mobile
-	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
-	*/
-	touch-action: manipulation; 
-
-	position: fixed;
-	width: 14%;
-	bottom : 20%;
-	left : 42.5%;
-	background-color: #03a60e;
-	border-radius: 50px;
-	transition: 0.3s background-color ease;
-	transition: 0.1s border-radius, 0.3s background-color;
-
-}
-
-.github:hover {
-	background-color: #02c90f;
-	border-radius: 0px;
-	transition: 0.1s border-radius, 0.3s background-color;
 }
 
 .Screen1 {
 	width: 480px;
 	height: 260px;
+	transform: translate(148%, 0%);
 	
-	position: fixed;
-	top: 50%;
-	left : 37.5%;
+}
+
+.Screen2 {
+	width: 480px;
+	height: 260px;
+	transform: translate(48%, 120%);
+}
+
+.Screen3 {
+	width: 480px;
+	height: 260px;
+	transform: translate(-53%, 240%);
 }
 
 .description {
-	position: fixed;
-	top : 25%;
+	
 }
-
 .gamePNG {
-	position: fixed;
-	top: 25%;
-	left : 39%;
 	width: 400px;
 	height: 300px;
+	transform: translate(189%, -5%);
+	position: initial;
 }
 
 .AboutDE {
@@ -181,7 +116,7 @@ font-family: arial;
 	border:none;
 	cursor:pointer;
 
-	position:fixed;
+	position:initial;
 
 	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
 	-webkit-touch-callout: none; /* iOS Safari */
@@ -196,15 +131,54 @@ font-family: arial;
 	*/
 	touch-action: manipulation; 
 
-
-	position: fixed;
-	bottom: 30%;
-	width: 25%;
-	left : 37%;
+	transform: translate(60%, 250%);
 
 	border-radius: 50px;
 	transition: 0.3s border-radius;
 }
+
+
+.github {
+	font-family: arial;
+	text-align: center;
+	font-size: 25px;
+	padding: 10px 10px;
+	color: white;
+
+	outline-style:none;
+	border:none;
+	cursor:pointer;
+
+	position:initial;
+
+	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome, Opera and Firefox */
+
+	/* 
+	Prevent double-tapping on button from zooming page on mobile
+	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
+	*/
+	touch-action: manipulation; 
+	background-color: #03a60e;
+	border-radius: 50px;
+
+	transform: translate(120%, 250%);
+
+	transition: 0.3s background-color ease;
+	transition: 0.1s border-radius, 0.3s background-color;
+
+}
+
+.github:hover {
+	background-color: #02c90f;
+	border-radius: 0px;
+	transition: 0.1s border-radius, 0.3s background-color;
+}
+
 
 button:hover {
   background-color: #5dc2f5;
