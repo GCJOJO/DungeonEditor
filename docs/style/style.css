@@ -1,0 +1,77 @@
+ @font-face { font-family: arial; src: url('Resources/Arial.ttf');}
+
+body {
+	background-color: #222222;
+}
+
+h1 {
+	font-family: arial;
+	color: white;
+	text-align: center;
+	font-size:25px;
+
+	position: fixed;
+	width: 90%;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/*outline: 2px solid #555555;*/
+}
+
+p {
+	font-family: arial;
+	color: white;
+	text-align: center;
+	font-size:25px;
+
+	position: fixed;
+	width: 90%;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/*outline: 2px solid #555555;*/
+}
+
+button {
+	background-color: #4CAFFF;
+	
+	font-family: arial;
+	text-align: center;
+	font-size: 25px;
+	padding: 10px 0px;
+	color: white;
+
+	outline-style:none;
+	border:none;
+	cursor:pointer;
+
+	position:fixed;
+
+	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome, Opera and Firefox */
+
+	/* 
+	Prevent double-tapping on button from zooming page on mobile
+	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
+	*/
+	touch-action: manipulation; 
+
+	border-radius: 50px;
+
+	transition: 0.1s border-radius;
+	}
+
+button:hover {
+  background-color: #5dc2f5;
+
+  border-radius: 0px;
+
+  transition: 0.1s border-radius;
+}
+button:active {
+  background-color: #5591ff;
+}
