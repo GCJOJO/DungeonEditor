@@ -4,7 +4,7 @@ body {
 	background-color: #222222;
 }
 
-header.customHeader {
+.customHeader {
 	/*z-index: 32;*/
     padding: 32px;
     font-size: 14px;
@@ -13,18 +13,18 @@ header.customHeader {
     background-color: #24292e;
 }
 
-header nav.menu {
+.menu {
 	position: fixed;
 	top: 1%;
 	left : 34%;
 }
 
-header nav.menu ul li.menuBtn{
+.menuBtn{
 	display: inline-block;
 	list-style-type: none;
 }
 
-header nav.menu ul li.menuBtn a {
+.menuBtn a {
 	outline-style: none;
 	text-decoration-line: none;
 	color : white;
@@ -34,7 +34,7 @@ header nav.menu ul li.menuBtn a {
 	font-family: arial;
 }
 
-header nav.menu ul li.menuBtn a:hover {
+.menuBtn a:hover {
 	color : #5dc2f5;
 	padding: 10px;
 	transition: 0.3s all;
