@@ -6,6 +6,11 @@ body {
 
 .customHeader {
 	/*z-index: 32;*/
+	position: fixed;
+	top: 0%;
+	width: 100%;
+	left: 0%;
+	height: 16px;
     padding: 32px;
     font-size: 14px;
     line-height: 1.5;
