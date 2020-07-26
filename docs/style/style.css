@@ -4,6 +4,45 @@ body {
 	background-color: #222222;
 }
 
+.customHeader {
+	/*z-index: 32;*/
+    padding: 32px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: hsla(0,0%,100%,.7);
+    background-color: #24292e;
+}
+
+nav.menu {
+	position: fixed;
+	top: 1%;
+	left : 34%;
+}
+
+nav.menu ul li.menuBtn{
+	display: inline-block;
+}
+
+nav.menu ul li.menuBtn {
+	list-style-type: none;
+}
+
+nav.menu ul li.menuBtn a {
+	outline-style: none;
+	text-decoration-line: none;
+	color : white;
+	padding: 5px;
+	font-size: 25px;
+	transition: 0.3s all;
+	font-family: arial;
+}
+
+nav.menu ul li.menuBtn a:hover {
+	color : #5dc2f5;
+	padding: 10px;
+	transition: 0.3s all;
+}
+
 h1.underConstruction {
 	font-family: arial;
 	color: red;
@@ -90,7 +129,7 @@ font-family: arial;
 	position: fixed;
 	width: 14%;
 	bottom : 20%;
-	left : 43%;
+	left : 42.5%;
 	background-color: #03a60e;
 	border-radius: 50px;
 	transition: 0.3s background-color ease;
