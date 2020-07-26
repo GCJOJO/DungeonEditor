@@ -145,6 +145,20 @@ font-family: arial;
 	transition: 0.1s border-radius, 0.3s background-color;
 }
 
+.Screen1 {
+	width: 480px;
+	height: 260px;
+	
+	position: fixed;
+	top: 50%;
+	left : 37.5%;
+}
+
+.description {
+	position: fixed;
+	top : 25%;
+}
+
 .AboutDE {
 
 	background-color: #4CAFFF;
