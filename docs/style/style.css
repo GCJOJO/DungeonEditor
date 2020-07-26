@@ -32,7 +32,7 @@ p {
 	/*outline: 2px solid #555555;*/
 }
 .github {
-
+	position: fixed;
 	bottom : 20%;
 	left : 43.5%;
 	background-color: #03a60e;
@@ -49,6 +49,7 @@ p {
 }
 
 .AboutDE {
+	position: fixed;
 	bottom: 30%;
 	width: 25%;
 	left : 37%;
