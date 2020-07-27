@@ -189,7 +189,7 @@ margin-left : 10%;
 }
 
 .downloadBtn {
-	background-color: #4CAFFF;
+	background-color: #03a60e;
 
 	font-family: arial;
 	text-align: center;
@@ -257,12 +257,12 @@ margin-left : 10%;
 }
 
 .downloadBtn:hover {
-  background-color: #5dc2f5;
+  background-color: #02c90f;
   border-radius: 5px;
   transition: 0.1s border-radius linear, 0.1s background-color;
 }
 .downloadBtn:active {
-  background-color: #5591ff;
+  background-color: #02c90f;
 }
 
 button:hover {
