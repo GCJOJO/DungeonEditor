@@ -221,6 +221,15 @@ p {
 	transition: 0.3s border-radius;
 }
 
+.downloadBtn:hover {
+  background-color: #5dc2f5;
+  border-radius: 0px;
+  transition: 0.1s border-radius linear, 0.1s background-color;
+}
+.downloadBtn:active {
+  background-color: #5591ff;
+}
+
 button:hover {
   background-color: #5dc2f5;
 
