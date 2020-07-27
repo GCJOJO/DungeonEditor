@@ -132,7 +132,7 @@ p {
 	*/
 	touch-action: manipulation; 
 
-	transform: translate(50%, 250%);
+	transform: translate(25%, 250%);
 
 	border-radius: 50px;
 	transition: 0.3s border-radius;
