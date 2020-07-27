@@ -10,15 +10,16 @@ body {
     padding: 32px;
     font-size: 14px;
     line-height: 1.5;
-    width: 100%;
-    /*color: hsla(0,0%,100%,.7);*/
+    width: 97%;
+    margin-left : 0%;
+    color: hsla(0,0%,100%,.7);
     background-color: #24292e;
 }
 
 .menu {
 	transform: translate(0%, -50%);
 	/*margin-left : auto;*/
-	margin-left : 22%;
+	margin-left : 27%;
 }
 
 .menuBtn{
@@ -217,7 +218,7 @@ margin-left : 10%;
 	touch-action: manipulation; 
 
 	/*transform: translate(164.5%, 250%);*/
-	margin-left : 43%;
+	margin-left : 45%;
 	border-radius: 50px;
 	transition: 0.3s border-radius;
 }
