@@ -10,14 +10,13 @@ body {
     padding: 32px;
     font-size: 14px;
     line-height: 1.5;
-    width: 90%;
+    width: 10%;
     color: hsla(0,0%,100%,.7);
     background-color: #24292e;
-    left : 10%;
 }
 
 .menu {
-	transform: translate(25%, -50%);
+	transform: translate(15%, -50%);
 }
 
 .menuBtn{
