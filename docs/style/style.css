@@ -16,8 +16,9 @@ body {
 }
 
 .menu {
-	/*transform: translate(22%, -50%);*/
-	margin : auto;
+	transform: translate(0%, -50%);
+	/*margin-left : auto;*/
+	margin-left : 22%;
 }
 
 .menuBtn{
