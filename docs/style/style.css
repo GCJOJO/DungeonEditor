@@ -96,7 +96,7 @@ p {
 .gamePNG {
 	width: 400px;
 	height: 300px;
-	transform: translate(147.5%, -5%);
+	margin-left : 37%;
 	position: initial;
 }
 
@@ -129,7 +129,7 @@ p {
 	*/
 	touch-action: manipulation; 
 
-	transform: translate(0%, 250%);
+	margin-left : 25%;
 
 	border-radius: 50px;
 	transition: 0.3s border-radius;
@@ -137,6 +137,9 @@ p {
 
 
 .github {
+
+margin-left : 10%;
+	
 	font-family: arial;
 	text-align: center;
 	font-size: 25px;
@@ -164,7 +167,7 @@ p {
 	background-color: #03a60e;
 	border-radius: 50px;
 
-	transform: translate(50%, 250%);
+	
 
 	transition: 0.3s background-color ease;
 	transition: 0.1s border-radius, 0.3s background-color;
