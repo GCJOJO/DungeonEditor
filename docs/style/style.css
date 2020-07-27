@@ -77,20 +77,20 @@ p {
 .Screen1 {
 	width: 480px;
 	height: 260px;
-	transform: translate(148%, 0%);
+	transform: translate(112%, 0%);
 	
 }
 
 .Screen2 {
 	width: 480px;
 	height: 260px;
-	transform: translate(48%, 120%);
+	transform: translate(12%, 120%);
 }
 
 .Screen3 {
 	width: 480px;
 	height: 260px;
-	transform: translate(-53%, 240%);
+	transform: translate(-89%, 240%);
 }
 .gamePNG {
 	width: 400px;
