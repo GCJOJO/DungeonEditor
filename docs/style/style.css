@@ -16,7 +16,8 @@ body {
 }
 
 .menu {
-	transform: translate(22%, -50%);
+	/*transform: translate(22%, -50%);*/
+	margin : auto;
 }
 
 .menuBtn{
@@ -211,8 +212,8 @@ p {
 	*/
 	touch-action: manipulation; 
 
-	transform: translate(164.5%, 250%);
-
+	/*transform: translate(164.5%, 250%);*/
+	margin : auto;
 	border-radius: 50px;
 	transition: 0.3s border-radius;
 }
