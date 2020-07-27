@@ -217,7 +217,7 @@ margin-left : 10%;
 	touch-action: manipulation; 
 
 	/*transform: translate(164.5%, 250%);*/
-	margin : auto;
+	margin-left : 45%;
 	border-radius: 50px;
 	transition: 0.3s border-radius;
 }
@@ -250,7 +250,7 @@ margin-left : 10%;
 	*/
 	touch-action: manipulation; 
 
-	transform: translate(0%, 120%);
+	transform: translate(-129%, 120%);
 	margin : auto;
 	border-radius: 50px;
 	transition: 0.3s border-radius;
