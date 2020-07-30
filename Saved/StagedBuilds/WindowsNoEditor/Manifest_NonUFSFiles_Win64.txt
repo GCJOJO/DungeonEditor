@@ -1,4 +1,4 @@
-DungeonEditor/Binaries/Win64/DungeonEditor.exe	2020-07-29T16:42:16.613Z
+DungeonEditor/Binaries/Win64/DungeonEditor.exe	2020-07-30T11:22:13.018Z
 Engine/Binaries/ThirdParty/Oculus/OVRPlugin/OVRPlugin/Win64/OVRPlugin.dll	2020-07-16T18:43:16.487Z
 Engine/Binaries/ThirdParty/DbgHelp/dbghelp.dll	2020-07-16T18:42:21.685Z
 Engine/Binaries/Win64/UnrealCEFSubProcess.exe	2020-07-16T18:53:42.681Z
@@ -85,4 +85,4 @@ Engine/Binaries/ThirdParty/CEF3/Win64/Resources/locales/uk.pak	2020-07-16T18:42:
 Engine/Binaries/ThirdParty/CEF3/Win64/Resources/locales/vi.pak	2020-07-16T18:42:21.198Z
 Engine/Binaries/ThirdParty/CEF3/Win64/Resources/locales/zh-CN.pak	2020-07-16T18:42:21.199Z
 Engine/Binaries/ThirdParty/CEF3/Win64/Resources/locales/zh-TW.pak	2020-07-16T18:42:21.200Z
-DungeonEditor.exe	2020-07-30T09:53:56.883Z
+DungeonEditor.exe	2020-07-30T11:22:57.709Z
