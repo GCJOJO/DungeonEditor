@@ -1,4 +1,4 @@
-DungeonEditor/Binaries/Win64/DungeonEditor.exe	2020-07-30T11:22:13.018Z
+DungeonEditor/Binaries/Win64/DungeonEditor.exe	2020-08-30T13:25:52.678Z
 Engine/Binaries/ThirdParty/Oculus/OVRPlugin/OVRPlugin/Win64/OVRPlugin.dll	2020-07-16T18:43:16.487Z
 Engine/Binaries/ThirdParty/DbgHelp/dbghelp.dll	2020-07-16T18:42:21.685Z
 Engine/Binaries/Win64/UnrealCEFSubProcess.exe	2020-07-16T18:53:42.681Z
@@ -14,7 +14,7 @@ Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/NvClothPROFILE_x64.dll	2020-07-16
 Engine/Binaries/ThirdParty/Ogg/Win64/VS2015/libogg_64.dll	2020-07-16T18:43:16.493Z
 Engine/Binaries/ThirdParty/Vorbis/Win64/VS2015/libvorbis_64.dll	2020-07-16T18:45:18.506Z
 Engine/Binaries/ThirdParty/Vorbis/Win64/VS2015/libvorbisfile_64.dll	2020-07-16T18:45:18.512Z
-Engine/Binaries/ThirdParty/NVIDIA/NVaftermath/Win64/GFSDK_Aftermath_Lib.x64.dll	2020-07-16T18:43:07.602Z
+Engine/Binaries/ThirdParty/NVIDIA/NVaftermath/Win64/GFSDK_Aftermath_Lib.x64.dll	2020-08-05T10:16:28.540Z
 Engine/Binaries/ThirdParty/OpenVR/OpenVRv1_5_17/Win64/openvr_api.dll	2020-07-16T18:43:16.528Z
 Engine/Binaries/ThirdParty/Windows/WinPixEventRuntime/x64/WinPixEventRuntime.dll	2020-07-16T18:45:24.328Z
 Engine/Binaries/ThirdParty/Windows/XAudio2_9/x64/xaudio2_9redist.dll	2020-07-16T18:45:26.286Z
@@ -85,4 +85,4 @@ Engine/Binaries/ThirdParty/CEF3/Win64/Resources/locales/uk.pak	2020-07-16T18:42:
 Engine/Binaries/ThirdParty/CEF3/Win64/Resources/locales/vi.pak	2020-07-16T18:42:21.198Z
 Engine/Binaries/ThirdParty/CEF3/Win64/Resources/locales/zh-CN.pak	2020-07-16T18:42:21.199Z
 Engine/Binaries/ThirdParty/CEF3/Win64/Resources/locales/zh-TW.pak	2020-07-16T18:42:21.200Z
-DungeonEditor.exe	2020-07-31T08:37:45.974Z
+DungeonEditor.exe	2020-08-30T13:26:42.546Z
