@@ -77,3 +77,4 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+Saved/StagedBuilds/WindowsNoEditor/DungeonEditor/Content/Paks/pakchunk0-WindowsNoEditor.pak
