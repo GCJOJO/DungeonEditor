@@ -77,4 +77,11 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+<<<<<<< Updated upstream
 Saved/StagedBuilds/WindowsNoEditor/DungeonEditor/Content/Paks/pakchunk0-WindowsNoEditor.pak
+=======
+Saved/StagedBuilds/WindowsNoEditor/Manifest_DebugFiles_Win64.txt
+Saved/StagedBuilds/WindowsNoEditor/Manifest_NonUFSFiles_Win64.txt
+Saved/StagedBuilds/WindowsNoEditor/DungeonEditor/Content/Paks/pakchunk0-WindowsNoEditor.pak
+Saved/StagedBuilds/WindowsNoEditor/DungeonEditor/Content/Paks/pakchunk0-WindowsNoEditor.pak
+>>>>>>> Stashed changes
