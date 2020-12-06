@@ -14,7 +14,7 @@ public class DungeonEditor : ModuleRules
 		
 		PublicIncludePaths.Add("D:\\DungeonEditor\\Source\\DungeonEditor\\Discord");
 
-		PublicAdditionalLibraries.Add("D:\\DungeonEditor\\Binaries\\Win64\\discord_game_sdk.dll.lib");
+		PublicAdditionalLibraries.Add("D:\\DungeonEditor\\Binaries\\Win32\\discord_game_sdk.dll.lib");
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
