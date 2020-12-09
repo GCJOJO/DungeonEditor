@@ -1,4 +1,4 @@
- @font-face { font-family: arial; src: url('Resources/arial.ttf');}
+ @font-face { font-family: arial; src: url('../Ressources/arial.ttf');}
 
 body {
 	background-image: url('../Ressources/IMG/background.png');
