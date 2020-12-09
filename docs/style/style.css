@@ -77,23 +77,25 @@ p {
 	/*outline: 2px solid #555555;*/
 }
 
+div {
+display : block;
+text-align : center;
+}
+
 .Screen1 {
 	width: 480px;
 	height: 260px;
-	transform: translate(150%, 0%);
 	
 }
 
 .Screen2 {
 	width: 480px;
 	height: 260px;
-	transform: translate(50%, 120%);
 }
 
 .Screen3 {
 	width: 480px;
 	height: 260px;
-	transform: translate(-50%, 240%);
 }
 .gamePNG {
 	width: 400px;
