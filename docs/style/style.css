@@ -1,6 +1,10 @@
  @font-face { font-family: arial; src: url('Resources/arial.ttf');}
 
 body {
+	background-image: url('Ressources/IMG/background.png');
+  	background-repeat: no-repeat;
+ 	background-attachment: fixed;
+  	background-size: cover;
 	background-color: #222222;
 }
 
@@ -80,6 +84,7 @@ p {
 div {
 display : block;
 text-align : center;
+padding: 5px;
 }
 
 .Screen1 {
@@ -133,8 +138,6 @@ text-align : center;
 	*/
 	touch-action: manipulation; 
 
-	margin-left : 25%;
-
 	border-radius: 50px;
 	transition: 0.3s border-radius;
 }
@@ -142,7 +145,7 @@ text-align : center;
 
 .github {
 
-margin-left : 10%;
+
 	
 	font-family: arial;
 	text-align: center;
@@ -225,7 +228,6 @@ margin-left : 10%;
 	touch-action: manipulation; 
 
 	/*transform: translate(164.5%, 250%);*/
-	margin-left : 45%;
 	border-radius: 50px;
 	transition: 0.3s border-radius;
 }
@@ -267,7 +269,6 @@ margin-left : 10%;
 	*/
 	touch-action: manipulation; 
 
-	transform: translate(-129%, 120%);
 	margin : auto;
 	border-radius: 50px;
 	transition: 0.3s border-radius;
@@ -301,7 +302,6 @@ margin-left : 10%;
 	*/
 	touch-action: manipulation; 
 
-	transform: translate(-129%, 120%);
 	margin : auto;
 	border-radius: 50px;
 	transition: 0.3s border-radius;
@@ -335,7 +335,7 @@ margin-left : 10%;
 	*/
 	touch-action: manipulation; 
 
-	margin-left : 44%;
+
 	border-radius: 50px;
 	transition: 0.3s border-radius;
 }
