@@ -1,9 +1,8 @@
  @font-face { font-family: arial; src: url('Resources/arial.ttf');}
 
 body {
-	background-image: url('Ressources/IMG/background.png');
+	background-image: url('../Ressources/IMG/background.png');
   	background-repeat: no-repeat;
- 	background-attachment: fixed;
   	background-size: cover;
 	background-color: #222222;
 }
