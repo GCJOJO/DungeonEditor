@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.25",
+	"EngineAssociation": "4.26",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -53,7 +53,7 @@
 		},
 		{
 			"Name": "BlueprintJson",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/f837e4835fbc434a853fe1ead2410b84"
 		},
 		{
@@ -70,7 +70,7 @@
 		},
 		{
 			"Name": "ActionsExtension",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/2924990b22c1452aa20a21af60c4aa12"
 		},
 		{
@@ -89,13 +89,12 @@
 		},
 		{
 			"Name": "UIWS",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/97ef36447df7427ca9b46edf1a438731"
 		},
 		{
 			"Name": "WindowsDialogBox",
-			"Enabled": true,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/afaf67a9cd9c4f0ba57234884332dc34"
+			"Enabled": true
 		},
 		{
 			"Name": "VariantManager",
