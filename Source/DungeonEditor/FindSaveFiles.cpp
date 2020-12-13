@@ -3,7 +3,7 @@
 
 #include "FindSaveFiles.h"
 
-bool UFindFiles::FindFiles(TArray<FString>& Files, FString RootFolderFullPath, FString Ext)
+bool UFindFiles::FindSaveFiles(TArray<FString>& Files, FString RootFolderFullPath, FString Ext)
 {
 	if(RootFolderFullPath.Len() < 1) return false;
      

@@ -23,4 +23,10 @@ class DUNGEONEDITOR_API UDungeonEditorLibrary : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 		UFUNCTION(BlueprintCallable, Category = "Dungeons", meta = (keywords = "Change Localization"))
 		static void ChangeLocalization(ELocalizationCulture culture);
+		UFUNCTION(BlueprintPure, Category = "Dungeons", meta = (Keywords = "Load File"))
+		static bool LoadFile(FString Path, FString FileName, FString& Text);
+		UFUNCTION(BlueprintCallable, Category = "Dungeons", meta = (Keywords = "Save File"))
+		static bool SaveFile(FString Path, FString FileName, FString Text);
+		UFUNCTION(BlueprintCallable, Category = "Dungeons", meta = (Keywords = "Search Files in directory"))
+		static bool FindFiles(TArray<FString>& Files, FString RootFolderFullPath, FString Ext);
 };

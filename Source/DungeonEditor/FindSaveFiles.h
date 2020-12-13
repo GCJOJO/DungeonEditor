@@ -14,5 +14,5 @@ class DUNGEONEDITOR_API UFindFiles : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 	UFUNCTION(BlueprintCallable, Category="Dungeons", meta = (Keywords = "Find Save Files"))
-	static bool FindFiles(TArray<FString>& Files, FString RootFolderFullPath, FString Ext);
+	static bool FindSaveFiles(TArray<FString>& Files, FString RootFolderFullPath, FString Ext);
 };
