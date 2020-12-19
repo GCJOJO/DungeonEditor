@@ -2,8 +2,8 @@
 
 
 #include "DiscordLibrary.h"
-#include "Discord/discord.h"
-
+//#include "Discord/discord.h"
+/*
 discord::Core* core{};
 
 bool UDiscordLibrary::InitDiscord(){
@@ -27,4 +27,4 @@ bool UDiscordLibrary::SetDiscordActivity(FString State, FString Details)
     activity.SetDetails(CDetails);
     core->ActivityManager().UpdateActivity(activity, [](discord::Result result) {});
     return true;
-}
+}*/

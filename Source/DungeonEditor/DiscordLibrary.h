@@ -4,11 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "DiscordLibrary.generated.h"
+//#include "DiscordLibrary.generated.h"
 
 /**
  * 
- */
+ 
 UCLASS()
 class DUNGEONEDITOR_API UDiscordLibrary : public UBlueprintFunctionLibrary
 {
@@ -23,3 +23,4 @@ class DUNGEONEDITOR_API UDiscordLibrary : public UBlueprintFunctionLibrary
 		UFUNCTION(BlueprintCallable, Category = "Dungeons Discord", meta = (Keywords = "Discord Set Activity"))
 		static bool SetDiscordActivity(FString State, FString Details);
 };
+*/
