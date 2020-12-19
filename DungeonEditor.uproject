@@ -100,6 +100,10 @@
 		{
 			"Name": "VariantManager",
 			"Enabled": true
+		},
+		{
+			"Name": "DiscordUE4",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [

@@ -16,6 +16,7 @@ void UDungeonEditorLibrary::ChangeLocalization(ELocalizationCulture culture)
 	}
 }
 
+
 bool UDungeonEditorLibrary::LoadFile(FString Path, FString FileName, FString& Text)
 {
 	return FFileHelper::LoadFileToString(Text, *(Path + FileName));

@@ -17,6 +17,29 @@ enum ELocalizationCulture
 	FR
 };
 
+UENUM(BlueprintType)
+enum EActivatorType
+{
+	Button,
+	PressurePlate,
+	Lever,
+	Default
+};
+
+UENUM(BlueprintType)
+enum EActivatorArray
+{
+	ArrayList1,
+	ArrayList2
+};
+
+UENUM(BlueprintType)
+enum EActorSearchMode
+{
+	All,
+	InList
+};
+
 UCLASS()
 class DUNGEONEDITOR_API UDungeonEditorLibrary : public UBlueprintFunctionLibrary
 {

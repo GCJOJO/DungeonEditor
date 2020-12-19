@@ -12,7 +12,7 @@ bool UDiscordLibrary::InitDiscord(){
 }
 
 bool UDiscordLibrary::UpdateDiscord() {
-    ::core->RunCallbacks();
+    //::core->RunCallbacks();
     return true;
 }
 
@@ -28,4 +28,3 @@ bool UDiscordLibrary::SetDiscordActivity(FString State, FString Details)
     core->ActivityManager().UpdateActivity(activity, [](discord::Result result) {});
     return true;
 }
-
