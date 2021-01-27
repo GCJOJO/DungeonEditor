@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.25",
+	"EngineAssociation": "{F80AD0E3-4F7F-04CD-3992-D4B6A93BECA3}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -48,7 +48,7 @@
 		},
 		{
 			"Name": "HorizonUIPlugin",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/8b94d073d32443b497d4a9e8b1e210f7"
 		},
 		{
@@ -75,17 +75,12 @@
 		},
 		{
 			"Name": "EasyMultiSave",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/7232621c23174bbbbb64c7bfb6583f6f"
 		},
 		{
 			"Name": "OneSkyLocalizationService",
 			"Enabled": true
-		},
-		{
-			"Name": "AutoSettings",
-			"Enabled": true,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/7f6a777da2724d4a9a3dd551f03a3ad1"
 		},
 		{
 			"Name": "UIWS",
@@ -94,7 +89,7 @@
 		},
 		{
 			"Name": "WindowsDialogBox",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/afaf67a9cd9c4f0ba57234884332dc34"
 		},
 		{
@@ -103,6 +98,34 @@
 		},
 		{
 			"Name": "DiscordUE4",
+			"Enabled": true
+		},
+		{
+			"Name": "ImagePlate",
+			"Enabled": true
+		},
+		{
+			"Name": "Volumetrics",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemEOS",
+			"Enabled": true
+		},
+		{
+			"Name": "SteamController",
+			"Enabled": true
+		},
+		{
+			"Name": "SoundCueTemplates",
+			"Enabled": true
+		},
+		{
+			"Name": "SoundUtilities",
+			"Enabled": true
+		},
+		{
+			"Name": "SoundVisualizations",
 			"Enabled": true
 		}
 	],

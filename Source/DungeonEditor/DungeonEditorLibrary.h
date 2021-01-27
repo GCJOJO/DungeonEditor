@@ -40,6 +40,15 @@ enum EActorSearchMode
 	InList
 };
 
+UENUM(BlueprintType)
+enum ParticleLOD
+{
+	HIGH,
+	MEDIUM,
+	LOW,
+	NONE
+};
+
 UCLASS()
 class DUNGEONEDITOR_API UDungeonEditorLibrary : public UBlueprintFunctionLibrary
 {
