@@ -109,10 +109,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "OnlineSubsystemEOS",
-			"Enabled": true
-		},
-		{
 			"Name": "SteamController",
 			"Enabled": true
 		},
