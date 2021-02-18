@@ -17,6 +17,10 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/HUD/InGame/GotItem.GotItem
 /Game/HUD/InGame/InteractUI.InteractUI
 /Game/HUD/LoadWorld.LoadWorld
+/Game/HUD/MainMenu/MainMenu.MainMenu
+/Game/HUD/MainMenu/OpenWorldHUD.OpenWorldHUD
+/Game/HUD/MainMenu/OptionsHUD.OptionsHUD
+/Game/HUD/MainMenu/WorldBTN.WorldBTN
 /Game/HUD/OpenWorldEditorHUD.OpenWorldEditorHUD
 /Game/HUD/PauseMenu.PauseMenu
 /Game/HUD/PlayHUD.PlayHUD
