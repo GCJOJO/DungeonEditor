@@ -17,3 +17,5 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/BPs/Spawnalbes/Tiles/Tile.Tile
 /Game/BPs/Spawnalbes/Tiles/Torch.Torch
 /Game/BPs/Spawnalbes/Tiles/Torch_S.Torch_S
+/Game/BPs/Spawnalbes/Traps/FallingTrap.FallingTrap
+/Game/BPs/Spawnalbes/Traps/SpikeTrap_Wall.SpikeTrap_Wall
