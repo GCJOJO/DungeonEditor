@@ -13,6 +13,9 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/HUD/EndDungeonHUD.EndDungeonHUD
 /Game/HUD/Enemies/NamePlates.NamePlates
 /Game/HUD/ExitHUD.ExitHUD
+/Game/HUD/InGame/ChestOpened.ChestOpened
+/Game/HUD/InGame/GotItem.GotItem
+/Game/HUD/InGame/InteractUI.InteractUI
 /Game/HUD/LoadWorld.LoadWorld
 /Game/HUD/OpenWorldEditorHUD.OpenWorldEditorHUD
 /Game/HUD/PauseMenu.PauseMenu
