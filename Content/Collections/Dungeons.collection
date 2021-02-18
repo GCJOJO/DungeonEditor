@@ -3,6 +3,15 @@ Type:Static
 Guid:54EF6D10-41F6-0724-E323-5FBF8B60906A
 ParentGuid:00000000-0000-0000-0000-000000000000
 
+/Game/BPs/CreatorPawn.CreatorPawn
+/Game/BPs/DEGameMode.DEGameMode
+/Game/BPs/DEplayerController.DEplayerController
+/Game/BPs/DungeonEditorFunctions.DungeonEditorFunctions
+/Game/BPs/DungeonEditorMacros.DungeonEditorMacros
+/Game/BPs/EditorPawn.EditorPawn
+/Game/BPs/FallingTrapStopLevel.FallingTrapStopLevel
+/Game/BPs/FreeCamPawn.FreeCamPawn
+/Game/BPs/ProcedualMesh.ProcedualMesh
 /Game/BPs/Spawnalbes/Entities/EnemyParent.EnemyParent
 /Game/BPs/Spawnalbes/Functions/Activators/ActivatorParent.ActivatorParent
 /Game/BPs/Spawnalbes/Functions/Activators/Lever.Lever
@@ -20,3 +29,4 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/BPs/Spawnalbes/Tiles/Torch_S.Torch_S
 /Game/BPs/Spawnalbes/Traps/FallingTrap.FallingTrap
 /Game/BPs/Spawnalbes/Traps/SpikeTrap_Wall.SpikeTrap_Wall
+/Game/BPs/VarsBP.VarsBP
