@@ -4,6 +4,8 @@ Guid:54EF6D10-41F6-0724-E323-5FBF8B60906A
 ParentGuid:00000000-0000-0000-0000-000000000000
 
 /Game/BPs/Spawnalbes/Entities/EnemyParent.EnemyParent
+/Game/BPs/Spawnalbes/Functions/Activators/ActivatorParent.ActivatorParent
+/Game/BPs/Spawnalbes/Functions/Activators/Lever.Lever
 /Game/BPs/Spawnalbes/Functions/Blue_Door.Blue_Door
 /Game/BPs/Spawnalbes/Functions/Chest.Chest
 /Game/BPs/Spawnalbes/Functions/Spawnpoint_S.Spawnpoint_S
