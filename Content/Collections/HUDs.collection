@@ -3,3 +3,13 @@ Type:Static
 Guid:3EEA0DA2-41D9-D2AD-86F1-DFA136B5BEE8
 ParentGuid:00000000-0000-0000-0000-000000000000
 
+/Game/HUD/BIGMiniMap.BIGMiniMap
+/Game/HUD/EditorMenu.EditorMenu
+/Game/HUD/EndDungeonHUD.EndDungeonHUD
+/Game/HUD/ExitHUD.ExitHUD
+/Game/HUD/LoadWorld.LoadWorld
+/Game/HUD/OpenWorldEditorHUD.OpenWorldEditorHUD
+/Game/HUD/PauseMenu.PauseMenu
+/Game/HUD/PlayHUD.PlayHUD
+/Game/HUD/Site.Site
+/Game/HUD/WorldSetingsHUD.WorldSetingsHUD
