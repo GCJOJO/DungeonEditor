@@ -21,6 +21,8 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/HUD/MainMenu/OpenWorldHUD.OpenWorldHUD
 /Game/HUD/MainMenu/OptionsHUD.OptionsHUD
 /Game/HUD/MainMenu/WorldBTN.WorldBTN
+/Game/HUD/Online/OnlineUI.OnlineUI
+/Game/HUD/Online/SessionBTN.SessionBTN
 /Game/HUD/OpenWorldEditorHUD.OpenWorldEditorHUD
 /Game/HUD/PauseMenu.PauseMenu
 /Game/HUD/PlayHUD.PlayHUD
