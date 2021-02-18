@@ -10,6 +10,7 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/BPs/Spawnalbes/Functions/Chest.Chest
 /Game/BPs/Spawnalbes/Functions/Spawnpoint_S.Spawnpoint_S
 /Game/BPs/Spawnalbes/Functions/Wooden_Door.Wooden_Door
+/Game/BPs/Spawnalbes/SpawnablesParent.SpawnablesParent
 /Game/BPs/Spawnalbes/Tiles/BlackTile.BlackTile
 /Game/BPs/Spawnalbes/Tiles/EndDoor.EndDoor
 /Game/BPs/Spawnalbes/Tiles/Floor.Floor
