@@ -4,4 +4,6 @@ Guid:EEB164F8-41E6-8B8A-5AA1-D5903D17489D
 ParentGuid:00000000-0000-0000-0000-000000000000
 
 /Game/Ressources/Cursor/Cursor.Cursor
+/Game/Ressources/FBXs/OldDungeon/3DTiles/Door/Door.Door
+/Game/Ressources/FBXs/OldDungeon/3DTiles/Door/door_frame.door_frame
 /Game/Ressources/FBXs/VillageFountainWater.VillageFountainWater
