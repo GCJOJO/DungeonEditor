@@ -429,6 +429,36 @@ button:active {
 /* Show the dropdown menu on hover */
 .help_dropdown:hover .dropdown-content {display: block;}
 
+.github-btn-image
+{
+	width : 64px;
+	height: 64px;
+	margin-left: 90%;
+	transform: translateY(-125%);
+}
+
+.github-btn
+{
+	width : 64px;
+	height: 64px;
+	margin-left: 90%;
+	transform: translateY(-225%);
+	background: transparent;
+    border: none !important;
+    font-size:0;
+}
+
+.github-btn:hover
+{
+	width : 64px;
+	height: 64px;
+	margin-left: 90%;
+	transform: translateY(-225%);
+	background: transparent;
+    border: none !important;
+    font-size:0;
+}
+
 /* 
 À = Alt + 183 
 Æ = Alt + 146 
