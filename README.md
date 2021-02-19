@@ -7,3 +7,8 @@
   -First you will need to change "F:\UnrealEngine\Engine\Binaries\Win64\UE4Editor.exe" in Standalone.bat by you UE4Editor.exe location\
   -Then you will need to change "D:\DungeonEditor\DungeonEditor.uproject" in Standalone.bat by the .uproject file location\
   -Now you can launch the game via this simple file !
+
+If you want to build the project you will have in the "BatchFiles\" directory .bat files to build the game but you will need to replace "F:/UnrealEngine/Engine/Build/BatchFiles/RunUAT.bat" by "{You Engine Location}/Engine/Build/BatchFiles/RunUAT.bat" and "D:/DungeonEditor/DungeonEditor.uproject" by "{You Project Loaction}/DungeonEditor.uproject", "{You Engine Location}\Engine\Binaries\Win64\UE4Editor-Cmd.exe" and -archivedirectory="{Where you want to archive the build}"
+
+
+You can edit the .bat files to change how the engine will build the game
