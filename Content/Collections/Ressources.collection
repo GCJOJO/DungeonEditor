@@ -14,6 +14,8 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/Ressources/FBXs/OldDungeon/3DTiles/Wall/WallDoor.WallDoor
 /Game/Ressources/FBXs/OldDungeon/Props/Lever/lever.lever
 /Game/Ressources/FBXs/OldDungeon/Props/Spike/spike.spike
+/Game/Ressources/FBXs/Props/bridge.Bridge
+/Game/Ressources/FBXs/Props/village_gate.village_gate
 /Game/Ressources/FBXs/VillageFountainWater.VillageFountainWater
 /Game/Ressources/Particles/Circle/Circle.Circle
 /Game/Ressources/Particles/Fire/Fire.Fire
