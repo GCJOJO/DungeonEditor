@@ -3,3 +3,14 @@ Type:Static
 Guid:D3A6EADA-4D6E-99C5-3430-40B2C794FE12
 ParentGuid:00000000-0000-0000-0000-000000000000
 
+/Game/ChameleonDemo/ChameleonDemoHall.ChameleonDemoHall
+/Game/Levels/CreateWorld.CreateWorld
+/Game/Levels/Entry.Entry
+/Game/Levels/MainMenu.MainMenu
+/Game/Levels/PlayWorld.PlayWorld
+/Game/Levels/TestLevel2.TestLevel2
+/Game/Levels/TestMap.TestMap
+/Game/Levels/Village.Village
+/Game/StarterContent/Maps/Advanced_Lighting.Advanced_Lighting
+/Game/StarterContent/Maps/Minimal_Default.Minimal_Default
+/Game/StarterContent/Maps/StarterMap.StarterMap
