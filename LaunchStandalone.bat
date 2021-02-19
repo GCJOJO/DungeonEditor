@@ -1,1 +1,1 @@
-"D:\UnrealEngine\UE_4.25\Engine\Binaries\Win64\UE4Editor.exe" "D:\DungeonEditor\DungeonEditor.uproject" -game -log=StandaloneLog.txt -ResX=1280 -ResY=720 -VSync -silent  -WINDOWED
+"F:\UnrealEngine\Engine\Binaries\Win64\UE4Editor.exe" "D:\DungeonEditor\DungeonEditor.uproject" -game -log=StandaloneLog.txt -ResX=1280 -ResY=720 -VSync -silent  -WINDOWED
