@@ -6,7 +6,7 @@
 # Setup
 
 -First download the project or open it with Github Desktop\
-![download-source-img](https://github.com/GCJOJO/DungeonEditor/blob/master/docs/Ressources/IMG/download-source.PNG)\
+![download-source-img](https://github.com/GCJOJO/DungeonEditor/blob/master/docs/Ressources/IMG/download-source.PNG)
 
 Then download Unreal Engine 4 source and build it : [Tutorial on how to build Unreal Engine 4 from the source code](https://github.com/EpicGames/UnrealEngine#getting-up-and-running)\
 
