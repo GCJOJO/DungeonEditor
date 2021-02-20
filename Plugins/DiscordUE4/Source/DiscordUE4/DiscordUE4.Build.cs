@@ -73,7 +73,7 @@ public class DiscordUE4 : ModuleRules
 	{
 		get 
 		{
-			return Path.GetFullPath(Path.Combine(ModuleDirectory, "../../Binaries/Win64/discord_game_sdk.dll"));  
+			return Path.GetFullPath(Path.Combine(ModuleDirectory, "../../Binaries/" + GetPlatformName + "/discord_game_sdk.dll"));  
 		}
 	}
 
