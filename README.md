@@ -11,6 +11,10 @@
 Then download Unreal Engine 4 source and build it : [Tutorial on how to build Unreal Engine 4 from the source code](https://github.com/EpicGames/UnrealEngine#getting-up-and-running)\
 
 
+Then right click the ```DungeonEditor.uproject``` file and select the ```Switch Unreal Engine Version``` option. A windows will open asking you to select the UE4 version. Select the Source Build version. After this right click the ```DungeonEditor.uproject``` file and select the ```Generate Visual Studio Project Files``` option if you use Visual Studio.
+
+When it's finished double click ```DungeonEditor.sln``` and build the DungeonEditor project with the ```Development Editor``` configuration
+
 Then launch the .uproject file and **create** !
 
 # Launch game from Standalone.bat
