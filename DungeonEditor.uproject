@@ -131,6 +131,10 @@
 		{
 			"Name": "Water",
 			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemEOS",
+			"Enabled": false
 		}
 	],
 	"TargetPlatforms": [
