@@ -378,6 +378,7 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/Ressources/UI/Inventory/Items/TorchIcon.TorchIcon
 /Game/Ressources/UI/Minimap/BlackCircle.BlackCircle
 /Game/Ressources/UI/Minimap/Enemy.Enemy
+/Game/Ressources/UI/Minimap/Player.Player
 /Game/Ressources/UI/option_icon.option_icon
 /Game/Ressources/UI/Play.Play
 /Game/Splash/EdSplash.EdSplash
