@@ -1,0 +1,6 @@
+﻿	
+-Upload\Download de donjons
+	-Serveur où on peut upload les donjons (DungeonEditorServe.exe) 
+	-Menu de téléchargement de donjons
+	-Upload de donjons (nom, uid, auteur)
+	-Récupération donjons du server

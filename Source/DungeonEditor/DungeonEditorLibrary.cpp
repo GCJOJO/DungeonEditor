@@ -48,3 +48,8 @@ bool UDungeonEditorLibrary::FindFiles(TArray<FString>& Files, FString RootFolder
     FileManager.FindFiles(Files, *FinalPath, true, false);
     return true;
 }
+
+void UDungeonEditorLibrary::TakeScreenshot(const FString& Filename, bool ShowUI, bool AddUniqueSuffix)
+{  
+    FScreenshotRequest::RequestScreenshot(Filename, ShowUI, AddUniqueSuffix);
+}

@@ -61,4 +61,6 @@ class DUNGEONEDITOR_API UDungeonEditorLibrary : public UBlueprintFunctionLibrary
 		static bool SaveFile(FString Path, FString FileName, FString Text);
 		UFUNCTION(BlueprintCallable, Category = "Dungeons", meta = (Keywords = "Search Files in directory"))
 		static bool FindFiles(TArray<FString>& Files, FString RootFolderFullPath, FString Ext);
+		UFUNCTION(BlueprintCallable, Category = "Dungeons", meta = (Keywords = "Take a Screenshot"))
+		static void TakeScreenshot(const FString & Filename, bool ShowUI, bool AddUniqueSuffix);
 };

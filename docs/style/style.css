@@ -28,6 +28,7 @@ body {
 
 .menu {
 	transform: translate(0%, -50%);
+	text-align: center;
 }
 
 .menuBtn{
