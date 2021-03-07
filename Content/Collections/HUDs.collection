@@ -4,6 +4,7 @@ Guid:3EEA0DA2-41D9-D2AD-86F1-DFA136B5BEE8
 ParentGuid:00000000-0000-0000-0000-000000000000
 
 /Game/HUD/BIGMiniMap.BIGMiniMap
+/Game/HUD/CommunityContent/CC_Main.CC_Main
 /Game/HUD/Editing/ItemIcon.ItemIcon
 /Game/HUD/Editing/MinimapPoint.MinimapPoint
 /Game/HUD/Editing/Selector.Selector
