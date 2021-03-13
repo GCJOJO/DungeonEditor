@@ -49,6 +49,13 @@ enum ParticleLOD
 	NONE
 };
 
+UENUM(BlueprintType)
+enum DungeonEditorErrorType
+{
+	FileNotFound,
+	NoError
+};
+
 UCLASS()
 class DUNGEONEDITOR_API UDungeonEditorLibrary : public UBlueprintFunctionLibrary
 {
