@@ -30,3 +30,9 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/BPs/Spawnalbes/Traps/FallingTrap.FallingTrap
 /Game/BPs/Spawnalbes/Traps/SpikeTrap_Wall.SpikeTrap_Wall
 /Game/BPs/VarsBP.VarsBP
+/Game/Struct/Saves/ActorsSave.ActorsSave
+/Game/Struct/Saves/ChestSave.ChestSave
+/Game/Struct/Saves/LeverSave.LeverSave
+/Game/Struct/Saves/Save.Save
+/Game/Struct/Saves/TexturesSaves.TexturesSaves
+/Game/Struct/Saves/TorchSave.TorchSave
