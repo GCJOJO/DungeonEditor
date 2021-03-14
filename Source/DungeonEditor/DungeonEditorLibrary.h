@@ -70,4 +70,6 @@ class DUNGEONEDITOR_API UDungeonEditorLibrary : public UBlueprintFunctionLibrary
 		static bool FindFiles(TArray<FString>& Files, FString RootFolderFullPath, FString Ext);
 		UFUNCTION(BlueprintCallable, Category = "Dungeons", meta = (Keywords = "Take a Screenshot"))
 		static void TakeScreenshot(const FString & Filename, bool ShowUI, bool AddUniqueSuffix);
+		UFUNCTION(BlueprintPure, Category = "Dungeons", meta = (Keywords = "Load Texture from Image"))
+		static UTexture2D* LoadTextureFromPath(const FString& Path);
 };

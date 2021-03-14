@@ -54,3 +54,10 @@ void UDungeonEditorLibrary::TakeScreenshot(const FString& Filename, bool ShowUI,
    FScreenshotRequest::RequestScreenshot(Filename, ShowUI, AddUniqueSuffix);
 	UE_LOG(LogTemp, Log, TEXT("Screenshot taken !"));
 }
+
+UTexture2D* UDungeonEditorLibrary::LoadTextureFromPath(const FString& Path)
+{
+	if (Path.IsEmpty()) return nullptr;
+	
+	return Cast<UTexture2D>(StaticLoadObject(UTexture2D::StaticClass(), nullptr, *(Path)));
+}

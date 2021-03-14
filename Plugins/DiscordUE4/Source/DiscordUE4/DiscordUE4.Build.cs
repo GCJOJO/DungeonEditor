@@ -35,7 +35,10 @@ public class DiscordUE4 : ModuleRules
 			PublicDelayLoadDLLs.Add("discord_game_sdk.dll");
 		}
 		if (IsWin32()) PublicDelayLoadDLLs.Add("discord_game_sdk.dll");
-		RuntimeDependencies.Add(DiscordDllFile);
+		
+		if(IsWin64() || IsWin32()) RuntimeDependencies.Add(DiscordDllFile);
+		
+		if(IsLinux()) RuntimeDependencies.Add(DiscordSoFile);
 	}
 
 	private string DiscordPath
@@ -77,6 +80,14 @@ public class DiscordUE4 : ModuleRules
 		}
 	}
 
+	private string DiscordSoFile
+    {
+		get
+        {
+			return Path.GetFullPath(Path.Combine(ModuleDirectory, "../../Binaries/" + GetPlatformName +"/discord_game_sdk.so"));
+        }
+    }
+
 	private bool IsWin64()
 	{
 		return Target.Platform == UnrealTargetPlatform.Win64;
@@ -92,6 +103,11 @@ public class DiscordUE4 : ModuleRules
 		return Target.Platform == UnrealTargetPlatform.Mac;
 	}
 
+	private bool IsLinux()
+    {
+		return Target.Platform == UnrealTargetPlatform.Linux;
+    }
+
 	private string GetPlatformName
 	{
 		get 
@@ -105,7 +121,7 @@ public class DiscordUE4 : ModuleRules
 			{
 				return "Mac";
 			}
-
+			else if (IsLinux()) return "Linux";
 			return null;
 		}
 	}
