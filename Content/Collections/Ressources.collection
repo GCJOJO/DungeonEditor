@@ -411,6 +411,7 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/MSPresets/MSTextures/Normal.Normal
 /Game/MSPresets/MSTextures/Roughness.Roughness
 /Game/Ressources/Cursor/Cursor.Cursor
+/Game/Ressources/FBXs/DemiSkybox.DemiSkybox
 /Game/Ressources/FBXs/OldDungeon/3DTiles/Door/Door.Door
 /Game/Ressources/FBXs/OldDungeon/3DTiles/Door/door_frame.door_frame
 /Game/Ressources/FBXs/OldDungeon/3DTiles/Spawn/Flag.Flag
