@@ -135,6 +135,14 @@
 		{
 			"Name": "OnlineSubsystemEOS",
 			"Enabled": false
+		},
+		{
+			"Name": "VivoxCore",
+			"Enabled": true
+		},
+		{
+			"Name": "VivoxVoiceChat",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [

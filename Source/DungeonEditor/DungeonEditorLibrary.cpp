@@ -61,3 +61,35 @@ UTexture2D* UDungeonEditorLibrary::LoadTextureFromPath(const FString& Path)
 	
 	return Cast<UTexture2D>(StaticLoadObject(UTexture2D::StaticClass(), nullptr, *(Path)));
 }
+
+AIAction UDungeonEditorLibrary::AIChooseSomething(int RandomInt)
+{
+	switch (RandomInt)
+	{
+		case 0:
+			return AIAction::idle;
+			break;
+		case 1:
+			return AIAction::idle;
+			break;
+		case 2:
+			return AIAction::move;
+			break;
+		case 3:
+			return AIAction::move;
+			break;
+		case 4:
+			return AIAction::idleShop;
+			break;
+		case 5:
+			return AIAction::enterShop;
+			break;
+		case 6:
+			return AIAction::moveShop;
+			break;	
+		
+		default:
+			return AIAction::idle;
+	}
+	return AIAction::idle;
+}

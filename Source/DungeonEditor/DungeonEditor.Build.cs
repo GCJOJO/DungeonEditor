@@ -8,10 +8,10 @@ public class DungeonEditor : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore"/*, "OnlineSubsystem", "OnlineSubsystemEOS"*/});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
-		
+
 		// PublicIncludePaths.Add("D:\\DungeonEditor\\Source\\DungeonEditor\\Discord");
 
 		// if(IsWin32())   PublicAdditionalLibraries.Add("D:\\DungeonEditor\\Binaries\\Win32\\discord_game_sdk.dll.lib");

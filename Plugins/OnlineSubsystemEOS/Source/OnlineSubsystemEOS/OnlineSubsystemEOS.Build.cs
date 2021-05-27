@@ -30,7 +30,7 @@ public class OnlineSubsystemEOS : ModuleRules
 		bool bSDKInstalled = true;
 
 		// Update this to your SDK path once it is installed
-		string EOSSDKVersion = "EOS-SDK-1.10";
+		string EOSSDKVersion = "EOS-SDK-1.11";
 		string EOSPath = Path.Combine(ModuleDirectory, "..", "..", "EOS", EOSSDKVersion, "SDK");
 		string EOSIncludePath = Path.Combine(EOSPath, "Include");
 		if (bSDKInstalled)
@@ -44,7 +44,8 @@ public class OnlineSubsystemEOS : ModuleRules
 				string EOSLibPath = Path.Combine(EOSPath, "Lib");
 				PublicAdditionalLibraries.Add(Path.Combine(EOSLibPath, "EOSSDK-Win64-Shipping.lib"));
 
-				PublicDelayLoadDLLs.Add("EOSSDK-Win64-Shipping.dll");
+// There's a race condition that causes the SDK to fail to load (~75% of the time) when delay load is on
+//				PublicDelayLoadDLLs.Add("EOSSDK-Win64-Shipping.dll");
 
 				string EOSDLLPath = Path.Combine(EOSPath, "Bin", "EOSSDK-Win64-Shipping.dll");
 				RuntimeDependencies.Add(EOSDLLPath);
@@ -54,7 +55,7 @@ public class OnlineSubsystemEOS : ModuleRules
 				string EOSLibPath = Path.Combine(EOSPath, "Lib");
 				PublicAdditionalLibraries.Add(Path.Combine(EOSLibPath, "EOSSDK-Win32-Shipping.lib"));
 
-				PublicDelayLoadDLLs.Add("EOSSDK-Win32-Shipping.dll");
+//				PublicDelayLoadDLLs.Add("EOSSDK-Win32-Shipping.dll");
 
 				string EOSDLLPath = Path.Combine(EOSPath, "Bin", "EOSSDK-Win32-Shipping.dll");
 				RuntimeDependencies.Add(EOSDLLPath);
@@ -78,10 +79,17 @@ public class OnlineSubsystemEOS : ModuleRules
 
 				RuntimeDependencies.Add(SoName);
 			}
+			else
+			{
+				// platform extension
+				ConfigureTargetPlatform( EOSSDKVersion, EOSPath, EOSIncludePath );
+			}
 		}
 		else
 		{
 			PrivateDefinitions.Add("WITH_EOS_SDK=0");
 		}
 	}
+
+	protected virtual void ConfigureTargetPlatform( string EOSSDKVersion, string EOSPath, string EOSIncludePath ) { }
 }

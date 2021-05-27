@@ -56,6 +56,17 @@ enum DungeonEditorErrorType
 	NoError
 };
 
+UENUM(BlueprintType)
+enum AIAction
+{
+	idle,
+	move,
+	idleShop,
+	enterShop,
+	exitShop,
+	moveShop
+};
+
 UCLASS()
 class DUNGEONEDITOR_API UDungeonEditorLibrary : public UBlueprintFunctionLibrary
 {
@@ -72,4 +83,8 @@ class DUNGEONEDITOR_API UDungeonEditorLibrary : public UBlueprintFunctionLibrary
 		static void TakeScreenshot(const FString & Filename, bool ShowUI, bool AddUniqueSuffix);
 		UFUNCTION(BlueprintPure, Category = "Dungeons", meta = (Keywords = "Load Texture from Image"))
 		static UTexture2D* LoadTextureFromPath(const FString& Path);
+
+	// NPC AI
+		UFUNCTION(BlueprintCallable, Category = "Dungeons", meta = (Keywords = "AI : Choose Something"))
+		static AIAction AIChooseSomething(int RandomInt);
 };
