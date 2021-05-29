@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// G.C*JOJO
 
 #pragma once
 
@@ -6,9 +6,6 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "DungeonEditorLibrary.generated.h"
 
-/**
- * 
- */
 
 UENUM(BlueprintType)
 enum ELocalizationCulture 

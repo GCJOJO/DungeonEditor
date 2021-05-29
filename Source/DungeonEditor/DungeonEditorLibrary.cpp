@@ -1,5 +1,14 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// G.C*JOJO
 
+/*
+TODO : Upload\Download de donjons 0/4
+TODO :		-Serveur où on peut upload les donjons(DungeonEditorServer.exe)
+TODO :		-Menu de téléchargement de donjons
+TODO :		-Upload de donjons(nom, uid, auteur)
+TODO :		-Récupération donjons du server
+
+TODO : Version affichée en jeu
+*/
 
 #include "DungeonEditorLibrary.h"
 
