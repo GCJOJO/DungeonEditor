@@ -3,6 +3,8 @@
  
  # https://gcjojo.github.io/DungeonEditor/
 
+The Game is also on [Itch.io](https://gcjojo.itch.io/dungeon-editor)
+
 # Setup
 
 -First download the project or open it with Github Desktop\
