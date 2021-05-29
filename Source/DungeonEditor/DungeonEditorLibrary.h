@@ -81,6 +81,10 @@ class DUNGEONEDITOR_API UDungeonEditorLibrary : public UBlueprintFunctionLibrary
 		UFUNCTION(BlueprintPure, Category = "Dungeons", meta = (Keywords = "Load Texture from Image"))
 		static UTexture2D* LoadTextureFromPath(const FString& Path);
 
+		// Check if running in the editor
+		UFUNCTION(BlueprintPure, Category = "Dungeons", meta = (Keywords = "Is In Editor"))
+		static bool IsWithEditor();
+
 	// NPC AI
 		UFUNCTION(BlueprintCallable, Category = "Dungeons", meta = (Keywords = "AI : Choose Something"))
 		static AIAction AIChooseSomething(int RandomInt);

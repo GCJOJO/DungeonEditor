@@ -9,7 +9,7 @@
 #include "OnlineTitleFileEOS.h"
 #include "OnlineUserCloudEOS.h"
 #include "OnlineStoreEOS.h"
-#include "EOSSettings.h"
+#include "Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Public/EOSSettings.h"
 
 #include "Misc/App.h"
 #include "Misc/NetworkVersion.h"
