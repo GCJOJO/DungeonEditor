@@ -471,3 +471,8 @@ button:active {
 œ = Alt + 0156 
 Ù = Alt + 235
 */
+
+li {
+	color : white;
+    list-style-position : inside;
+}
