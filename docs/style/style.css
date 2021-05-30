@@ -476,3 +476,10 @@ li {
 	color : white;
     list-style-position : inside;
 }
+
+h3{
+	font-family: arial;
+	color: white;
+	text-align: center;
+	font-size:5px;
+}
