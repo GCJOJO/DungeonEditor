@@ -11,5 +11,8 @@ public class DungeonEditorTarget : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 
 		ExtraModuleNames.AddRange( new string[] { "DungeonEditor" } );
+		
+		bCompileChaos = true;
+		bUseChaos = true;
 	}
 }
