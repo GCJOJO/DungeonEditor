@@ -460,6 +460,36 @@ button:active {
     font-size:0;
 }
 
+ .itch-btn-image
+ {
+	 width : 64px;
+	 height: 64px;
+	 margin-left: 90%;
+	 transform: translateY(-325%);
+ }
+
+ .icth-btn
+ {
+	 width : 64px;
+	 height: 64px;
+	 margin-left: 90%;
+	 transform: translateY(-225%);
+	 background: transparent;
+	 border: none !important;
+	 font-size:0;
+ }
+ 
+ .itch-btn:hover
+ {
+	 width : 64px;
+	 height: 64px;
+	 margin-left: 90%;
+	 transform: translateY(-225%);
+	 background: transparent;
+	 border: none !important;
+	 font-size:0;
+ }
+
 /* 
 À = Alt + 183 
 Æ = Alt + 146 
