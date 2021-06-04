@@ -464,16 +464,16 @@ button:active {
  {
 	 width : 64px;
 	 height: 64px;
-	 margin-left: 90%;
+	 margin-left: 85%;
 	 transform: translateY(-325%);
  }
 
- .icth-btn
+ .itch-btn
  {
 	 width : 64px;
 	 height: 64px;
-	 margin-left: 90%;
-	 transform: translateY(-225%);
+	 margin-left: 85%;
+	 transform: translateY(-431%);
 	 background: transparent;
 	 border: none !important;
 	 font-size:0;
@@ -483,8 +483,8 @@ button:active {
  {
 	 width : 64px;
 	 height: 64px;
-	 margin-left: 90%;
-	 transform: translateY(-225%);
+	 margin-left: 85%;
+	 transform: translateY(-431%);
 	 background: transparent;
 	 border: none !important;
 	 font-size:0;
