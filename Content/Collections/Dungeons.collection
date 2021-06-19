@@ -5,7 +5,6 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 
 /Game/BPs/CreatorPawn.CreatorPawn
 /Game/BPs/DEGameMode.DEGameMode
-/Game/BPs/DEplayerController.DEplayerController
 /Game/BPs/DungeonEditorFunctions.DungeonEditorFunctions
 /Game/BPs/DungeonEditorMacros.DungeonEditorMacros
 /Game/BPs/EditorPawn.EditorPawn
@@ -23,6 +22,7 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/BPs/Spawnalbes/Tiles/BlackTile.BlackTile
 /Game/BPs/Spawnalbes/Tiles/EndDoor.EndDoor
 /Game/BPs/Spawnalbes/Tiles/Floor.Floor
+/Game/BPs/Spawnalbes/Tiles/Hole.Hole
 /Game/BPs/Spawnalbes/Tiles/ImcompleteFloor.ImcompleteFloor
 /Game/BPs/Spawnalbes/Tiles/Tile.Tile
 /Game/BPs/Spawnalbes/Tiles/Torch.Torch
@@ -30,6 +30,7 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/BPs/Spawnalbes/Traps/FallingTrap.FallingTrap
 /Game/BPs/Spawnalbes/Traps/SpikeTrap_Wall.SpikeTrap_Wall
 /Game/BPs/VarsBP.VarsBP
+/Game/IgnoreCook/DEplayerController.DEplayerController
 /Game/Struct/Saves/ActorsSave.ActorsSave
 /Game/Struct/Saves/ChestSave.ChestSave
 /Game/Struct/Saves/LeverSave.LeverSave
