@@ -11,7 +11,7 @@
 
 DECLARE_LOG_CATEGORY_EXTERN(LogSocketSubsystemEOS, Log, All);
 
-#define EOS_SOCKET_NAME_SIZE 33
+class FUniqueNetId;
 
 class FInternetAddrEOS
 	: public FInternetAddr
@@ -140,12 +140,12 @@ public:
 
 	void SetSocketName(const FString& InSocketName)
 	{
-		FCStringAnsi::Strncpy(SocketName, TCHAR_TO_UTF8(*InSocketName), EOS_SOCKET_NAME_SIZE);
+		FCStringAnsi::Strncpy(SocketName, TCHAR_TO_UTF8(*InSocketName), 32);
 	}
 
 	void SetSocketName(const char* InSocketName)
 	{
-		FCStringAnsi::Strncpy(SocketName, InSocketName, EOS_SOCKET_NAME_SIZE);
+		FCStringAnsi::Strncpy(SocketName, InSocketName, 32);
 	}
 
 	uint8 GetChannel() const
@@ -166,7 +166,7 @@ private:
 	void* LocalUserId;
 	void* RemoteUserId;
 #endif
-	char SocketName[EOS_SOCKET_NAME_SIZE];
+	char SocketName[33];
 	uint8 Channel;
 
 	friend class SocketSubsystemEOS;

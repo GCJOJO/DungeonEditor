@@ -70,7 +70,6 @@ struct FEOSSettings
 	FString CacheDir;
 	FString DefaultArtifactName;
 	int32 TickBudgetInMilliseconds;
-	int32 TitleStorageReadChunkLength;
 	bool bEnableOverlay;
 	bool bEnableSocialOverlay;
 	bool bShouldEnforceBeingLaunchedByEGS;
@@ -81,7 +80,6 @@ struct FEOSSettings
 	bool bUseEOSSessions;
 	bool bMirrorPresenceToEAS;
 	TArray<FEOSArtifactSettings> Artifacts;
-	TArray<FString> TitleStorageTags;
 };
 
 UCLASS(Config=Engine, DefaultConfig)
@@ -120,14 +118,6 @@ public:
 	/** Set to true to enable the social overlay (friends, invites, etc.) */
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category="EOS Settings", DisplayName="Require Being Launched by the Epic Games Store")
 	bool bShouldEnforceBeingLaunchedByEGS;
-
-	/** Tag combinations for paged queries in title file enumerations, separate tags within groups using `+` */
-	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category="EOS Settings")
-	TArray<FString> TitleStorageTags;
-
-	/** Chunk size used when reading a title file */
-	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category="EOS Settings")
-	int32 TitleStorageReadChunkLength;
 
 	/** Per artifact SDK settings. A game might have a FooStaging, FooQA, and public Foo artifact */
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category="EOS Settings")

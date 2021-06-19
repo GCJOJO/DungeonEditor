@@ -80,7 +80,7 @@ void FInternetAddrEOS::SetIp(const TCHAR* InAddr, bool& bIsValid)
 	{
 		return;
 	}
-	SetSocketName(UrlParts[2]);
+	FCStringAnsi::Strcpy(SocketName, TCHAR_TO_UTF8(*UrlParts[2]));
 	if (UrlParts.Num() == 4)
 	{
 		Channel = FCString::Atoi(*UrlParts[3]);

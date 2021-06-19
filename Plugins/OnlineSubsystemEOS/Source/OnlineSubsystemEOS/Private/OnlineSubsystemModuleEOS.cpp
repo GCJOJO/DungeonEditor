@@ -10,7 +10,6 @@
 #include "Features/IModularFeatures.h"
 
 #include "Misc/CoreDelegates.h"
-#include "Misc/ConfigCacheIni.h"
 
 #if WITH_EDITOR
 	#include "ISettingsModule.h"

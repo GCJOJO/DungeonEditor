@@ -13,15 +13,16 @@
 
 void FOnlineAchievementsEOS::WriteAchievements(const FUniqueNetId& PlayerId, FOnlineAchievementsWriteRef& WriteObject, const FOnAchievementsWrittenDelegate& Delegate)
 {
+	FUniqueNetIdEOSPtr NetId = MakeShared<FUniqueNetIdEOS>(PlayerId);
 	TArray<FOnlineStatsUserUpdatedStats> StatsToWrite;
 
-	FOnlineStatsUserUpdatedStats& UpdatedStats = StatsToWrite.Emplace_GetRef(PlayerId.AsShared());
+	FOnlineStatsUserUpdatedStats& UpdatedStats = StatsToWrite.Emplace_GetRef(NetId.ToSharedRef());
 	for (const TPair<FName, FVariantData>& Stat : WriteObject->Properties)
 	{
 		UpdatedStats.Stats.Add(Stat.Key.ToString(), FOnlineStatUpdate(Stat.Value, FOnlineStatUpdate::EOnlineStatModificationType::Unknown));
 	}
 
-	EOSSubsystem->StatsInterfacePtr->UpdateStats(PlayerId.AsShared(), StatsToWrite, FOnlineStatsUpdateStatsComplete());
+	EOSSubsystem->StatsInterfacePtr->UpdateStats(NetId.ToSharedRef(), StatsToWrite, FOnlineStatsUpdateStatsComplete());
 
 	WriteObject->WriteState = EOnlineAsyncTaskState::Done;
 	Delegate.ExecuteIfBound(PlayerId, true);
@@ -44,15 +45,15 @@ void FOnlineAchievementsEOS::QueryAchievements(const FUniqueNetId& PlayerId, con
 	Options.UserId = EOSSubsystem->UserManager->GetLocalProductUserId(LocalUserId);
 
 	FQueryProgressCallback* CallbackObj = new FQueryProgressCallback();
-	CallbackObj->CallbackLambda = [this, LambdaPlayerId = PlayerId.AsShared(), OnComplete = FOnQueryAchievementsCompleteDelegate(Delegate)](const EOS_Achievements_OnQueryPlayerAchievementsCompleteCallbackInfo* Data)
+	CallbackObj->CallbackLambda = [this, LambaPlayerId = FUniqueNetIdEOS(PlayerId), OnComplete = FOnQueryAchievementsCompleteDelegate(Delegate)](const EOS_Achievements_OnQueryPlayerAchievementsCompleteCallbackInfo* Data)
 	{
 		bool bWasSuccessful = Data->ResultCode == EOS_EResult::EOS_Success;
 		if (bWasSuccessful)
 		{
-			TSharedRef<TArray<FOnlineAchievement>> Cheevos = MakeShareable(new TArray<FOnlineAchievement>());
-			CachedAchievementsMap.Add(LambdaPlayerId, Cheevos);
+			TSharedPtr<TArray<FOnlineAchievement>> Cheevos = MakeShareable(new TArray<FOnlineAchievement>());
+			CachedAchievementsMap.Add(LambaPlayerId.UniqueNetIdStr, Cheevos);
 
-			int32 LocalUserNum = EOSSubsystem->UserManager->GetLocalUserNumFromUniqueNetId(*LambdaPlayerId);
+			int32 LocalUserNum = EOSSubsystem->UserManager->GetLocalUserNumFromUniqueNetId(LambaPlayerId);
 			EOS_ProductUserId UserId = EOSSubsystem->UserManager->GetLocalProductUserId(LocalUserNum);
 
 			EOS_Achievements_GetPlayerAchievementCountOptions CountOptions = { };
@@ -94,7 +95,7 @@ void FOnlineAchievementsEOS::QueryAchievements(const FUniqueNetId& PlayerId, con
 		{
 			UE_LOG_ONLINE_ACHIEVEMENTS(Error, TEXT("EOS_Achievements_QueryPlayerAchievements() failed with error code (%s)"), ANSI_TO_TCHAR(EOS_EResult_ToString(Data->ResultCode)));
 		}
-		OnComplete.ExecuteIfBound(*LambdaPlayerId, bWasSuccessful);
+		OnComplete.ExecuteIfBound(LambaPlayerId, bWasSuccessful);
 	};
 	EOS_Achievements_QueryPlayerAchievements(EOSSubsystem->AchievementsHandle, &Options, CallbackObj, CallbackObj->GetCallbackPtr());
 }
@@ -123,7 +124,7 @@ void FOnlineAchievementsEOS::QueryAchievementDescriptions(const FUniqueNetId& Pl
 	Options.LocalUserId = EOSSubsystem->UserManager->GetLocalProductUserId(LocalUserId);
 
 	FQueryDefinitionsCallback* CallbackObj = new FQueryDefinitionsCallback();
-	CallbackObj->CallbackLambda = [this, LambdaPlayerId = PlayerId.AsShared(), OnComplete = FOnQueryAchievementsCompleteDelegate(Delegate)](const EOS_Achievements_OnQueryDefinitionsCompleteCallbackInfo* Data)
+	CallbackObj->CallbackLambda = [this, LambaPlayerId = FUniqueNetIdEOS(PlayerId), OnComplete = FOnQueryAchievementsCompleteDelegate(Delegate)](const EOS_Achievements_OnQueryDefinitionsCompleteCallbackInfo* Data)
 	{
 		bool bWasSuccessful = Data->ResultCode == EOS_EResult::EOS_Success;
 		if (bWasSuccessful)
@@ -171,16 +172,18 @@ void FOnlineAchievementsEOS::QueryAchievementDescriptions(const FUniqueNetId& Pl
 		{
 			UE_LOG_ONLINE_ACHIEVEMENTS(Error, TEXT("EOS_Achievements_QueryDefinitions() failed with error code (%s)"), ANSI_TO_TCHAR(EOS_EResult_ToString(Data->ResultCode)));
 		}
-		OnComplete.ExecuteIfBound(*LambdaPlayerId, bWasSuccessful);
+		OnComplete.ExecuteIfBound(LambaPlayerId, bWasSuccessful);
 	};
 	EOS_Achievements_QueryDefinitions(EOSSubsystem->AchievementsHandle, &Options, CallbackObj, CallbackObj->GetCallbackPtr());
 }
 
 EOnlineCachedResult::Type FOnlineAchievementsEOS::GetCachedAchievement(const FUniqueNetId& PlayerId, const FString& AchievementId, FOnlineAchievement& OutAchievement)
 {
-	if (const TSharedRef<TArray<FOnlineAchievement>>* Achievements = CachedAchievementsMap.Find(PlayerId.AsShared()))
+	FUniqueNetIdEOS EOSID(PlayerId);
+	if (CachedAchievementsMap.Contains(EOSID.UniqueNetIdStr))
 	{
-		for (const FOnlineAchievement& Achievement : **Achievements)
+		const TArray<FOnlineAchievement>& Achievements = *CachedAchievementsMap[EOSID.UniqueNetIdStr];
+		for (const FOnlineAchievement& Achievement : Achievements)
 		{
 			if (Achievement.Id == AchievementId)
 			{
@@ -194,9 +197,10 @@ EOnlineCachedResult::Type FOnlineAchievementsEOS::GetCachedAchievement(const FUn
 
 EOnlineCachedResult::Type FOnlineAchievementsEOS::GetCachedAchievements(const FUniqueNetId& PlayerId, TArray<FOnlineAchievement>& OutAchievements)
 {
-	if (const TSharedRef<TArray<FOnlineAchievement>>* CachedAchievements = CachedAchievementsMap.Find(PlayerId.AsShared()))
+	FUniqueNetIdEOS EOSID(PlayerId);
+	if (CachedAchievementsMap.Contains(EOSID.UniqueNetIdStr))
 	{
-		OutAchievements = **CachedAchievements;
+		OutAchievements = *CachedAchievementsMap[EOSID.UniqueNetIdStr];
 		return EOnlineCachedResult::Success;
 	}
 	return EOnlineCachedResult::NotFound;

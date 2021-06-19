@@ -9,8 +9,8 @@
 #include "OnlineStatsEOSPlus.h"
 #include "OnlineAchievementsEOSPlus.h"
 #include "OnlineUserEOSPlus.h"
-#include "OnlineSessionEOSPlus.h"
 
+#define EOS_SUBSYSTEM TEXT("EOS")
 
 /**
  * OnlineSubsystemEOSPlus - Wrapper OSS that uses both the main platform and EOS OSS
@@ -75,7 +75,6 @@ PACKAGE_SCOPE:
 	FOnlineStatsEOSPlusPtr StatsInterfacePtr;
 	FOnlineAchievementsEOSPlusPtr AchievementsInterfacePtr;
 	FOnlineUserEOSPlusPtr UserInterfacePtr;
-	FOnlineSessionEOSPlusPtr SessionInterfacePtr;
 };
 
 typedef TSharedPtr<FOnlineSubsystemEOSPlus, ESPMode::ThreadSafe> FOnlineSubsystemEOSPlusPtr;

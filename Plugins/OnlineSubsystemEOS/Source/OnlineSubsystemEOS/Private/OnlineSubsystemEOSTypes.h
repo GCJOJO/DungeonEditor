@@ -2,13 +2,13 @@
 
 #pragma once
 
+#include "CoreMinimal.h"
 #include "OnlineSubsystemTypes.h"
 
 #include "Interfaces/OnlineIdentityInterface.h"
 #include "Interfaces/OnlineFriendsInterface.h"
 #include "Interfaces/OnlinePresenceInterface.h"
 #include "Interfaces/OnlineUserInterface.h"
-#include "IPAddress.h"
 
 #include "OnlineSubsystemEOSPackage.h"
 
@@ -26,14 +26,9 @@
 
 class FOnlineSubsystemEOS;
 
-#define EOS_ID_SEPARATOR TEXT("|")
-#define EMPTY_EASID TEXT("00000000000000000000000000000000")
-#define EMPTY_PUID TEXT("00000000000000000000000000000000")
-#define ID_HALF_BYTE_SIZE 16
-#define EOS_ID_BYTE_SIZE (ID_HALF_BYTE_SIZE * 2)
+typedef TSharedRef<const FUniqueNetId> FUniqueNetIdRef;
 
-typedef TSharedPtr<const class FUniqueNetIdEOS, UNIQUENETID_ESPMODE> FUniqueNetIdEOSPtr;
-typedef TSharedRef<const class FUniqueNetIdEOS, UNIQUENETID_ESPMODE> FUniqueNetIdEOSRef;
+#define EOS_ID_SEPARATOR TEXT("|")
 
 /**
  * Unique net id wrapper for a EOS account ids. The underlying string is a combination
@@ -43,113 +38,9 @@ class FUniqueNetIdEOS :
 	public FUniqueNetIdString
 {
 public:
-	template<typename... TArgs>
-	static FUniqueNetIdEOSRef Create(TArgs&&... Args)
-	{
-		return MakeShared<FUniqueNetIdEOS, UNIQUENETID_ESPMODE>(Forward<TArgs>(Args)...);
-	}
-
-	/** Allow MakeShared to see private constructors */
-	friend class SharedPointerInternals::TIntrusiveReferenceController<FUniqueNetIdEOS>;
-
-	static const FUniqueNetIdEOS& Cast(const FUniqueNetId& NetId)
-	{
-		check(GetTypeStatic() == NetId.GetType());
-		return *static_cast<const FUniqueNetIdEOS*>(&NetId);
-	}
-
-	friend uint32 GetTypeHash(const FUniqueNetIdEOS& A)
-	{
-		return ::GetTypeHash(A.UniqueNetIdStr);
-	}
-
-	/** global static instance of invalid (zero) id */
-	static const FUniqueNetIdEOSRef& EmptyId()
-	{
-		static const FUniqueNetIdEOSRef EmptyId(Create());
-		return EmptyId;
-	}
-
-	static FName GetTypeStatic()
-	{
-		static FName NAME_Eos(TEXT("EOS"));
-		return NAME_Eos;
-	}
-
-	virtual FName GetType() const override
-	{
-		return GetTypeStatic();
-	}
-
-	virtual const uint8* GetBytes() const override
-	{
-		return RawBytes;
-	}
-
-	virtual int32 GetSize() const override
-	{
-		return EOS_ID_BYTE_SIZE;
-	}
-
-PACKAGE_SCOPE:
-	void UpdateNetIdStr(const FString& InNetIdStr)
-	{
-		UniqueNetIdStr = InNetIdStr;
-		ParseAccountIds();
-	}
-
-	void ParseAccountIds()
-	{
-		TArray<FString> AccountIds;
-		UniqueNetIdStr.ParseIntoArray(AccountIds, EOS_ID_SEPARATOR, false);
-		if (AccountIds.Num() > 0)
-		{
-			EpicAccountIdStr = AccountIds[0];
-		}
-		else
-		{
-			EpicAccountIdStr = EMPTY_EASID;
-		}
-		AddToBuffer(RawBytes, EpicAccountIdStr);
-		if (AccountIds.Num() > 1)
-		{
-			ProductUserIdStr = AccountIds[1];
-		}
-		else
-		{
-			ProductUserIdStr = EMPTY_PUID;
-		}
-		AddToBuffer(RawBytes + ID_HALF_BYTE_SIZE, ProductUserIdStr);
-	}
-
-	void AddToBuffer(uint8* Buffer, const FString& Source)
-	{
-		check(Source.Len() == 32);
-		for (int32 ReadOffset = 0, WriteOffset = 0; ReadOffset < 32; ReadOffset += 2, WriteOffset++)
-		{
-			FString HexStr = Source.Mid(ReadOffset, 2);
-			// String is in HEX so use the version that takes a base
-			uint8 ToByte = (uint8)FCString::Strtoi(*HexStr, nullptr, 16);
-			Buffer[WriteOffset] = ToByte;
-		}
-	}
-
-	FString EpicAccountIdStr;
-	FString ProductUserIdStr;
-	uint8 RawBytes[EOS_ID_BYTE_SIZE];
-private:
 	FUniqueNetIdEOS()
-		: FUniqueNetIdString(EMPTY_EASID EOS_ID_SEPARATOR EMPTY_PUID)
-	{
-	}
-	
-	explicit FUniqueNetIdEOS(uint8* Bytes, int32 Size)
 		: FUniqueNetIdString()
 	{
-		check(Size == EOS_ID_BYTE_SIZE);
-		EpicAccountIdStr = BytesToHex(Bytes, ID_HALF_BYTE_SIZE);
-		ProductUserIdStr = BytesToHex(Bytes + ID_HALF_BYTE_SIZE, ID_HALF_BYTE_SIZE);
-		UniqueNetIdStr = EpicAccountIdStr + EOS_ID_SEPARATOR + ProductUserIdStr;
 	}
 
 	explicit FUniqueNetIdEOS(const FString& InUniqueNetId)
@@ -169,7 +60,52 @@ private:
 	{
 		ParseAccountIds();
 	}
+
+	friend uint32 GetTypeHash(const FUniqueNetIdEOS& A)
+	{
+		return ::GetTypeHash(A.UniqueNetIdStr);
+	}
+
+	/** global static instance of invalid (zero) id */
+	static const TSharedRef<const FUniqueNetId>& EmptyId()
+	{
+		static const TSharedRef<const FUniqueNetId> EmptyId(MakeShared<FUniqueNetIdEOS>());
+		return EmptyId;
+	}
+
+	virtual FName GetType() const override
+	{
+		static FName NAME_Eos(TEXT("EOS"));
+		return NAME_Eos;
+	}
+
+PACKAGE_SCOPE:
+	void UpdateNetIdStr(const FString& InNetIdStr)
+	{
+		UniqueNetIdStr = InNetIdStr;
+		ParseAccountIds();
+	}
+
+	void ParseAccountIds()
+	{
+		TArray<FString> AccountIds;
+		UniqueNetIdStr.ParseIntoArray(AccountIds, EOS_ID_SEPARATOR, false);
+		if (AccountIds.Num() > 0)
+		{
+			EpicAccountIdStr = AccountIds[0];
+		}
+		if (AccountIds.Num() > 1)
+		{
+			ProductUserIdStr = AccountIds[1];
+		}
+	}
+
+	FString EpicAccountIdStr;
+	FString ProductUserIdStr;
 };
+
+typedef TSharedPtr<FUniqueNetIdEOS> FUniqueNetIdEOSPtr;
+typedef TSharedRef<FUniqueNetIdEOS> FUniqueNetIdEOSRef;
 
 #ifndef AUTH_ATTR_REFRESH_TOKEN
 	#define AUTH_ATTR_REFRESH_TOKEN TEXT("refresh_token")
@@ -213,7 +149,7 @@ class TOnlineUserEOS
 	, public AttributeAccessClass
 {
 public:
-	TOnlineUserEOS(const FUniqueNetIdEOSRef& InNetIdRef)
+	TOnlineUserEOS(FUniqueNetIdEOSRef InNetIdRef)
 		: UserIdRef(InNetIdRef)
 	{
 	}
@@ -223,7 +159,7 @@ public:
 	}
 
 // FOnlineUser
-	virtual FUniqueNetIdRef GetUserId() const override
+	virtual TSharedRef<const FUniqueNetId> GetUserId() const override
 	{
 		return UserIdRef;
 	}
@@ -277,7 +213,7 @@ class TUserOnlineAccountEOS :
 	public TOnlineUserEOS<BaseClass, IAttributeAccessInterface>
 {
 public:
-	TUserOnlineAccountEOS(const FUniqueNetIdEOSRef& InNetIdRef)
+	TUserOnlineAccountEOS(FUniqueNetIdEOSRef InNetIdRef)
 		: TOnlineUserEOS<BaseClass, IAttributeAccessInterface>(InNetIdRef)
 	{
 	}
@@ -333,7 +269,7 @@ class TOnlineFriendEOS :
 	public TOnlineUserEOS<BaseClass, IAttributeAccessInterface>
 {
 public:
-	TOnlineFriendEOS(const FUniqueNetIdEOSRef& InNetIdRef)
+	TOnlineFriendEOS(FUniqueNetIdEOSRef InNetIdRef)
 		: TOnlineUserEOS<BaseClass, IAttributeAccessInterface>(InNetIdRef)
 	{
 	}
@@ -380,7 +316,7 @@ class TOnlineBlockedPlayerEOS :
 	public TOnlineUserEOS<BaseClass, IAttributeAccessInterface>
 {
 public:
-	TOnlineBlockedPlayerEOS(const FUniqueNetIdEOSRef& InNetIdRef)
+	TOnlineBlockedPlayerEOS(FUniqueNetIdEOSRef InNetIdRef)
 		: TOnlineUserEOS<BaseClass, IAttributeAccessInterface>(InNetIdRef)
 	{
 	}
@@ -394,7 +330,7 @@ class TOnlineRecentPlayerEOS :
 	public TOnlineUserEOS<BaseClass, IAttributeAccessInterface>
 {
 public:
-	TOnlineRecentPlayerEOS(const FUniqueNetIdEOSRef& InNetIdRef)
+	TOnlineRecentPlayerEOS(FUniqueNetIdEOSRef InNetIdRef)
 		: TOnlineUserEOS<BaseClass, IAttributeAccessInterface>(InNetIdRef)
 	{
 	}
@@ -511,164 +447,6 @@ private:
 	}
 };
 
-/**
- * Class to handle nested callbacks (callbacks that are tied to an external callback's lifetime,
- * e.g. file chunkers) generically using a lambda to process callback results
- */
-template<typename CallbackFuncType, typename CallbackType,
-	typename Nested1CallbackFuncType, typename Nested1CallbackType, typename Nested1ReturnType>
-class TEOSCallbackWithNested1 :
-	public TEOSCallback<CallbackFuncType, CallbackType>
-{
-public:
-	TEOSCallbackWithNested1() = default;
-	virtual ~TEOSCallbackWithNested1() = default;
-
-
-	Nested1CallbackFuncType GetNested1CallbackPtr()
-	{
-		return &Nested1CallbackImpl;
-	}
-
-	void SetNested1CallbackLambda(TFunction<Nested1ReturnType(const Nested1CallbackType*)> InLambda)
-	{
-		Nested1CallbackLambda = InLambda;
-	}
-
-private:
-	TFunction<Nested1ReturnType(const Nested1CallbackType*)> Nested1CallbackLambda;
-
-	static Nested1ReturnType EOS_CALL Nested1CallbackImpl(const Nested1CallbackType* Data)
-	{
-		check(IsInGameThread());
-
-		TEOSCallbackWithNested1* CallbackThis = (TEOSCallbackWithNested1*)Data->ClientData;
-		check(CallbackThis);
-
-		check(CallbackThis->CallbackLambda);
-		return CallbackThis->Nested1CallbackLambda(Data);
-	}
-};
-
-/**
- * Class to handle 2 nested callbacks (callbacks that are tied to an external callback's lifetime,
- * e.g. file chunkers) generically using a lambda to process callback results
- */
-template<typename CallbackFuncType, typename CallbackType,
-	typename Nested1CallbackFuncType, typename Nested1CallbackType, typename Nested1ReturnType,
-	typename Nested2CallbackFuncType, typename Nested2CallbackType>
-class TEOSCallbackWithNested2 :
-	public TEOSCallbackWithNested1<CallbackFuncType, CallbackType, Nested1CallbackFuncType, Nested1CallbackType, Nested1ReturnType>
-{
-public:
-	TEOSCallbackWithNested2() = default;
-	virtual ~TEOSCallbackWithNested2() = default;
-
-
-	Nested2CallbackFuncType GetNested2CallbackPtr()
-	{
-		return &Nested2CallbackImpl;
-	}
-
-	void SetNested2CallbackLambda(TFunction<void(const Nested2CallbackType*)> InLambda)
-	{
-		Nested2CallbackLambda = InLambda;
-	}
-
-private:
-	TFunction<void(const Nested2CallbackType*)> Nested2CallbackLambda;
-
-	static void EOS_CALL Nested2CallbackImpl(const Nested2CallbackType* Data)
-	{
-		check(IsInGameThread());
-
-		TEOSCallbackWithNested2* CallbackThis = (TEOSCallbackWithNested2*)Data->ClientData;
-		check(CallbackThis);
-
-		check(CallbackThis->CallbackLambda);
-		CallbackThis->Nested2CallbackLambda(Data);
-	}
-};
-
-/**
- * Class to handle nested callbacks (callbacks that are tied to an external callback's lifetime,
- * e.g. file chunkers) generically using a lambda to process callback results
- */
-template<typename CallbackFuncType, typename CallbackType,
-	typename Nested1CallbackFuncType, typename Nested1CallbackType, typename Nested1ReturnType>
-	class TEOSCallbackWithNested1Param3 :
-	public TEOSCallback<CallbackFuncType, CallbackType>
-{
-public:
-	TEOSCallbackWithNested1Param3() = default;
-	virtual ~TEOSCallbackWithNested1Param3() = default;
-
-
-	Nested1CallbackFuncType GetNested1CallbackPtr()
-	{
-		return (Nested1CallbackFuncType)&Nested1CallbackImpl;
-	}
-
-	void SetNested1CallbackLambda(TFunction<Nested1ReturnType(const Nested1CallbackType*, void*, uint32_t*)> InLambda)
-	{
-		Nested1CallbackLambda = InLambda;
-	}
-
-private:
-	TFunction<Nested1ReturnType(const Nested1CallbackType*, void*, uint32_t*)> Nested1CallbackLambda;
-
-	static Nested1ReturnType EOS_CALL Nested1CallbackImpl(const Nested1CallbackType* Data, void* OutDataBuffer, uint32_t* OutDataWritten)
-	{
-		check(IsInGameThread());
-
-		TEOSCallbackWithNested1Param3* CallbackThis = (TEOSCallbackWithNested1Param3*)Data->ClientData;
-		check(CallbackThis);
-
-		check(CallbackThis->CallbackLambda);
-		return CallbackThis->Nested1CallbackLambda(Data, OutDataBuffer, OutDataWritten);
-	}
-};
-
-/**
- * Class to handle 2 nested callbacks (callbacks that are tied to an external callback's lifetime,
- * e.g. file chunkers) generically using a lambda to process callback results
- */
-template<typename CallbackFuncType, typename CallbackType,
-	typename Nested1CallbackFuncType, typename Nested1CallbackType, typename Nested1ReturnType,
-	typename Nested2CallbackFuncType, typename Nested2CallbackType>
-	class TEOSCallbackWithNested2ForNested1Param3 :
-	public TEOSCallbackWithNested1Param3<CallbackFuncType, CallbackType, Nested1CallbackFuncType, Nested1CallbackType, Nested1ReturnType>
-{
-public:
-	TEOSCallbackWithNested2ForNested1Param3() = default;
-	virtual ~TEOSCallbackWithNested2ForNested1Param3() = default;
-
-
-	Nested2CallbackFuncType GetNested2CallbackPtr()
-	{
-		return &Nested2CallbackImpl;
-	}
-
-	void SetNested2CallbackLambda(TFunction<void(const Nested2CallbackType*)> InLambda)
-	{
-		Nested2CallbackLambda = InLambda;
-	}
-
-private:
-	TFunction<void(const Nested2CallbackType*)> Nested2CallbackLambda;
-
-	static void EOS_CALL Nested2CallbackImpl(const Nested2CallbackType* Data)
-	{
-		check(IsInGameThread());
-
-		TEOSCallbackWithNested2ForNested1Param3* CallbackThis = (TEOSCallbackWithNested2ForNested1Param3*)Data->ClientData;
-		check(CallbackThis);
-
-		check(CallbackThis->CallbackLambda);
-		CallbackThis->Nested2CallbackLambda(Data);
-	}
-};
-
 /** Class to handle all callbacks generically using a lambda to process callback results */
 template<typename CallbackFuncType, typename CallbackType>
 class TEOSGlobalCallback :
@@ -738,7 +516,7 @@ PACKAGE_SCOPE:
 	/** The ip & port that the host is listening on (valid for LAN/GameServer) */
 	TSharedPtr<class FInternetAddr> HostAddr;
 	/** Unique Id for this session */
-	FUniqueNetIdStringRef SessionId;
+	FUniqueNetIdEOS SessionId;
 	/** EOS session handle. Note: this needs to be released by the SDK */
 	EOS_HSessionDetails SessionHandle;
 	/** Whether we should delete this handle or not */
@@ -765,17 +543,17 @@ public:
 	}
 	virtual FString ToString() const override
 	{
-		return SessionId->ToString();
+		return SessionId.ToString();
 	}
 	virtual FString ToDebugString() const override
 	{
 		return FString::Printf(TEXT("HostIP: %s SessionId: %s"),
 			HostAddr.IsValid() ? *HostAddr->ToString(true) : TEXT("INVALID"),
-			*SessionId->ToDebugString());
+			*SessionId.ToDebugString());
 	}
 	virtual const FUniqueNetId& GetSessionId() const override
 	{
-		return *SessionId;
+		return SessionId;
 	}
 };
 

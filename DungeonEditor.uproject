@@ -155,6 +155,7 @@
 		"MacNoEditor",
 		"WindowsNoEditor",
 		"WindowsNoEditorWin32",
-		"AllDesktop"
+		"AllDesktop",
+		"Android"
 	]
 }
