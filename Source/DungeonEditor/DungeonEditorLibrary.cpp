@@ -2,12 +2,10 @@
 
 /*
 @TODO : Upload\Download de donjons 0/4
-@TODO :		-Serveur où on peut upload les donjons(DungeonEditorServer.exe)
-@TODO :		-Menu de téléchargement de donjons
+@TODO :		-Serveur o? on peut upload les donjons(DungeonEditorServer.exe)
+@TODO :		-Menu de t?l?chargement de donjons
 @TODO :		-Upload de donjons(nom, uid, auteur, version minimum)
-@TODO :		-Récupération donjons du server
-
-@TODO : Version affichée en jeu
+@TODO :		-R?cup?ration donjons du server
 */
 
 #include "DungeonEditorLibrary.h"
