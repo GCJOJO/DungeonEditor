@@ -116,6 +116,7 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/Mats/Tiles/OldDungeon/ImcompleteFloor.ImcompleteFloor
 /Game/Mats/Tiles/OldDungeon/M_Bricks.M_Bricks
 /Game/Mats/Tiles/OldDungeon/Stone_Mat.Stone_Mat
+/Game/Mats/Tiles/OldDungeon/Stone_Mat_Inst.Stone_Mat_Inst
 /Game/Mats/Tiles/OldDungeon/Wood.Wood
 /Game/Mats/Utils/Cursor/M_Cursor.M_Cursor
 /Game/Mats/Utils/Debug_Greenscreen.Debug_Greenscreen
@@ -144,8 +145,8 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/MSPresets/MS_DefaultMaterial/MS_DefaultMaterial.MS_DefaultMaterial
 /Game/Ressources/FBXs/OldDungeon/3DTiles/Spawn/Flag1.Flag1
 /Game/Ressources/FBXs/OldDungeon/3DTiles/Spawn/Metal.Metal
+/Game/Ressources/FBXs/OldDungeon/3DTiles/Torch/Fire.Fire
 /Game/Ressources/FBXs/OldDungeon/3DTiles/Torch/palette.palette
-/Game/Ressources/FBXs/OldDungeon/3DTiles/Torch/White.White
 /Game/Ressources/FBXs/OldDungeon/3DTiles/Torch/Wood.Wood
 /Game/Ressources/FBXs/OldDungeon/3DTiles/Wall/Bricks.Bricks
 /Game/Ressources/FBXs/OldDungeon/3DTiles/Wall/Top.Top
