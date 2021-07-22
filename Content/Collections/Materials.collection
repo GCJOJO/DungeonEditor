@@ -112,6 +112,7 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/IgnoreCook/M_TableRound.M_TableRound
 /Game/Mannequin/Character/Materials/M_UE4Man_Body.M_UE4Man_Body
 /Game/Mats/Tiles/OldDungeon/BlueDoor.BlueDoor
+/Game/Mats/Tiles/OldDungeon/BlueDoor_Inst.BlueDoor_Inst
 /Game/Mats/Tiles/OldDungeon/EditableTexture_M.EditableTexture_M
 /Game/Mats/Tiles/OldDungeon/ImcompleteFloor.ImcompleteFloor
 /Game/Mats/Tiles/OldDungeon/M_Bricks.M_Bricks
