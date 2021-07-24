@@ -31,6 +31,7 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/BPs/Spawnalbes/Traps/SpikeTrap_Wall.SpikeTrap_Wall
 /Game/BPs/VarsBP.VarsBP
 /Game/IgnoreCook/DEplayerController.DEplayerController
+/Game/Input/EditorTouchInterface.EditorTouchInterface
 /Game/Struct/Saves/ActorsSave.ActorsSave
 /Game/Struct/Saves/ChestSave.ChestSave
 /Game/Struct/Saves/LeverSave.LeverSave
