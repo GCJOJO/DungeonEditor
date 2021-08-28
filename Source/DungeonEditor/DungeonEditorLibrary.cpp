@@ -1,7 +1,7 @@
 // G.C*JOJO
 
 /*
-@TODO : Upload\Download de donjons 0/4
+@TODO : Upload\Download de donjons 0/4 (Avec EOS ? Non je ne pense pas...)
 @TODO :		-Serveur o? on peut upload les donjons(DungeonEditorServer.exe)
 @TODO :		-Menu de t?l?chargement de donjons
 @TODO :		-Upload de donjons(nom, uid, auteur, version minimum)

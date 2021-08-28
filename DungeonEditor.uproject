@@ -133,10 +133,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "OnlineSubsystemEOS",
-			"Enabled": false
-		},
-		{
 			"Name": "VivoxCore",
 			"Enabled": true
 		},

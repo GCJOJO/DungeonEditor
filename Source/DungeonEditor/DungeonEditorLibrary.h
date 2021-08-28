@@ -91,6 +91,17 @@ enum HoleType
 	Lava
 };
 
+UENUM(BlueprintType)
+enum Direction
+{
+	X,
+	Y,
+	Z,
+	NegativeX,
+	NegativeY,
+	NegativeZ
+};
+
 UCLASS()
 class DUNGEONEDITOR_API UDungeonEditorLibrary : public UBlueprintFunctionLibrary
 {
