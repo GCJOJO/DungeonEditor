@@ -65,10 +65,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "Ansel",
-			"Enabled": true
-		},
-		{
 			"Name": "ActionsExtension",
 			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/2924990b22c1452aa20a21af60c4aa12"
@@ -142,6 +138,10 @@
 		},
 		{
 			"Name": "FieldSystemPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "Ansel",
 			"Enabled": true
 		}
 	],
