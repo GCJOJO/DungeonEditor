@@ -5,26 +5,7 @@
 
 ## The Game is also on [Itch.io](https://gcjojo.itch.io/dungeon-editor)
 
-# Setup
-
--First download the project or open it with Github Desktop\
-![download-source-img](https://github.com/GCJOJO/DungeonEditor/blob/master/docs/Ressources/IMG/download-source.PNG)
-
-Then download Unreal Engine 4 source and build it : [Tutorial on how to build Unreal Engine 4 from the source code](https://github.com/EpicGames/UnrealEngine#getting-up-and-running)\
-
-
-Then right click the ```DungeonEditor.uproject``` file and select the ```Switch Unreal Engine Version``` option. A windows will open asking you to select the UE4 version. Select the Source Build version.
-
-![switch-ue4-img](https://github.com/GCJOJO/DungeonEditor/blob/master/docs/Ressources/IMG/switch-ue4-version-and-gen-file.png)
-![switch-windows-img](https://github.com/GCJOJO/DungeonEditor/blob/master/docs/Ressources/IMG/switc-ue4-version-windows.PNG)
-
-After this right click the ```DungeonEditor.uproject``` file and select the ```Generate Visual Studio Project Files``` option if you use Visual Studio.
-
-When it's finished double click ```DungeonEditor.sln``` and build the DungeonEditor project with the ```Development Editor``` configuration
-
-![build-source-img](https://github.com/GCJOJO/DungeonEditor/blob/master/docs/Ressources/IMG/build-source.png)
-
-Then launch the .uproject file and **create** !
+[Set Up the Project](https://github.com/GCJOJO/DungeonEditor/wiki/Setting-up-the-Project)
 
 # Launch game from Standalone.bat
   -First you will need to change "F:\UnrealEngine\Engine\Binaries\Win64\UE4Editor.exe" in Standalone.bat by you UE4Editor.exe location\
