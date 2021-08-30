@@ -9,9 +9,9 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/IgnoreCook/StarterMap.StarterMap
 /Game/Levels/CreateWorld.CreateWorld
 /Game/Levels/CreateWorld_BuiltData.CreateWorld_BuiltData
+/Game/Levels/CustomEntry.CustomEntry
+/Game/Levels/CustomEntry_BuiltData.CustomEntry_BuiltData
 /Game/Levels/Dungeons/Dungeon1/Dungeon1.Dungeon1
-/Game/Levels/Entry.Entry
-/Game/Levels/Entry_BuiltData.Entry_BuiltData
 /Game/Levels/MainMenu.MainMenu
 /Game/Levels/MainMenu_BuiltData.MainMenu_BuiltData
 /Game/Levels/PlayWorld.PlayWorld
