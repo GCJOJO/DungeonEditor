@@ -105,10 +105,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "SteamController",
-			"Enabled": true
-		},
-		{
 			"Name": "SoundCueTemplates",
 			"Enabled": true
 		},
@@ -142,6 +138,10 @@
 		},
 		{
 			"Name": "Ansel",
+			"Enabled": true
+		},
+		{
+			"Name": "SteamController",
 			"Enabled": true
 		}
 	],
