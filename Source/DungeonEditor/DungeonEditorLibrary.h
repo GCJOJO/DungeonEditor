@@ -102,6 +102,13 @@ enum Direction
 	NegativeZ
 };
 
+UENUM(BlueprintType)
+enum ChangeSubLevelMode
+{
+	Single,
+	Multiple
+};
+
 UCLASS()
 class DUNGEONEDITOR_API UDungeonEditorLibrary : public UBlueprintFunctionLibrary
 {
