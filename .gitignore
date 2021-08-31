@@ -72,6 +72,10 @@ Saved/StagedBuilds
 Saved/StagedBuilds/*
 Saved/Packages/
 
+Mods/*
+
+
+
 # Compiled source files for the engine to use
 Intermediate/*
 Plugins/*/Intermediate/*
