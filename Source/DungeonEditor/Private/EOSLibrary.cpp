@@ -3,7 +3,7 @@
 
 #include "EOSLibrary.h"
 
-/*#include <complex>
+#include <complex>
 #include "F:/UnrealEngine/Engine/Plugins/Online/OnlineSubsystem/Source/Public/Interfaces/OnlineFriendsInterface.h"
 #include "Interfaces/OnlinePresenceInterface.h"
 #include "Source\Public\OnlineSubsystem.h"
@@ -100,4 +100,9 @@ void UEOSLibrary::GetPlayerFriends(int32 LocalUserNum)
 		}
 	}
 }
-*/
+
+bool UEOSLibrary::CreateLobby(int32 localUserNum, FText GroupName, FText GroupDesc, FText GroupMotto,
+	bool bIsInviteOnly, FString GroupLanguage)
+{
+	return true;
+}

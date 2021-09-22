@@ -117,6 +117,14 @@ enum ChangeSubLevelMode
 	Exit
 };
 
+UENUM(BlueprintType)
+enum ECustomCameraState
+{
+	Idle,
+	BlendingUp,
+	BlendingDown,
+	Showing
+};
 
 UCLASS()
 class DUNGEONEDITOR_API UDungeonEditorLibrary : public UBlueprintFunctionLibrary

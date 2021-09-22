@@ -125,14 +125,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "VivoxCore",
-			"Enabled": true
-		},
-		{
-			"Name": "VivoxVoiceChat",
-			"Enabled": true
-		},
-		{
 			"Name": "FieldSystemPlugin",
 			"Enabled": true
 		},
@@ -142,6 +134,18 @@
 		},
 		{
 			"Name": "SteamController",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemEOS",
+			"Enabled": true
+		},
+		{
+			"Name": "EOSVoiceChat",
+			"Enabled": true
+		},
+		{
+			"Name": "EOSShared",
 			"Enabled": true
 		}
 	],

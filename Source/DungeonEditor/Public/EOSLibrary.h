@@ -21,7 +21,7 @@ UCLASS()
 class DUNGEONEDITOR_API UEOSLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
-	/*	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Login"))
+		UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Login"))
 		static void Login(int32 UserNum, ELoginType loginType);
 		UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Logout"))
 		static void Logout(int32 UserNum);
@@ -31,5 +31,5 @@ class DUNGEONEDITOR_API UEOSLibrary : public UBlueprintFunctionLibrary
 		static void GetPlayerFriends(int32 LocalUserNum);
 
 		UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Create Lobby"))
-		static bool CreateLobby(int32 localUserNum, FText GroupName, FText GroupDesc, FText GroupMotto, bool bIsInviteOnly, FString GroupLanguage);*/
+		static bool CreateLobby(int32 localUserNum, FText GroupName, FText GroupDesc, FText GroupMotto, bool bIsInviteOnly, FString GroupLanguage);
 };

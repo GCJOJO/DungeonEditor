@@ -11,5 +11,8 @@ public class DungeonEditorServerTarget : TargetRules
 		Type = TargetType.Server;
 		BuildEnvironment = TargetBuildEnvironment.Shared;
 		ExtraModuleNames.Add("DungeonEditor");
+
+		bCompileChaos = true;
+		bUseChaos = true;
 	}
 }
