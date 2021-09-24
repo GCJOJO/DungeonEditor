@@ -5,6 +5,8 @@
 
 ## The Game is also on [Itch.io](https://gcjojo.itch.io/dungeon-editor)
 
+Some of the icons made by : https://www.flaticon.com/free-icon/
+
 # Setup
 
 -First download the project or open it with Github Desktop\
