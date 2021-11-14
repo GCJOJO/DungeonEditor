@@ -3,37 +3,39 @@
 
 #include "EOSLibrary.h"
 
+
 #include <complex>
-#include "F:/UnrealEngine/Engine/Plugins/Online/OnlineSubsystem/Source/Public/Interfaces/OnlineFriendsInterface.h"
+/*#include "F:/UnrealEngine/Engine/Plugins/Online/OnlineSubsystem/Source/Public/Interfaces/OnlineFriendsInterface.h"
 #include "Interfaces/OnlinePresenceInterface.h"
+#include "D:/UnrealEngine/UE_4.27/UE_4.27/Engine/Plugins/Online/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Public/OnlineSubsystemEOS.h"
+#include "D:/UnrealEngine/UE_4.27/UE_4.27/Engine/Plugins/Online/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/UserManagerEOS.h"
 #include "Source\Public\OnlineSubsystem.h"
 #include "Source\Public\Interfaces\OnlineGroupsInterface.h"
-#include "Source\Public\Interfaces\OnlineIdentityInterface.h"
+#include "Source\Public\Interfaces\OnlineIdentityInterface.h"*/
 
-void UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
+bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
 {
-	FOnlineAccountCredentials Credentials;
+	/*FOnlineAccountCredentials Credentials;
 	
-	switch (loginType) {
-	case Web:
+	switch (loginType)
+	{
+		case Web:
 
-		Credentials.Id = TEXT("");
-		Credentials.Token = TEXT("");
-		Credentials.Type = TEXT("web");
+			Credentials.Id = TEXT("");
+			Credentials.Token = TEXT("");
+			Credentials.Type = TEXT("accountportal");
 
-		break;
-	case Code:
+			break;
+		case Code:
 
-		Credentials.Id = TEXT("");
-		Credentials.Token = TEXT("");
-		Credentials.Type = TEXT("exchangecode");
+			Credentials.Id = TEXT("");
+			Credentials.Token = TEXT("");
+			Credentials.Type = TEXT("exchangecode");
 
-		break;
-	default:
-		break;
+			break;
+		default:
+			break;
 	}
-	
-	
 
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
@@ -41,27 +43,46 @@ void UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
 		IOnlineIdentityPtr Identity = OSS->GetIdentityInterface();
 		if (Identity.IsValid())
 		{
-			Identity->Login(UserNum, Credentials);
+			return Identity->Login(UserNum, Credentials);
 		}
-	}
+		return false;
+	}*/
+	return false;
 }
 
-void UEOSLibrary::Logout(int32 UserNum)
+bool UEOSLibrary::Logout(int32 UserNum)
 {
-	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+	/*IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
 	{
 		IOnlineIdentityPtr Identity = OSS->GetIdentityInterface();
 		if (Identity.IsValid())
 		{
-			Identity->Logout(UserNum);
+			return Identity->Logout(UserNum);
 		}
-	}
+		return false;
+	}*/
+	return false;
+}
+
+bool UEOSLibrary::TryAutoLogin(int32 UserNum)
+{
+	/*IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+	if(OSS)
+	{
+		IOnlineIdentityPtr Identity = OSS->GetIdentityInterface();
+		if(Identity.IsValid())
+		{
+			return Identity->AutoLogin(UserNum);
+		}
+		return false;
+	}*/
+	return false;
 }
 
 FString UEOSLibrary::GetPlayerNickname(int32 LocalUserNum)
 {
-	FString playerName = TEXT("Null");
+	/*FString playerName = TEXT("Null");
 
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
@@ -75,15 +96,17 @@ FString UEOSLibrary::GetPlayerNickname(int32 LocalUserNum)
 		return playerName;
 	}
 	return playerName;
+	*/
+	return "NULL";
 }
 
 void UEOSLibrary::GetPlayerFriends(int32 LocalUserNum)
 {
-	TArray< TSharedRef<FOnlineFriend> > friendList ;
-	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
-	if (OSS)
-	{
-		IOnlineFriendsPtr Friends = OSS->GetFriendsInterface();
+//	TArray< TSharedRef<FOnlineFriend> > friendList;
+//	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+//	if (OSS)
+//	{
+		/*IOnlineFriendsPtr Friends = OSS->GetFriendsInterface();
 		if (Friends.IsValid())
 		{
 			Friends->GetFriendsList(LocalUserNum, "default", friendList);
@@ -97,12 +120,52 @@ void UEOSLibrary::GetPlayerFriends(int32 LocalUserNum)
 			{
 				UE_LOG(LogTemp, Warning, TEXT("Friends List not found !"));
 			}
-		}
-	}
+		}*/
+	//}
 }
 
 bool UEOSLibrary::CreateLobby(int32 localUserNum, FText GroupName, FText GroupDesc, FText GroupMotto,
 	bool bIsInviteOnly, FString GroupLanguage)
 {
-	return true;
+	/*IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+	if(OSS)
+	{
+		IOnlineGroupsPtr Groups = OSS->GetGroupsInterface();
+		FGroupDisplayInfo groupInfo;
+		groupInfo.Name = GroupName;
+		groupInfo.Description = GroupDesc;
+		groupInfo.Language = GroupLanguage;
+		groupInfo.Motto = GroupMotto;
+		groupInfo.InviteOnly = bIsInviteOnly;
+		//Groups->CreateGroup();
+		return false;
+	}*/
+	return false;
+}
+
+EUserLoginStatus UEOSLibrary::GetLoginStatus(int32 localUserNum)
+{
+	/*IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+	if (OSS)
+	{
+		IOnlineIdentityPtr Identity = OSS->GetIdentityInterface();
+		if (Identity.IsValid())
+		{
+			EUserLoginStatus LoginStatus;
+			switch(Identity->GetLoginStatus(localUserNum))
+			{
+				default : LoginStatus = EUserLoginStatus::NotLoggedIn;
+					break;
+				case ELoginStatus::LoggedIn : LoginStatus = EUserLoginStatus::LoggedIn;
+					break;
+				case ELoginStatus::NotLoggedIn : LoginStatus = EUserLoginStatus::NotLoggedIn;
+					break;
+				case ELoginStatus::UsingLocalProfile : LoginStatus = EUserLoginStatus::UsingLocalProfile;
+					break;
+			}
+			return LoginStatus;
+		}
+		return EUserLoginStatus::NotLoggedIn;
+	}*/
+	return EUserLoginStatus::NotLoggedIn;
 }

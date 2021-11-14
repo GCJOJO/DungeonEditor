@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{F80AD0E3-4F7F-04CD-3992-D4B6A93BECA3}",
+	"EngineAssociation": "4.27",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -137,16 +137,12 @@
 			"Enabled": true
 		},
 		{
-			"Name": "OnlineSubsystemEOS",
-			"Enabled": true
-		},
-		{
 			"Name": "EOSVoiceChat",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "EOSShared",
-			"Enabled": true
+			"Enabled": false
 		}
 	],
 	"TargetPlatforms": [
