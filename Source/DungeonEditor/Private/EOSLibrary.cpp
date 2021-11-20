@@ -5,14 +5,14 @@
 
 
 #include <complex>
-/*#include "F:/UnrealEngine/Engine/Plugins/Online/OnlineSubsystem/Source/Public/Interfaces/OnlineFriendsInterface.h"
+/*#include <OnlineSubsystemEOS.h>
+#include "UserManagerEOS.h"
+#include "Interfaces/OnlineFriendsInterface.h"
 #include "Interfaces/OnlinePresenceInterface.h"
-#include "D:/UnrealEngine/UE_4.27/UE_4.27/Engine/Plugins/Online/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Public/OnlineSubsystemEOS.h"
-#include "D:/UnrealEngine/UE_4.27/UE_4.27/Engine/Plugins/Online/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/UserManagerEOS.h"
+#include "Interfaces\OnlineGroupsInterface.h"
+#include "Interfaces\OnlineIdentityInterface.h"
 #include "Source\Public\OnlineSubsystem.h"
-#include "Source\Public\Interfaces\OnlineGroupsInterface.h"
-#include "Source\Public\Interfaces\OnlineIdentityInterface.h"*/
-
+*/
 bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
 {
 	/*FOnlineAccountCredentials Credentials;
@@ -82,8 +82,9 @@ bool UEOSLibrary::TryAutoLogin(int32 UserNum)
 
 FString UEOSLibrary::GetPlayerNickname(int32 LocalUserNum)
 {
-	/*FString playerName = TEXT("Null");
-
+	
+	FString playerName = TEXT("Null");
+	/*
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
 	{
@@ -94,9 +95,9 @@ FString UEOSLibrary::GetPlayerNickname(int32 LocalUserNum)
 			return playerName;
 		}
 		return playerName;
-	}
+	}*/
 	return playerName;
-	*/
+	
 	return "NULL";
 }
 
@@ -105,7 +106,7 @@ void UEOSLibrary::GetPlayerFriends(int32 LocalUserNum)
 //	TArray< TSharedRef<FOnlineFriend> > friendList;
 //	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 //	if (OSS)
-//	{
+	{
 		/*IOnlineFriendsPtr Friends = OSS->GetFriendsInterface();
 		if (Friends.IsValid())
 		{
@@ -121,7 +122,7 @@ void UEOSLibrary::GetPlayerFriends(int32 LocalUserNum)
 				UE_LOG(LogTemp, Warning, TEXT("Friends List not found !"));
 			}
 		}*/
-	//}
+	}
 }
 
 bool UEOSLibrary::CreateLobby(int32 localUserNum, FText GroupName, FText GroupDesc, FText GroupMotto,

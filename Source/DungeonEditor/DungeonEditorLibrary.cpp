@@ -1,11 +1,17 @@
 // G.C*JOJO
 
 /*
-@TODO : Upload\Download de donjons 0/4 (Avec EOS ? Non je ne pense pas...)
-@TODO :		-Serveur o? on peut upload les donjons(DungeonEditorServer.exe)
-@TODO :		-Menu de t?l?chargement de donjons
+@TODO : Upload\Download de donjons 0/4
+@TODO :		-Serveur où on peut upload les donjons(DungeonEditorServer.exe)
+@TODO :		-Menu de téléchargement de donjons
 @TODO :		-Upload de donjons(nom, uid, auteur, version minimum)
-@TODO :		-R?cup?ration donjons du server
+@TODO :		-Récupération donjons du server
+
+@TODO : Multijoueur ??? (Avec EOS ???)
+@TODO :		-Rejoindre/Créer des parties
+@TODO :		-Système de chef de groupe
+@TODO :		-Chef de groupe qui peut choisir des niveau téléchargés
+@TODO :		-Liste d'amis et parties privées
 */
 
 #include "DungeonEditorLibrary.h"

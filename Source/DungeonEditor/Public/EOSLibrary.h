@@ -20,11 +20,11 @@ enum ELoginType
 UENUM(BlueprintType)
 enum EUserLoginStatus
 {
-	/** Player has not logged in or chosen a local profile */
+	/* Player has not logged in or chosen a local profile */
 	NotLoggedIn,
-	/** Player is using a local profile but is not logged in */
+	/* Player is using a local profile but is not logged in */
 	UsingLocalProfile,
-	/** Player has been validated by the platform specific authentication service */
+	/* Player has been validated by the platform specific authentication service */
 	LoggedIn
 };
 
