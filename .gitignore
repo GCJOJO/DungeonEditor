@@ -83,6 +83,5 @@ DerivedDataCache/*
 
 Patching/
 
-Config/DefaultEngine.ini
-
+Plugins/Developer/RiderLink/Win64/*
 *.ini
