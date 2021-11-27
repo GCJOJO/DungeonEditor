@@ -82,4 +82,7 @@ Plugins/*/Intermediate/*
 DerivedDataCache/*
 
 Patching/
+
 Config/DefaultEngine.ini
+
+*.ini

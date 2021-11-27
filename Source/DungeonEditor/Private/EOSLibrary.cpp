@@ -2,8 +2,6 @@
 
 
 #include "EOSLibrary.h"
-
-
 #include <complex>
 /*#include <OnlineSubsystemEOS.h>
 #include "UserManagerEOS.h"
@@ -13,9 +11,13 @@
 #include "Interfaces\OnlineIdentityInterface.h"
 #include "Source\Public\OnlineSubsystem.h"
 */
+#include "OnlineSubsystem.h"
+
+#define DISPLAY_LOG(fmt, ...) if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT(fmt), __VA_ARGS__));
+
 bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
 {
-	/*FOnlineAccountCredentials Credentials;
+	FOnlineAccountCredentials Credentials;
 	
 	switch (loginType)
 	{
@@ -43,16 +45,22 @@ bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
 		IOnlineIdentityPtr Identity = OSS->GetIdentityInterface();
 		if (Identity.IsValid())
 		{
+			Identity->OnLoginCompleteDelegates->Clear();
+			Identity->OnLoginCompleteDelegates->AddLambda([&](int32 i, bool successful, const FUniqueNetId& userID, const FString& error)
+			{
+					DISPLAY_LOG("Logged In !")
+			});//Don't forget the ";" in the end of your parenthesis!
+
 			return Identity->Login(UserNum, Credentials);
 		}
 		return false;
-	}*/
+	}
 	return false;
 }
 
 bool UEOSLibrary::Logout(int32 UserNum)
 {
-	/*IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
 	{
 		IOnlineIdentityPtr Identity = OSS->GetIdentityInterface();
@@ -61,13 +69,13 @@ bool UEOSLibrary::Logout(int32 UserNum)
 			return Identity->Logout(UserNum);
 		}
 		return false;
-	}*/
+	}
 	return false;
 }
 
 bool UEOSLibrary::TryAutoLogin(int32 UserNum)
 {
-	/*IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if(OSS)
 	{
 		IOnlineIdentityPtr Identity = OSS->GetIdentityInterface();
@@ -76,7 +84,7 @@ bool UEOSLibrary::TryAutoLogin(int32 UserNum)
 			return Identity->AutoLogin(UserNum);
 		}
 		return false;
-	}*/
+	}
 	return false;
 }
 
@@ -84,7 +92,7 @@ FString UEOSLibrary::GetPlayerNickname(int32 LocalUserNum)
 {
 	
 	FString playerName = TEXT("Null");
-	/*
+	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
 	{
@@ -95,7 +103,7 @@ FString UEOSLibrary::GetPlayerNickname(int32 LocalUserNum)
 			return playerName;
 		}
 		return playerName;
-	}*/
+	}
 	return playerName;
 	
 	return "NULL";
