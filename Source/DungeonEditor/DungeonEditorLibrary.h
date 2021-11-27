@@ -129,6 +129,15 @@ enum HoleType
 };
 
 UENUM(BlueprintType)
+enum SkyboxType
+{
+	lava,
+	Castle,
+	Space,
+	Forest
+};
+
+UENUM(BlueprintType)
 enum Direction
 {
 	X,
