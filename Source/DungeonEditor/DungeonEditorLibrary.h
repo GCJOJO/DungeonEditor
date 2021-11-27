@@ -113,12 +113,12 @@ enum DungeonEditorErrorType
 UENUM(BlueprintType)
 enum AIAction
 {
-	idle,
-	move,
-	idleShop,
-	enterShop,
-	exitShop,
-	moveShop
+	AiIdle,
+	AiMove,
+	AiIdleShop,
+	AiEnterShop,
+	AiExitShop,
+	AiMoveShop
 };
 
 UENUM(BlueprintType)
@@ -131,10 +131,10 @@ enum HoleType
 UENUM(BlueprintType)
 enum SkyboxType
 {
-	lava,
-	Castle,
-	Space,
-	Forest
+	SkyboxLava,
+	SkyboxCastle,
+	SkyboxSpace,
+	SkyboxForest
 };
 
 UENUM(BlueprintType)

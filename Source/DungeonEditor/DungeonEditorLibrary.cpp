@@ -80,31 +80,31 @@ AIAction UDungeonEditorLibrary::AIChooseSomething(int RandomInt)
 	switch (RandomInt)
 	{
 	case 0:
-		return AIAction::idle;
+		return AIAction::AiIdle;
 		break;
 	case 1:
-		return AIAction::idle;
+		return AIAction::AiIdle;
 		break;
 	case 2:
-		return AIAction::move;
+		return AIAction::AiMove;
 		break;
 	case 3:
-		return AIAction::move;
+		return AIAction::AiMove;
 		break;
 	case 4:
-		return AIAction::idleShop;
+		return AIAction::AiIdleShop;
 		break;
 	case 5:
-		return AIAction::enterShop;
+		return AIAction::AiEnterShop;
 		break;
 	case 6:
-		return AIAction::moveShop;
+		return AIAction::AiMoveShop;
 		break;
 
 	default:
-		return AIAction::idle;
+		return AIAction::AiIdle;
 	}
-	return AIAction::idle;
+	return AIAction::AiIdle;
 
 }
 
