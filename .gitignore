@@ -84,4 +84,5 @@ DerivedDataCache/*
 Patching/
 
 Plugins/Developer/RiderLink/Win64/*
+Plugins/Developer/RiderLink/Intermediate/*
 *.ini

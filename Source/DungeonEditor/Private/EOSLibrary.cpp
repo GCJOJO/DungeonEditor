@@ -12,6 +12,8 @@
 #include "Source\Public\OnlineSubsystem.h"
 */
 #include "OnlineSubsystem.h"
+#include "Interfaces/OnlineIdentityInterface.h"
+#include "Interfaces/OnlineFriendsInterface.h"
 
 #define DISPLAY_LOG(fmt, ...) if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT(fmt), __VA_ARGS__));
 
@@ -114,7 +116,7 @@ void UEOSLibrary::GetPlayerFriends(int32 LocalUserNum)
 //	TArray< TSharedRef<FOnlineFriend> > friendList;
 //	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 //	if (OSS)
-	{
+//	{
 		/*IOnlineFriendsPtr Friends = OSS->GetFriendsInterface();
 		if (Friends.IsValid())
 		{
@@ -130,7 +132,7 @@ void UEOSLibrary::GetPlayerFriends(int32 LocalUserNum)
 				UE_LOG(LogTemp, Warning, TEXT("Friends List not found !"));
 			}
 		}*/
-	}
+//	}
 }
 
 bool UEOSLibrary::CreateLobby(int32 localUserNum, FText GroupName, FText GroupDesc, FText GroupMotto,
@@ -154,7 +156,7 @@ bool UEOSLibrary::CreateLobby(int32 localUserNum, FText GroupName, FText GroupDe
 
 EUserLoginStatus UEOSLibrary::GetLoginStatus(int32 localUserNum)
 {
-	/*IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
 	{
 		IOnlineIdentityPtr Identity = OSS->GetIdentityInterface();
@@ -175,6 +177,6 @@ EUserLoginStatus UEOSLibrary::GetLoginStatus(int32 localUserNum)
 			return LoginStatus;
 		}
 		return EUserLoginStatus::NotLoggedIn;
-	}*/
+	}
 	return EUserLoginStatus::NotLoggedIn;
 }

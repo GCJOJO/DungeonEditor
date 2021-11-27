@@ -32,6 +32,7 @@ UCLASS()
 class DUNGEONEDITOR_API UEOSLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
+
 		// User Management
 		UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Login"))
 		static bool Login(int32 UserNum, ELoginType loginType);
