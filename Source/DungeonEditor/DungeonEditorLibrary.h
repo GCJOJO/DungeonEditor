@@ -7,7 +7,7 @@
 #include "Async/AsyncWork.h"
 #include "DungeonEditorLibrary.generated.h"
 
-class FloorThreadFunctions : public FNonAbandonableTask
+/*class FloorThreadFunctions : public FNonAbandonableTask
 {
 public:
 	FloorThreadFunctions(int floorWidth, int floodHeight)
@@ -62,7 +62,7 @@ public:
 		return;
 	}
 	
-};
+};*/
 
 UENUM(BlueprintType)
 enum ELocalizationCulture 
@@ -190,12 +190,12 @@ class DUNGEONEDITOR_API UDungeonEditorLibrary : public UBlueprintFunctionLibrary
 		static UTexture2D* LoadTextureFromPath(const FString& Path);
 
 		// MULTI THREADING
-		UFUNCTION(BlueprintCallable, Category = "Dungeons", meta = (Keywords = "Generate Floor On Other Thread"))
+		/*UFUNCTION(BlueprintCallable, Category = "Dungeons", meta = (Keywords = "Generate Floor On Other Thread"))
 		static void GenerateFloorOnThread(int floorWidth, int floorHeight)
 		{
 			FloorThreadFunctions* floorGenerator = new FloorThreadFunctions(floorWidth, floorHeight);
 			floorGenerator->GenerateFloor();
-		}
+		}*/
 	
 		// Check if running in the editor
 		UFUNCTION(BlueprintPure, Category = "Dungeons", meta = (Keywords = "Is In Editor"))

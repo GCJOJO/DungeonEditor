@@ -12,7 +12,7 @@ public class DungeonEditorServerTarget : TargetRules
 		BuildEnvironment = TargetBuildEnvironment.Shared;
 		ExtraModuleNames.Add("DungeonEditor");
 
-		bCompileChaos = true;
-		bUseChaos = true;
+//		bCompileChaos = true;
+//		bUseChaos = true;
 	}
 }
