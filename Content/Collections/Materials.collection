@@ -118,6 +118,7 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/Mats/Tiles/OldDungeon/M_Bricks.M_Bricks
 /Game/Mats/Tiles/OldDungeon/Stone_Mat.Stone_Mat
 /Game/Mats/Tiles/OldDungeon/Stone_Mat_Inst.Stone_Mat_Inst
+/Game/Mats/Tiles/OldDungeon/Stone_Mat_Inst_Emissive.Stone_Mat_Inst_Emissive
 /Game/Mats/Tiles/OldDungeon/Wood.Wood
 /Game/Mats/Utils/Cursor/M_Cursor.M_Cursor
 /Game/Mats/Utils/Debug_Greenscreen.Debug_Greenscreen
