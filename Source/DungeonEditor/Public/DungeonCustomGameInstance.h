@@ -44,16 +44,16 @@ struct FFriendStruct
 	UPROPERTY(BlueprintReadWrite)
 	FString InviteStatus;
 
-	FFriendStruct();
+	/*FFriendStruct();
 	
-	FFriendStruct(FString _DisplayName, FString _RealName,FString _UniqueNetId/*, FOnlineUserPresence* _Presence*/, FString _InviteStatus)
+	FFriendStruct(FString _DisplayName, FString _RealName,FString _UniqueNetId/*, FOnlineUserPresence* _Presence*//*, FString _InviteStatus)
 	{
 		DisplayName = _DisplayName;
 		RealName = _RealName;
 		UniqueNetId = _UniqueNetId;
 		//Presence = _Presence;
 		InviteStatus = _InviteStatus;
-	}
+	}*/
 };
 
 UCLASS()

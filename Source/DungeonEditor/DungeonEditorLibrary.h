@@ -131,6 +131,7 @@ enum HoleType
 UENUM(BlueprintType)
 enum SkyboxType
 {
+	SkyboxDefault,
 	SkyboxLava,
 	SkyboxCastle,
 	SkyboxSpace,

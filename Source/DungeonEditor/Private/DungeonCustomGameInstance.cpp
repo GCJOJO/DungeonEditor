@@ -17,11 +17,11 @@ TArray<FFriendStruct> UDungeonCustomGameInstance::GetFriendsList()
 		FString DisplayName = Friend->GetDisplayName();
 		FString RealName = Friend->GetRealName();
 		FString UniqueNetId = Friend->GetUserId()->ToString();
-		//FOnlineUserPresence* Presence = Friend->GetPresence();
+		//FOnlineUserPresence Presence = Friend->GetPresence();
 		FString InviteStatus = ToString(Friend->GetInviteStatus());
-		FFriendStruct NewFriend = FFriendStruct(DisplayName, RealName, UniqueNetId, InviteStatus);
-		FriendsArray.Add(NewFriend);
+		//FFriendStruct NewFriend = FFriendStruct(DisplayName, RealName, UniqueNetId, InviteStatus);
+		//FriendsArray.Add(NewFriend);
 	}
-		return FriendsArray;
+	return FriendsArray;
 }
 
