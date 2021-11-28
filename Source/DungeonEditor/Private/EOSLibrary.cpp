@@ -14,8 +14,10 @@
 #include "OnlineSubsystem.h"
 #include "Interfaces/OnlineIdentityInterface.h"
 #include "Interfaces/OnlineFriendsInterface.h"
-
-#define DISPLAY_LOG(fmt, ...) if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT(fmt), __VA_ARGS__));
+#include "Interfaces/OnlineStatsInterface.h"
+#include "Kismet/GameplayStatics.h"
+#include <DungeonEditor/Public/DungeonCustomGameInstance.h>
+#include "DungeonEditor/DungeonEditor.h"
 
 bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
 {
@@ -55,8 +57,10 @@ bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
 
 			return Identity->Login(UserNum, Credentials);
 		}
+		DISPLAY_LOG("Couldn't login !")
 		return false;
 	}
+	DISPLAY_LOG("Couldn't login !")
 	return false;
 }
 
@@ -68,10 +72,13 @@ bool UEOSLibrary::Logout(int32 UserNum)
 		IOnlineIdentityPtr Identity = OSS->GetIdentityInterface();
 		if (Identity.IsValid())
 		{
+			DISPLAY_LOG("Logged Out !")
 			return Identity->Logout(UserNum);
 		}
+		DISPLAY_LOG("Couldn't logout !")
 		return false;
 	}
+	DISPLAY_LOG("Couldn't logout !")
 	return false;
 }
 
@@ -83,10 +90,13 @@ bool UEOSLibrary::TryAutoLogin(int32 UserNum)
 		IOnlineIdentityPtr Identity = OSS->GetIdentityInterface();
 		if(Identity.IsValid())
 		{
+			DISPLAY_LOG("Auto Logged In !")
 			return Identity->AutoLogin(UserNum);
 		}
+		DISPLAY_LOG("Couldn't auto login !")
 		return false;
 	}
+	DISPLAY_LOG("Couldn't auto login !")
 	return false;
 }
 
@@ -113,26 +123,27 @@ FString UEOSLibrary::GetPlayerNickname(int32 LocalUserNum)
 
 void UEOSLibrary::GetPlayerFriends(int32 LocalUserNum)
 {
-//	TArray< TSharedRef<FOnlineFriend> > friendList;
-//	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
-//	if (OSS)
-//	{
-		/*IOnlineFriendsPtr Friends = OSS->GetFriendsInterface();
-		if (Friends.IsValid())
-		{
-			Friends->GetFriendsList(LocalUserNum, "default", friendList);
-			for (auto OnlineFriend : friendList)
+	
+	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+	if (OSS)
+	{
+		IOnlineFriendsPtr Friends = OSS->GetFriendsInterface();
+		Friends->ReadFriendsList(LocalUserNum, "default");
+		
+
+		Friends->OnFriendsChangeDelegates->AddLambda([&] 
 			{
-				FString friendName = OnlineFriend->GetDisplayName();
-				const FOnlineUserPresence friendPresence = OnlineFriend->GetPresence();
-				UE_LOG(LogTemp, Warning, TEXT("Friend %s is "), *friendName, &friendPresence);
-			}
-			if(friendList.Num() == 0)
-			{
-				UE_LOG(LogTemp, Warning, TEXT("Friends List not found !"));
-			}
-		}*/
-//	}
+				DISPLAY_LOG("Finished Retrieving Friends List");
+				/*TArray<TSharedRef<FOnlineFriend>> OutFriends;
+				Friends->GetFriendsList(LocalUserNum, "default", OutFriends);
+				if (GEngine->GetWorld() != nullptr && GEngine->GetWorld()->GetGameInstance() != nullptr)
+				{
+					UDungeonCustomGameInstance* gameInstance = Cast<UDungeonCustomGameInstance>(GEngine->GetWorld()->GetGameInstance());
+					gameInstance->UpdateFriendsList(OutFriends);
+				}*/
+			});
+		
+	}
 }
 
 bool UEOSLibrary::CreateLobby(int32 localUserNum, FText GroupName, FText GroupDesc, FText GroupMotto,
