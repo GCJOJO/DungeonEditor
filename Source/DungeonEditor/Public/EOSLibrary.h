@@ -33,23 +33,35 @@ class DUNGEONEDITOR_API UEOSLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 
-		// User Management
-		UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Login"))
-		static bool Login(int32 UserNum, ELoginType loginType);
-		UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Logout"))
-		static bool Logout(int32 UserNum);
-		UFUNCTION(BlueprintCallable, Category="EOS", meta = (keywords = "Try To Auto Login"))
-		static bool TryAutoLogin(int32 UserNum);
-		UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Get User Login Status"))
-		static EUserLoginStatus GetLoginStatus(int32 localUserNum);
-		UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Get Player Nickname"))
-		static FString GetPlayerNickname(int32 LocalUserNum);
+	// User Management
+	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Login"))
+	static bool Login(int32 UserNum, ELoginType loginType);
+	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Logout"))
+	static bool Logout(int32 UserNum);
+	UFUNCTION(BlueprintCallable, Category="EOS", meta = (keywords = "Try To Auto Login"))
+	static bool TryAutoLogin(int32 UserNum);
+	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Get User Login Status"))
+	static EUserLoginStatus GetLoginStatus(int32 localUserNum);
+	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Get Player Nickname"))
+	static FString GetPlayerNickname(int32 LocalUserNum);
 
-		// Friends
-		UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Get Player Friends"))
-		static void GetPlayerFriends(int32 LocalUserNum);
+	// Friends
+	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Get Player Friends"))
+	static void GetPlayerFriends(int32 LocalUserNum);
 
-		// Lobbies
-		UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Create Lobby"))
-		static bool CreateLobby(int32 localUserNum, FText GroupName, FText GroupDesc, FText GroupMotto, bool bIsInviteOnly, FString GroupLanguage);
+
+	// Lobbies
+	/**
+	*	Function to host a game!
+	*
+	*	@param 		localUserNum			        User that started the request
+	*	@param		SessionName						The Name of the Session
+	*	@param		bIsLAN							Is the Session in LAN mode
+	*	@param		bIsPresence						Use Presence
+	*	@param		MaxNumPlayers					The Max number of Players in the session
+	*	@returns	Returns true if managed to start the creation of a session
+	*/
+	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Create Lobby"))
+	bool CreateLobby(int32 localUserNum, FName SessionName, bool bIsLAN, bool bIsPresence, int32 MaxNumPlayers);
+	
 };

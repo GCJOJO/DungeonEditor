@@ -4,5 +4,3 @@
  TODO :	-Menu de téléchargement de donjons
  TODO :	-Upload de donjons (nom, uid, auteur)
  TODO :	-Récupération donjons du server
-
--TODO : Version affichée en jeu

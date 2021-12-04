@@ -87,3 +87,5 @@ Plugins/Developer/RiderLink/Win64/*
 Plugins/Developer/RiderLink/Intermediate/*
 Plugins/Developer/RiderLink/*
 *.ini
+EOS Stuff
+Events.json

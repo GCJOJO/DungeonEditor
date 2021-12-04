@@ -9,6 +9,10 @@ void UDungeonCustomGameInstance::Init()
 	Super::Init();
 }
 
+UDungeonCustomGameInstance::UDungeonCustomGameInstance(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
+{
+}
+
 TArray<FFriendStruct> UDungeonCustomGameInstance::GetFriendsList()
 {
 	TArray<FFriendStruct> FriendsArray;

@@ -29,7 +29,7 @@ void FSimpleUGCCreator::OpenNewPluginWizard(bool bSuppressErrors) const
 {
 	if (IPluginBrowser::IsAvailable())
 	{
-		FGlobalTabmanager::Get()->InvokeTab(SimpleUGCEditorPluginCreatorName);
+		FGlobalTabmanager::Get()->TryInvokeTab(SimpleUGCEditorPluginCreatorName);
 	}
 	else if (!bSuppressErrors)
 	{

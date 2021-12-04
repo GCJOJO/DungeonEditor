@@ -7,6 +7,7 @@
 #include "Interfaces/OnlineIdentityInterface.h"
 #include "Interfaces/OnlineFriendsInterface.h"
 #include "DungeonEditor/DungeonEditor.h"
+#include "Interfaces/OnlineSessionInterface.h"
 #include "DungeonCustomGameInstance.generated.h"
 
 /**
@@ -62,6 +63,8 @@ class DUNGEONEDITOR_API UDungeonCustomGameInstance : public UGameInstance
 	GENERATED_BODY()
 	public:
 		virtual void Init() override;
+
+		UDungeonCustomGameInstance(const FObjectInitializer& ObjectInitializer);
 	
 		TArray<TSharedRef<FOnlineFriend>> FriendsList;
 	
@@ -82,4 +85,8 @@ class DUNGEONEDITOR_API UDungeonCustomGameInstance : public UGameInstance
 
 		UPROPERTY(BlueprintAssignable, Category = "Online", meta = (keywords = "On Friends List Updated"))
 		FFriendsListUpdatedDelegate OnFriendsListUpdatedDelegate;
+
+		UFUNCTION(BlueprintImplementableEvent, Category = "Online", meta = (keywords = "On Friends List Updated"))
+		void HasCreatedSessionEvent(FName SessionName, bool bIsSuccessful);
+	
 };
