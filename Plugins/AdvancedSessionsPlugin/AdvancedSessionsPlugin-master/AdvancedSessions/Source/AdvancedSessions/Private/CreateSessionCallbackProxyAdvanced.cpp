@@ -13,7 +13,7 @@ UCreateSessionCallbackProxyAdvanced::UCreateSessionCallbackProxyAdvanced(const F
 {
 }
 
-UCreateSessionCallbackProxyAdvanced* UCreateSessionCallbackProxyAdvanced::CreateAdvancedSession(UObject* WorldContextObject, const TArray<FSessionPropertyKeyPair> &ExtraSettings, class APlayerController* PlayerController, int32 PublicConnections, int32 PrivateConnections, bool bUseLAN, bool bAllowInvites, bool bIsDedicatedServer, bool bUsePresence, bool bUseLobbiesIfAvailable, bool bAllowJoinViaPresence, bool bAllowJoinViaPresenceFriendsOnly, bool bAntiCheatProtected, bool bUsesStats, bool bShouldAdvertise)
+UCreateSessionCallbackProxyAdvanced* UCreateSessionCallbackProxyAdvanced::CreateAdvancedSession(UObject* WorldContextObject, const TArray<FSessionPropertyKeyPair> &ExtraSettings, class APlayerController* PlayerController, int32 LocalUserNum,  int32 PublicConnections, int32 PrivateConnections, bool bUseLAN, bool bAllowInvites, bool bIsDedicatedServer, bool bUsePresence, bool bUseLobbiesIfAvailable, bool bAllowJoinViaPresence, bool bAllowJoinViaPresenceFriendsOnly, bool bAntiCheatProtected, bool bUsesStats, bool bShouldAdvertise)
 {
 	UCreateSessionCallbackProxyAdvanced* Proxy = NewObject<UCreateSessionCallbackProxyAdvanced>();
 	Proxy->PlayerControllerWeakPtr = PlayerController;
@@ -31,6 +31,7 @@ UCreateSessionCallbackProxyAdvanced* UCreateSessionCallbackProxyAdvanced::Create
 	Proxy->bAntiCheatProtected = bAntiCheatProtected;
 	Proxy->bUsesStats = bUsesStats;
 	Proxy->bShouldAdvertise = bShouldAdvertise;
+	Proxy->LocalUserNum = LocalUserNum;
 	return Proxy;
 }
 
@@ -88,9 +89,9 @@ void UCreateSessionCallbackProxyAdvanced::Activate()
 			
 			if (!bDedicatedServer )
 			{
-				if (PlayerControllerWeakPtr.IsValid() && Helper.UserID.IsValid())
+				if (PlayerControllerWeakPtr.IsValid())
 				{
-					Sessions->CreateSession(*Helper.UserID, NAME_GameSession, Settings);
+					Sessions->CreateSession(LocalUserNum, NAME_GameSession, Settings);
 				}
 				else
 				{
