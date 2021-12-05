@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "DungeonEditor.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "Async/AsyncWork.h"
 #include "DungeonEditorLibrary.generated.h"
@@ -190,6 +191,18 @@ class DUNGEONEDITOR_API UDungeonEditorLibrary : public UBlueprintFunctionLibrary
 		UFUNCTION(BlueprintPure, Category = "Dungeons", meta = (Keywords = "Load Texture from Image"))
 		static UTexture2D* LoadTextureFromPath(const FString& Path);
 
+		UFUNCTION(BlueprintPure, Category = "User", meta = (Keywords = "Get User ID"))
+		static int32 GetUserId(const APlayerController* PlayerController)
+		{
+			if(!IsValid(PlayerController))
+			{
+				DISPLAY_LOG("Player Controller Not Valid");
+				return 0;
+			}
+			const ULocalPlayer* Player = Cast<ULocalPlayer>(PlayerController->Player);
+			return Player->GetControllerId();
+		}
+	
 		// MULTI THREADING
 		/*UFUNCTION(BlueprintCallable, Category = "Dungeons", meta = (Keywords = "Generate Floor On Other Thread"))
 		static void GenerateFloorOnThread(int floorWidth, int floorHeight)

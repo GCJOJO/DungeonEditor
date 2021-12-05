@@ -132,20 +132,15 @@ void UEOSLibrary::GetPlayerFriends(int32 LocalUserNum)
 	if (OSS)
 	{
 		IOnlineFriendsPtr Friends = OSS->GetFriendsInterface();
-		Friends->ReadFriendsList(LocalUserNum, "default");
+		Friends->ReadFriendsList(LocalUserNum, EFriendsLists::ToString((EFriendsLists::Default)));
 		
 
 		Friends->OnFriendsChangeDelegates->Clear();
 		Friends->OnFriendsChangeDelegates->AddLambda([&] 
 			{
 				DISPLAY_LOG("Finished Retrieving Friends List");
-				/*TArray<TSharedRef<FOnlineFriend>> OutFriends;
-				Friends->GetFriendsList(LocalUserNum, "default", OutFriends);
-				if (GEngine->GetWorld() != nullptr && GEngine->GetWorld()->GetGameInstance() != nullptr)
-				{
-					UDungeonCustomGameInstance* gameInstance = Cast<UDungeonCustomGameInstance>(GEngine->GetWorld()->GetGameInstance());
-					gameInstance->UpdateFriendsList(OutFriends);
-				}*/
+				TArray<TSharedRef<FOnlineFriend>> OutFriends;
+				Friends->GetFriendsList(LocalUserNum, EFriendsLists::ToString((EFriendsLists::Default)), OutFriends);
 			});
 		
 	}

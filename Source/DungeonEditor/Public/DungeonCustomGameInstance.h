@@ -3,6 +3,8 @@
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
 #include <SimpleUGC/Public/UGCRegistry.h>
+
+#include "AdvancedFriendsGameInstance.h"
 #include "OnlineSubsystem.h"
 #include "Interfaces/OnlineIdentityInterface.h"
 #include "Interfaces/OnlineFriendsInterface.h"
@@ -58,7 +60,7 @@ struct FFriendStruct
 };
 
 UCLASS()
-class DUNGEONEDITOR_API UDungeonCustomGameInstance : public UGameInstance
+class DUNGEONEDITOR_API UDungeonCustomGameInstance : public UAdvancedFriendsGameInstance
 {
 	GENERATED_BODY()
 	public:
