@@ -89,3 +89,4 @@ Plugins/Developer/RiderLink/*
 *.ini
 EOS Stuff
 Events.json
+Config/DefaultCrypto.ini

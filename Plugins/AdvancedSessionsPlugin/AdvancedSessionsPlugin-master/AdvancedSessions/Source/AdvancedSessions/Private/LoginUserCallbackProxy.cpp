@@ -40,11 +40,13 @@ void ULoginUserCallbackProxy::Activate()
 	}
 
 	auto Identity = Online::GetIdentityInterface();
-
+	
+	
 	if (Identity.IsValid())
 	{
 		DelegateHandle = Identity->AddOnLoginCompleteDelegate_Handle(Player->GetControllerId(), Delegate);
 		FOnlineAccountCredentials AccountCreds(Identity->GetAuthType(), UserID, UserToken);
+		
 		Identity->Login(Player->GetControllerId(), AccountCreds);
 		return;
 	}

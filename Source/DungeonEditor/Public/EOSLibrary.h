@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "BlueprintDataDefinitions.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "EOSLibrary.generated.h"
 
@@ -35,26 +36,26 @@ class DUNGEONEDITOR_API UEOSLibrary : public UBlueprintFunctionLibrary
 
 	// User Management
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Login"))
-	static bool Login(int32 UserNum, ELoginType loginType);
+	static bool Login(APlayerController* PlayerController, ELoginType loginType);
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Logout"))
-	static bool Logout(int32 UserNum);
+	static bool Logout(APlayerController* PlayerController);
 	UFUNCTION(BlueprintCallable, Category="EOS", meta = (keywords = "Try To Auto Login"))
-	static bool TryAutoLogin(int32 UserNum);
+	static bool TryAutoLogin(APlayerController* PlayerController);
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Get User Login Status"))
-	static EUserLoginStatus GetLoginStatus(int32 localUserNum);
+	static EUserLoginStatus GetLoginStatus(APlayerController* PlayerController);
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Get Player Nickname"))
-	static FString GetPlayerNickname(int32 LocalUserNum);
+	static FString GetPlayerNickname(APlayerController* PlayerController);
 
 	// Friends
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Get Player Friends"))
-	static void GetPlayerFriends(int32 LocalUserNum);
+	static void GetPlayerFriends(APlayerController* PlayerController);
 
 
 	// Lobbies
 	/**
 	*	Function to host a game!
 	*
-	*	@param 		localUserNum			        User that started the request
+	*	@param 		PlayerController				User that started the request
 	*	@param		SessionName						The Name of the Session
 	*	@param		bIsLAN							Is the Session in LAN mode
 	*	@param		bIsPresence						Use Presence
@@ -62,6 +63,10 @@ class DUNGEONEDITOR_API UEOSLibrary : public UBlueprintFunctionLibrary
 	*	@returns	Returns true if managed to start the creation of a session
 	*/
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Create Lobby"))
-	bool CreateLobby(int32 localUserNum, FName SessionName, bool bIsLAN, bool bIsPresence, int32 MaxNumPlayers);
+	bool CreateLobby(APlayerController* PlayerController, FName SessionName, bool bIsLAN, bool bIsPresence, int32 MaxNumPlayers);
+
+	// Stats And Achievements
+	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Retrieve Achievements"))
+	bool RetrieveAchievements(APlayerController *PlayerController);
 	
 };

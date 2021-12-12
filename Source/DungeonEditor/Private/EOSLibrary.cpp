@@ -1,16 +1,6 @@
 // By G.C*JOJO
-
-
 #include "EOSLibrary.h"
-#include <complex>
-/*#include <OnlineSubsystemEOS.h>
-#include "UserManagerEOS.h"
-#include "Interfaces/OnlineFriendsInterface.h"
-#include "Interfaces/OnlinePresenceInterface.h"
-#include "Interfaces\OnlineGroupsInterface.h"
-#include "Interfaces\OnlineIdentityInterface.h"
-#include "Source\Public\OnlineSubsystem.h"
-*/
+
 #include "OnlineSubsystem.h"
 #include "Interfaces/OnlineIdentityInterface.h"
 #include "Interfaces/OnlineFriendsInterface.h"
@@ -18,12 +8,11 @@
 #include "Interfaces/OnlineSessionInterface.h"
 #include "Interfaces/OnlineTitleFileInterface.h"
 #include "Kismet/GameplayStatics.h"
-#include <DungeonEditor/Public/DungeonCustomGameInstance.h>
-
+#include "DungeonEditor/Public/DungeonCustomGameInstance.h"
 #include "OnlineSessionSettings.h"
 #include "DungeonEditor/DungeonEditor.h"
 
-bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
+bool UEOSLibrary::Login(APlayerController* PlayerController, ELoginType loginType)
 {
 	FOnlineAccountCredentials Credentials;
 	
@@ -47,6 +36,17 @@ bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
 			break;
 	}
 
+	if(!PlayerController)
+	{
+		DISPLAY_LOG("Player Controller Not Valid !");
+		return false;
+	}
+	
+	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
+	int32 UserNum = LocalPlayer->GetControllerId();
+
+	DISPLAY_LOG("User Num : %i", UserNum);
+	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
 	{
@@ -54,11 +54,12 @@ bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
 		if (Identity.IsValid())
 		{
 			Identity->OnLoginCompleteDelegates->Clear();
-			Identity->OnLoginCompleteDelegates->AddLambda([&](int32 i, bool successful, const FUniqueNetId& userID, const FString& error)
+			Identity->OnLoginCompleteDelegates->AddLambda([&](int32 LocalUserNum, bool successful, const FUniqueNetId& userID, const FString& error)
 			{
 					DISPLAY_LOG("Logged In !")
-			});//Don't forget the ";" in the end of your parenthesis!
+			});
 
+			DISPLAY_LOG("Loging In...");
 			return Identity->Login(UserNum, Credentials);
 		}
 		DISPLAY_LOG("Couldn't login !")
@@ -68,8 +69,19 @@ bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
 	return false;
 }
 
-bool UEOSLibrary::Logout(int32 UserNum)
+bool UEOSLibrary::Logout(APlayerController* PlayerController)
 {
+	if(!PlayerController)
+	{
+		DISPLAY_LOG("Player Controller Not Valid !");
+		return false;
+	}
+	
+	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
+	int32 UserNum = LocalPlayer->GetControllerId();
+
+	DISPLAY_LOG("User Num : %i", UserNum);
+	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
 	{
@@ -86,15 +98,26 @@ bool UEOSLibrary::Logout(int32 UserNum)
 	return false;
 }
 
-bool UEOSLibrary::TryAutoLogin(int32 UserNum)
+bool UEOSLibrary::TryAutoLogin(APlayerController* PlayerController)
 {
+	if(!PlayerController)
+	{
+		DISPLAY_LOG("Player Controller Not Valid !");
+		return false;
+	}
+	
+	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
+	int32 UserNum = LocalPlayer->GetControllerId();
+
+	DISPLAY_LOG("User Num : %i", UserNum);
+	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if(OSS)
 	{
 		IOnlineIdentityPtr Identity = OSS->GetIdentityInterface();
 		if(Identity.IsValid())
 		{
-			DISPLAY_LOG("Auto Logged In !")
+			DISPLAY_LOG("Trying to Auto Login...")
 			return Identity->AutoLogin(UserNum);
 		}
 		DISPLAY_LOG("Couldn't auto login !")
@@ -104,10 +127,20 @@ bool UEOSLibrary::TryAutoLogin(int32 UserNum)
 	return false;
 }
 
-FString UEOSLibrary::GetPlayerNickname(int32 LocalUserNum)
+FString UEOSLibrary::GetPlayerNickname(APlayerController* PlayerController)
 {
-	
 	FString playerName = TEXT("Null");
+
+	if(!PlayerController)
+	{
+		DISPLAY_LOG("Player Controller Not Valid !");
+		return playerName;
+	}
+	
+	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
+	int32 UserNum = LocalPlayer->GetControllerId();
+
+	DISPLAY_LOG("User Num : %i", UserNum);
 	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
@@ -115,18 +148,24 @@ FString UEOSLibrary::GetPlayerNickname(int32 LocalUserNum)
 		IOnlineIdentityPtr Identity = OSS->GetIdentityInterface();
 		if (Identity.IsValid())
 		{
-			playerName = Identity->GetPlayerNickname(0);
+			playerName = Identity->GetPlayerNickname(UserNum);
 			return playerName;
 		}
 		return playerName;
 	}
 	return playerName;
-	
-	return "NULL";
 }
 
-void UEOSLibrary::GetPlayerFriends(int32 LocalUserNum)
+void UEOSLibrary::GetPlayerFriends(APlayerController* PlayerController)
 {
+	if(!PlayerController)
+	{
+		DISPLAY_LOG("Player Controller Not Valid !");
+		return;
+	}
+	
+	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
+	int32 LocalUserNum = LocalPlayer->GetControllerId();
 	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
@@ -147,8 +186,17 @@ void UEOSLibrary::GetPlayerFriends(int32 LocalUserNum)
 }
 
 
-bool UEOSLibrary::CreateLobby(int32 localUserNum, FName SessionName, bool bIsLAN, bool bIsPresence, int32 MaxNumPlayers)
+bool UEOSLibrary::CreateLobby(APlayerController* PlayerController, FName SessionName, bool bIsLAN, bool bIsPresence, int32 MaxNumPlayers)
 {
+	if(!PlayerController)
+	{
+		DISPLAY_LOG("Player Controller Not Valid !");
+		return false;
+	}
+	
+	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
+	int32 UserNum = LocalPlayer->GetControllerId();
+
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if(OSS)
 	{
@@ -183,8 +231,7 @@ bool UEOSLibrary::CreateLobby(int32 localUserNum, FName SessionName, bool bIsLAN
 				});
 			}
 			DISPLAY_LOG("Creating Session...");
-			return Sessions->CreateSession(localUserNum, SessionName, *SessionSettings);
-			//Sessions->CreateSession(localUserNum, SessionName, SessionSettings);
+			return Sessions->CreateSession(UserNum, SessionName, *SessionSettings);
 		}
 		DISPLAY_LOG("Sessions Interface not valid");
 
@@ -194,8 +241,19 @@ bool UEOSLibrary::CreateLobby(int32 localUserNum, FName SessionName, bool bIsLAN
 	return false;
 }
 
-EUserLoginStatus UEOSLibrary::GetLoginStatus(int32 localUserNum)
+EUserLoginStatus UEOSLibrary::GetLoginStatus(APlayerController* PlayerController)
 {
+	if(!PlayerController)
+	{
+		DISPLAY_LOG("Player Controller Not Valid !");
+		return EUserLoginStatus::NotLoggedIn;
+	}
+	
+	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
+	int32 UserNum = LocalPlayer->GetControllerId();
+
+	DISPLAY_LOG("User Num : %i", UserNum);
+	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
 	{
@@ -203,7 +261,7 @@ EUserLoginStatus UEOSLibrary::GetLoginStatus(int32 localUserNum)
 		if (Identity.IsValid())
 		{
 			EUserLoginStatus LoginStatus;
-			switch(Identity->GetLoginStatus(localUserNum))
+			switch(Identity->GetLoginStatus(UserNum))
 			{
 			default : LoginStatus = EUserLoginStatus::NotLoggedIn;
 				break;
@@ -221,6 +279,43 @@ EUserLoginStatus UEOSLibrary::GetLoginStatus(int32 localUserNum)
 	return EUserLoginStatus::NotLoggedIn;
 }
 
+bool UEOSLibrary::RetrieveAchievements(APlayerController *PlayerController)
+{
+
+	if (!PlayerController)
+	{
+		DISPLAY_LOG("Invalid Player Controller !");
+		return false;
+	}
+	FUniqueNetIdPtr PlayerUniqueNetID = nullptr;
+	
+	if (APlayerState* PlayerState = (PlayerController != NULL) ? PlayerController->PlayerState : NULL)
+	{
+		PlayerUniqueNetID = PlayerState->GetUniqueId().GetUniqueNetId();
+	}
+	
+	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+	if (OSS)
+	{
+		IOnlineAchievementsPtr Achievements = OSS->GetAchievementsInterface();
+		if(Achievements.IsValid())
+		{
+			/*FOnQueryAchievementsCompleteDelegate QueryComplete;
+			QueryComplete.CreateLambda([&](FUniqueNetId& PlayerID, const bool bSuccessful)
+			{
+				DISPLAY_LOG("Finished Retrieving Achievements");
+				if(bSuccessful) { DISPLAY_LOG("Retrieving Achievements Successful !"); }
+				else { DISPLAY_LOG("Retrieving Achievements not Successful..."); }
+				
+			});*/
+			// Achievements->QueryAchievements(*PlayerUniqueNetID, QueryComplete);
+			Achievements->QueryAchievements(*PlayerUniqueNetID);
+			return true;
+		}
+		return false;
+	}
+	return false;
+}
 
 /*void GetTitleFile(FName FileName)
 {
