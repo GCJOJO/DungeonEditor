@@ -50,21 +50,6 @@ class DUNGEONEDITOR_API UEOSLibrary : public UBlueprintFunctionLibrary
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Get Player Friends"))
 	static void GetPlayerFriends(APlayerController* PlayerController);
 
-
-	// Lobbies
-	/**
-	*	Function to host a game!
-	*
-	*	@param 		PlayerController				User that started the request
-	*	@param		SessionName						The Name of the Session
-	*	@param		bIsLAN							Is the Session in LAN mode
-	*	@param		bIsPresence						Use Presence
-	*	@param		MaxNumPlayers					The Max number of Players in the session
-	*	@returns	Returns true if managed to start the creation of a session
-	*/
-	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Create Lobby"))
-	bool CreateLobby(APlayerController* PlayerController, FName SessionName, bool bIsLAN, bool bIsPresence, int32 MaxNumPlayers);
-
 	// Stats And Achievements
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Retrieve Achievements"))
 	bool RetrieveAchievements(APlayerController *PlayerController);

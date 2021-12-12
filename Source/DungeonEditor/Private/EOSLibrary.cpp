@@ -4,9 +4,6 @@
 #include "OnlineSubsystem.h"
 #include "Interfaces/OnlineIdentityInterface.h"
 #include "Interfaces/OnlineFriendsInterface.h"
-#include "Interfaces/OnlineStatsInterface.h"
-#include "Interfaces/OnlineSessionInterface.h"
-#include "Interfaces/OnlineTitleFileInterface.h"
 #include "Kismet/GameplayStatics.h"
 #include "DungeonEditor/Public/DungeonCustomGameInstance.h"
 #include "OnlineSessionSettings.h"
@@ -28,11 +25,14 @@ bool UEOSLibrary::Login(APlayerController* PlayerController, ELoginType loginTyp
 		case Code:
 
 			Credentials.Id = TEXT("");
-			Credentials.Token = TEXT("");
+			Credentials.Token = TEXT(""); // Add Token from the Epic Games Launcher, so probably shouldn't use the 'Code' login type
 			Credentials.Type = TEXT("exchangecode");
 
 			break;
 		default:
+			Credentials.Id = TEXT("");
+			Credentials.Token = TEXT("");
+			Credentials.Type = TEXT("accountportal");
 			break;
 	}
 
@@ -45,7 +45,7 @@ bool UEOSLibrary::Login(APlayerController* PlayerController, ELoginType loginTyp
 	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
 	int32 UserNum = LocalPlayer->GetControllerId();
 
-	DISPLAY_LOG("User Num : %i", UserNum);
+	DISPLAY_LOG("Login for User Num : %i", UserNum);
 	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
@@ -58,7 +58,13 @@ bool UEOSLibrary::Login(APlayerController* PlayerController, ELoginType loginTyp
 			{
 					DISPLAY_LOG("Logged In !")
 			});
-
+			Identity->OnLoginChangedDelegates.Clear();
+			Identity->OnLoginChangedDelegates.AddLambda([&](int32 LocalUserNum)
+			{
+				
+				DISPLAY_LOG("User %i changed logged status now : %d!", LocalUserNum, Identity->GetLoginStatus(LocalUserNum));
+			});
+			
 			DISPLAY_LOG("Loging In...");
 			return Identity->Login(UserNum, Credentials);
 		}
@@ -80,7 +86,7 @@ bool UEOSLibrary::Logout(APlayerController* PlayerController)
 	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
 	int32 UserNum = LocalPlayer->GetControllerId();
 
-	DISPLAY_LOG("User Num : %i", UserNum);
+	DISPLAY_LOG("Logout for User Num : %i", UserNum);
 	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
@@ -109,7 +115,7 @@ bool UEOSLibrary::TryAutoLogin(APlayerController* PlayerController)
 	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
 	int32 UserNum = LocalPlayer->GetControllerId();
 
-	DISPLAY_LOG("User Num : %i", UserNum);
+	DISPLAY_LOG("Auto Login for User Num : %i", UserNum);
 	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if(OSS)
@@ -140,7 +146,7 @@ FString UEOSLibrary::GetPlayerNickname(APlayerController* PlayerController)
 	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
 	int32 UserNum = LocalPlayer->GetControllerId();
 
-	DISPLAY_LOG("User Num : %i", UserNum);
+	DISPLAY_LOG("Getting Player Nickname for User Num : %i", UserNum);
 	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
@@ -185,62 +191,6 @@ void UEOSLibrary::GetPlayerFriends(APlayerController* PlayerController)
 	}
 }
 
-
-bool UEOSLibrary::CreateLobby(APlayerController* PlayerController, FName SessionName, bool bIsLAN, bool bIsPresence, int32 MaxNumPlayers)
-{
-	if(!PlayerController)
-	{
-		DISPLAY_LOG("Player Controller Not Valid !");
-		return false;
-	}
-	
-	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
-	int32 UserNum = LocalPlayer->GetControllerId();
-
-	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
-	if(OSS)
-	{
-		IOnlineSessionPtr Sessions = OSS->GetSessionInterface();
-
-		if(Sessions.IsValid())
-		{
-			//FOnlineSessionSettings* NewSettings = FOnlineSessionSettings(4, 4, true, false, false, false, true, true, true, true, true, false, true, false, 0);
-
-			TSharedPtr<class FOnlineSessionSettings> SessionSettings = MakeShareable(new FOnlineSessionSettings());
-			
-			SessionSettings->bIsLANMatch = bIsLAN;
-			SessionSettings->bUsesPresence = bIsPresence;
-            SessionSettings->NumPublicConnections = MaxNumPlayers;
-            SessionSettings->NumPrivateConnections = 0;
-            SessionSettings->bAllowInvites = true;
-            SessionSettings->bAllowJoinInProgress = false;
-            SessionSettings->bShouldAdvertise = true;
-            SessionSettings->bAllowJoinViaPresence = true;
-            SessionSettings->bAllowJoinViaPresenceFriendsOnly = true;
-
-			if (GEngine->GetWorld() != nullptr && GEngine->GetWorld()->GetGameInstance() != nullptr)
-			{
-				UDungeonCustomGameInstance* gameInstance = Cast<UDungeonCustomGameInstance>(GEngine->GetWorld()->GetGameInstance());
-				//gameInstance->BindOnCreateSessionCompleteDelegateHandle(Sessions);
-				Sessions->OnCreateSessionCompleteDelegates.AddLambda([&](FName Name, bool bIsSuccessful)
-				{
-					DISPLAY_LOG("Tried to create session");
-					if(bIsSuccessful){ DISPLAY_LOG("Created Session Succesfully"); }
-					else { DISPLAY_LOG("Tried to create session but couldn't"); }
-					gameInstance->HasCreatedSessionEvent(Name, bIsSuccessful);
-				});
-			}
-			DISPLAY_LOG("Creating Session...");
-			return Sessions->CreateSession(UserNum, SessionName, *SessionSettings);
-		}
-		DISPLAY_LOG("Sessions Interface not valid");
-
-		return false;
-	}
-	DISPLAY_LOG("Online Subsystem not valid");
-	return false;
-}
-
 EUserLoginStatus UEOSLibrary::GetLoginStatus(APlayerController* PlayerController)
 {
 	if(!PlayerController)
@@ -252,7 +202,7 @@ EUserLoginStatus UEOSLibrary::GetLoginStatus(APlayerController* PlayerController
 	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
 	int32 UserNum = LocalPlayer->GetControllerId();
 
-	DISPLAY_LOG("User Num : %i", UserNum);
+	DISPLAY_LOG("Getting Status for User Num : %i", UserNum);
 	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
@@ -274,8 +224,10 @@ EUserLoginStatus UEOSLibrary::GetLoginStatus(APlayerController* PlayerController
 			}
 			return LoginStatus;
 		}
+		DISPLAY_LOG("Identity Interface not Valid !");
 		return EUserLoginStatus::NotLoggedIn;
 	}
+	DISPLAY_LOG("OSS not Valid !");
 	return EUserLoginStatus::NotLoggedIn;
 }
 
