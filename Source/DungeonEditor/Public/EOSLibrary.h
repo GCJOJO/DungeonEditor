@@ -15,7 +15,8 @@ UENUM(BlueprintType)
 enum ELoginType
 {
 	Web,
-	Code
+	Code,
+	Dev
 };
 
 UENUM(BlueprintType)
@@ -36,22 +37,21 @@ class DUNGEONEDITOR_API UEOSLibrary : public UBlueprintFunctionLibrary
 
 	// User Management
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Login"))
-	static bool Login(APlayerController* PlayerController, ELoginType loginType);
+	static bool Login(int32 UserNum, ELoginType loginType);
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Logout"))
-	static bool Logout(APlayerController* PlayerController);
+	static bool Logout(int32 UserNum);
 	UFUNCTION(BlueprintCallable, Category="EOS", meta = (keywords = "Try To Auto Login"))
-	static bool TryAutoLogin(APlayerController* PlayerController);
+	static bool TryAutoLogin(int32 UserNum);
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Get User Login Status"))
-	static EUserLoginStatus GetLoginStatus(APlayerController* PlayerController);
+	static EUserLoginStatus GetLoginStatus(int32 UserNum);
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Get Player Nickname"))
-	static FString GetPlayerNickname(APlayerController* PlayerController);
+	static FString GetPlayerNickname(int32 UserNum);
 
 	// Friends
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Get Player Friends"))
-	static void GetPlayerFriends(APlayerController* PlayerController);
+	static void GetPlayerFriends(int32 UserNum);
 
 	// Stats And Achievements
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Retrieve Achievements"))
-	bool RetrieveAchievements(APlayerController *PlayerController);
-	
+	bool RetrieveAchievements(int32 UserNum);
 };

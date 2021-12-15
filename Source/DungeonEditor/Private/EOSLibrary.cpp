@@ -4,46 +4,47 @@
 #include "OnlineSubsystem.h"
 #include "Interfaces/OnlineIdentityInterface.h"
 #include "Interfaces/OnlineFriendsInterface.h"
-#include "Kismet/GameplayStatics.h"
 #include "DungeonEditor/Public/DungeonCustomGameInstance.h"
 #include "OnlineSessionSettings.h"
 #include "DungeonEditor/DungeonEditor.h"
 
-bool UEOSLibrary::Login(APlayerController* PlayerController, ELoginType loginType)
+bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
 {
 	FOnlineAccountCredentials Credentials;
+
+	// Init the Credentials
+	Credentials.Id = TEXT("");
+	Credentials.Token = TEXT("");
+	Credentials.Type = TEXT("accountportal");
 	
 	switch (loginType)
 	{
+	default:
+		DISPLAY_LOG("Login Method : Account Portal (Default)");
+		break;
+		
 		case Web:
 
 			Credentials.Id = TEXT("");
 			Credentials.Token = TEXT("");
 			Credentials.Type = TEXT("accountportal");
-
+		DISPLAY_LOG("Login Method : Account Portal");
+		
 			break;
 		case Code:
 
 			Credentials.Id = TEXT("");
 			Credentials.Token = TEXT(""); // Add Token from the Epic Games Launcher, so probably shouldn't use the 'Code' login type
 			Credentials.Type = TEXT("exchangecode");
+		DISPLAY_LOG("Login Method : Exchange Code");
 
 			break;
-		default:
-			Credentials.Id = TEXT("");
-			Credentials.Token = TEXT("");
-			Credentials.Type = TEXT("accountportal");
-			break;
+		case Dev:
+			Credentials.Id = TEXT("127.0.0.1:1024");
+			Credentials.Token = TEXT("UE4");
+			Credentials.Type = TEXT("Developer");
+		DISPLAY_LOG("Login Method : Dev");
 	}
-
-	if(!PlayerController)
-	{
-		DISPLAY_LOG("Player Controller Not Valid !");
-		return false;
-	}
-	
-	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
-	int32 UserNum = LocalPlayer->GetControllerId();
 
 	DISPLAY_LOG("Login for User Num : %i", UserNum);
 	
@@ -59,10 +60,10 @@ bool UEOSLibrary::Login(APlayerController* PlayerController, ELoginType loginTyp
 					DISPLAY_LOG("Logged In !")
 			});
 			Identity->OnLoginChangedDelegates.Clear();
-			Identity->OnLoginChangedDelegates.AddLambda([&](int32 LocalUserNum)
+			Identity->OnLoginChangedDelegates.AddLambda([&](int32 _UserNum)
 			{
 				
-				DISPLAY_LOG("User %i changed logged status now : %d!", LocalUserNum, Identity->GetLoginStatus(LocalUserNum));
+				DISPLAY_LOG("User %i changed logged status now : %d!", _UserNum, Identity->GetLoginStatus(_UserNum));
 			});
 			
 			DISPLAY_LOG("Loging In...");
@@ -75,16 +76,8 @@ bool UEOSLibrary::Login(APlayerController* PlayerController, ELoginType loginTyp
 	return false;
 }
 
-bool UEOSLibrary::Logout(APlayerController* PlayerController)
+bool UEOSLibrary::Logout(int32 UserNum)
 {
-	if(!PlayerController)
-	{
-		DISPLAY_LOG("Player Controller Not Valid !");
-		return false;
-	}
-	
-	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
-	int32 UserNum = LocalPlayer->GetControllerId();
 
 	DISPLAY_LOG("Logout for User Num : %i", UserNum);
 	
@@ -104,16 +97,8 @@ bool UEOSLibrary::Logout(APlayerController* PlayerController)
 	return false;
 }
 
-bool UEOSLibrary::TryAutoLogin(APlayerController* PlayerController)
+bool UEOSLibrary::TryAutoLogin(int32 UserNum)
 {
-	if(!PlayerController)
-	{
-		DISPLAY_LOG("Player Controller Not Valid !");
-		return false;
-	}
-	
-	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
-	int32 UserNum = LocalPlayer->GetControllerId();
 
 	DISPLAY_LOG("Auto Login for User Num : %i", UserNum);
 	
@@ -133,20 +118,11 @@ bool UEOSLibrary::TryAutoLogin(APlayerController* PlayerController)
 	return false;
 }
 
-FString UEOSLibrary::GetPlayerNickname(APlayerController* PlayerController)
+FString UEOSLibrary::GetPlayerNickname(int32 UserNum)
 {
 	FString playerName = TEXT("Null");
 
-	if(!PlayerController)
-	{
-		DISPLAY_LOG("Player Controller Not Valid !");
-		return playerName;
-	}
-	
-	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
-	int32 UserNum = LocalPlayer->GetControllerId();
-
-	DISPLAY_LOG("Getting Player Nickname for User Num : %i", UserNum);
+	DISPLAY_LOG("Getting Player Nickname for User (%i)...", UserNum);
 	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
@@ -155,6 +131,7 @@ FString UEOSLibrary::GetPlayerNickname(APlayerController* PlayerController)
 		if (Identity.IsValid())
 		{
 			playerName = Identity->GetPlayerNickname(UserNum);
+			DISPLAY_LOG("Got Player Nickname for User (%i) : %s", UserNum, *playerName);
 			return playerName;
 		}
 		return playerName;
@@ -162,22 +139,13 @@ FString UEOSLibrary::GetPlayerNickname(APlayerController* PlayerController)
 	return playerName;
 }
 
-void UEOSLibrary::GetPlayerFriends(APlayerController* PlayerController)
-{
-	if(!PlayerController)
-	{
-		DISPLAY_LOG("Player Controller Not Valid !");
-		return;
-	}
-	
-	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
-	int32 LocalUserNum = LocalPlayer->GetControllerId();
-	
+void UEOSLibrary::GetPlayerFriends(int32 UserNum)
+{	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
 	{
 		IOnlineFriendsPtr Friends = OSS->GetFriendsInterface();
-		Friends->ReadFriendsList(LocalUserNum, EFriendsLists::ToString((EFriendsLists::Default)));
+		Friends->ReadFriendsList(UserNum, EFriendsLists::ToString((EFriendsLists::Default)));
 		
 
 		Friends->OnFriendsChangeDelegates->Clear();
@@ -185,23 +153,14 @@ void UEOSLibrary::GetPlayerFriends(APlayerController* PlayerController)
 			{
 				DISPLAY_LOG("Finished Retrieving Friends List");
 				TArray<TSharedRef<FOnlineFriend>> OutFriends;
-				Friends->GetFriendsList(LocalUserNum, EFriendsLists::ToString((EFriendsLists::Default)), OutFriends);
+				Friends->GetFriendsList(UserNum, EFriendsLists::ToString((EFriendsLists::Default)), OutFriends);
 			});
 		
 	}
 }
 
-EUserLoginStatus UEOSLibrary::GetLoginStatus(APlayerController* PlayerController)
+EUserLoginStatus UEOSLibrary::GetLoginStatus(int32 UserNum)
 {
-	if(!PlayerController)
-	{
-		DISPLAY_LOG("Player Controller Not Valid !");
-		return EUserLoginStatus::NotLoggedIn;
-	}
-	
-	ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(PlayerController->Player);
-	int32 UserNum = LocalPlayer->GetControllerId();
-
 	DISPLAY_LOG("Getting Status for User Num : %i", UserNum);
 	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
@@ -210,7 +169,7 @@ EUserLoginStatus UEOSLibrary::GetLoginStatus(APlayerController* PlayerController
 		IOnlineIdentityPtr Identity = OSS->GetIdentityInterface();
 		if (Identity.IsValid())
 		{
-			EUserLoginStatus LoginStatus;
+			EUserLoginStatus LoginStatus = EUserLoginStatus::NotLoggedIn;
 			switch(Identity->GetLoginStatus(UserNum))
 			{
 			default : LoginStatus = EUserLoginStatus::NotLoggedIn;
@@ -222,6 +181,7 @@ EUserLoginStatus UEOSLibrary::GetLoginStatus(APlayerController* PlayerController
 			case ELoginStatus::UsingLocalProfile : LoginStatus = EUserLoginStatus::UsingLocalProfile;
 				break;
 			}
+			DISPLAY_LOG("Login Status for User %i is %d", UserNum, Identity->GetLoginStatus(UserNum));
 			return LoginStatus;
 		}
 		DISPLAY_LOG("Identity Interface not Valid !");
@@ -231,21 +191,9 @@ EUserLoginStatus UEOSLibrary::GetLoginStatus(APlayerController* PlayerController
 	return EUserLoginStatus::NotLoggedIn;
 }
 
-bool UEOSLibrary::RetrieveAchievements(APlayerController *PlayerController)
+bool UEOSLibrary::RetrieveAchievements(int32 UserNum)
 {
-
-	if (!PlayerController)
-	{
-		DISPLAY_LOG("Invalid Player Controller !");
-		return false;
-	}
-	FUniqueNetIdPtr PlayerUniqueNetID = nullptr;
-	
-	if (APlayerState* PlayerState = (PlayerController != NULL) ? PlayerController->PlayerState : NULL)
-	{
-		PlayerUniqueNetID = PlayerState->GetUniqueId().GetUniqueNetId();
-	}
-	
+	return false;
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
 	{
@@ -261,7 +209,7 @@ bool UEOSLibrary::RetrieveAchievements(APlayerController *PlayerController)
 				
 			});*/
 			// Achievements->QueryAchievements(*PlayerUniqueNetID, QueryComplete);
-			Achievements->QueryAchievements(*PlayerUniqueNetID);
+			//Achievements->QueryAchievements(*PlayerUniqueNetID);
 			return true;
 		}
 		return false;
