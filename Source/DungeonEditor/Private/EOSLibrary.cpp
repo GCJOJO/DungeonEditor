@@ -57,13 +57,23 @@ bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
 			Identity->OnLoginCompleteDelegates->Clear();
 			Identity->OnLoginCompleteDelegates->AddLambda([&](int32 LocalUserNum, bool successful, const FUniqueNetId& userID, const FString& error)
 			{
-					DISPLAY_LOG("Logged In !")
+				DISPLAY_LOG("Logged In ? %i", successful);
+				if(successful)
+				{
+					// DISPLAY_LOG("Created Unique Player ID : %s", *Identity->CreateUniquePlayerId(FGuid::NewGuid().ToString())->ToString());
+					// DISPLAY_LOG("Player (%i) with Unique EOS ID : %s", LocalUserNum, *userID.ToString());
+					// DISPLAY_LOG("Player (%i) has a Global ID of : %s", LocalUserNum, *Identity->GetUniquePlayerId(LocalUserNum)->ToString());
+				}
 			});
 			Identity->OnLoginChangedDelegates.Clear();
 			Identity->OnLoginChangedDelegates.AddLambda([&](int32 _UserNum)
 			{
 				
 				DISPLAY_LOG("User %i changed logged status now : %d!", _UserNum, Identity->GetLoginStatus(_UserNum));
+				if(Identity->GetLoginStatus(_UserNum) == ELoginStatus::LoggedIn)
+				{
+					// DISPLAY_LOG("Created Unique Player ID : %s", *Identity->CreateUniquePlayerId(FGuid::NewGuid().ToString())->ToString());
+				}
 			});
 			
 			DISPLAY_LOG("Loging In...");

@@ -3,6 +3,6 @@
 #include "DungeonEditor.h"
 #include "Modules/ModuleManager.h"
 
-DEFINE_LOG_CATEGORY(FLogDungeonEditor);
+DEFINE_LOG_CATEGORY(LogDungeonEditor);
 
 IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, DungeonEditor, "DungeonEditor" );
