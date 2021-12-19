@@ -141,6 +141,8 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/Megascans/Surfaces/Grass/Grass.Grass
 /Game/Megascans/Surfaces/Grass/Grass_Inst.Grass_Inst
 /Game/Megascans/Surfaces/grass_wild_pjvtR0_surface/GrassWild.GrassWild
+/Game/Megascans/Surfaces/Landscape.Landscape
+/Game/Megascans/Surfaces/Landscape_Inst.Landscape_Inst
 /Game/Megascans/Surfaces/Stone_Pavement_2x2_M_ulxedfng_surface/StonePavement.StonePavement
 /Game/Models/Chests/OldDungeon/Black.Black
 /Game/Models/Chests/OldDungeon/Gold.Gold
