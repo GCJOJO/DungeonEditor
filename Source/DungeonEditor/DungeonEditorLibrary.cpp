@@ -64,8 +64,8 @@ bool UDungeonEditorLibrary::FindFiles(TArray<FString>& Files, FString RootFolder
 
 void UDungeonEditorLibrary::TakeScreenshot(const FString& Filename, bool ShowUI, bool AddUniqueSuffix)
 {  
-   FScreenshotRequest::RequestScreenshot(Filename, ShowUI, AddUniqueSuffix);
-	UE_LOG(LogTemp, Log, TEXT("Screenshot taken !"));
+	FScreenshotRequest::RequestScreenshot(Filename, ShowUI, AddUniqueSuffix);
+	DISPLAY_LOG("Screenshot taken !");
 }
 
 UTexture2D* UDungeonEditorLibrary::LoadTextureFromPath(const FString& Path)

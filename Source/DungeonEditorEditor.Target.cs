@@ -12,7 +12,7 @@ public class DungeonEditorEditorTarget : TargetRules
 
 		ExtraModuleNames.AddRange( new string[] { "DungeonEditor" } );
 
-//		bCompileChaos = true;
-//		bUseChaos = true;
+		bCompileChaos = true;
+		bUseChaos = true;
 	}
 }

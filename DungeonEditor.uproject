@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.27",
+	"EngineAssociation": "{F80AD0E3-4F7F-04CD-3992-D4B6A93BECA3}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -151,6 +151,10 @@
 		{
 			"Name": "RiderLink",
 			"Enabled": false
+		},
+		{
+			"Name": "BinkMedia",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [

@@ -162,7 +162,8 @@ enum ChangeSubLevelMode
 {
 	Normal,
 	Enter,
-	Exit
+	Exit,
+	Blueprint
 };
 
 UENUM(BlueprintType)
