@@ -1,6 +1,7 @@
 // By G.C*JOJO
 #include "EOSLibrary.h"
 
+#include "EOSVoiceChatFactory.h"
 #include "OnlineSubsystem.h"
 #include "Interfaces/OnlineIdentityInterface.h"
 #include "Interfaces/OnlineFriendsInterface.h"

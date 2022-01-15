@@ -13,7 +13,7 @@ UCreateSessionCallbackProxyAdvanced::UCreateSessionCallbackProxyAdvanced(const F
 {
 }
 
-UCreateSessionCallbackProxyAdvanced* UCreateSessionCallbackProxyAdvanced::CreateAdvancedSession(UObject* WorldContextObject, const TArray<FSessionPropertyKeyPair> &ExtraSettings, class APlayerController* PlayerController, int32 LocalUserNum,  int32 PublicConnections, int32 PrivateConnections, bool bUseLAN, bool bAllowInvites, bool bIsDedicatedServer, bool bUsePresence, bool bUseLobbiesIfAvailable, bool bAllowJoinViaPresence, bool bAllowJoinViaPresenceFriendsOnly, bool bAntiCheatProtected, bool bUsesStats, bool bShouldAdvertise)
+UCreateSessionCallbackProxyAdvanced* UCreateSessionCallbackProxyAdvanced::CreateAdvancedSession(UObject* WorldContextObject, const TArray<FSessionPropertyKeyPair> &ExtraSettings, class APlayerController* PlayerController, int32 LocalUserNum,  int32 PublicConnections, int32 PrivateConnections, bool bUseLAN, bool bAllowInvites, bool bIsDedicatedServer, bool bUsePresence, bool bUseLobbiesIfAvailable, bool bAllowJoinViaPresence, bool bAllowJoinViaPresenceFriendsOnly, bool bAntiCheatProtected, bool bUsesStats, bool bShouldAdvertise, bool bUseLobbiesVoiceChatIfAvailable)
 {
 	UCreateSessionCallbackProxyAdvanced* Proxy = NewObject<UCreateSessionCallbackProxyAdvanced>();
 	Proxy->PlayerControllerWeakPtr = PlayerController;
@@ -32,6 +32,8 @@ UCreateSessionCallbackProxyAdvanced* UCreateSessionCallbackProxyAdvanced::Create
 	Proxy->bUsesStats = bUsesStats;
 	Proxy->bShouldAdvertise = bShouldAdvertise;
 	Proxy->LocalUserNum = LocalUserNum;
+	Proxy->bUseLobbiesVoiceChatIfAvailable = bUseLobbiesVoiceChatIfAvailable;
+	
 	return Proxy;
 }
 
@@ -57,6 +59,7 @@ void UCreateSessionCallbackProxyAdvanced::Activate()
 			Settings.bIsLANMatch = bUseLAN;
 			Settings.bAllowJoinViaPresence = true;
 			Settings.bIsDedicated = bDedicatedServer;
+			
 
 			if (bDedicatedServer)
 			{
@@ -73,7 +76,8 @@ void UCreateSessionCallbackProxyAdvanced::Activate()
 			Settings.bAntiCheatProtected = bAntiCheatProtected;
 			Settings.bUsesStats = bUsesStats;
 			Settings.bShouldAdvertise = bShouldAdvertise;
-
+			Settings.bUseLobbiesVoiceChatIfAvailable = bUseLobbiesVoiceChatIfAvailable;
+			
 			// These are about the only changes over the standard Create Sessions Node
 			Settings.bAllowInvites = bAllowInvites;
 			

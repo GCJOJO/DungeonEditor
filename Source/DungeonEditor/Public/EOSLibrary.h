@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "BlueprintDataDefinitions.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "EOSLibrary.generated.h"
 
