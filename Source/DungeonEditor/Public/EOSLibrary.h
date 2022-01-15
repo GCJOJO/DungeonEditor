@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "BlueprintDataDefinitions.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "EOSLibrary.generated.h"
 
@@ -36,8 +35,8 @@ class DUNGEONEDITOR_API UEOSLibrary : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 
 	// User Management
-	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Login"))
-	static bool Login(int32 UserNum, ELoginType loginType);
+	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Login", AdvancedDisplay = "DevIP, DevToken"))
+	static bool Login(int32 UserNum, ELoginType loginType, FString DevIP = "127.0.0.1:1024", FString DevToken = "UE4");
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Logout"))
 	static bool Logout(int32 UserNum);
 	UFUNCTION(BlueprintCallable, Category="EOS", meta = (keywords = "Try To Auto Login"))

@@ -8,7 +8,7 @@
 #include "OnlineSessionSettings.h"
 #include "DungeonEditor/DungeonEditor.h"
 
-bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
+bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType, FString DevIP, FString DevToken )
 {
 	FOnlineAccountCredentials Credentials;
 
@@ -40,8 +40,8 @@ bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType)
 
 			break;
 		case Dev:
-			Credentials.Id = TEXT("127.0.0.1:1024");
-			Credentials.Token = TEXT("UE4");
+			Credentials.Id = DevIP;
+			Credentials.Token = DevToken;
 			Credentials.Type = TEXT("Developer");
 		DISPLAY_LOG("Login Method : Dev");
 	}
