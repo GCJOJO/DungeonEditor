@@ -25,16 +25,14 @@ class UGetFriendsCallbackProxy : public UOnlineBlueprintCallProxyBase
 
 	// Gets the players list of friends from the OnlineSubsystem and returns it, can be retrieved later with GetStoredFriendsList
 	UFUNCTION(BlueprintCallable, meta=(BlueprintInternalUseOnly = "true", WorldContext="WorldContextObject"), Category = "Online|AdvancedFriends")
-	static UGetFriendsCallbackProxy* GetAndStoreFriendsList(UObject* WorldContextObject, class APlayerController* PlayerController);
+	static UGetFriendsCallbackProxy* GetAndStoreFriendsList(UObject* WorldContextObject, int32 LocalUserID = 0);
 
 	virtual void Activate() override;
 
 private:
 	// Internal callback when the friends list is retrieved
 	void OnReadFriendsListCompleted(int32 LocalUserNum, bool bWasSuccessful, const FString& ListName, const FString& ErrorString);
-
-	// The player controller triggering things
-	TWeakObjectPtr<APlayerController> PlayerControllerWeakPtr;
+	
 
 	// The delegate executed
 	FOnReadFriendsListComplete FriendListReadCompleteDelegate;
@@ -42,6 +40,8 @@ private:
 	// The Type of friends list to get
 	// Removed because all but the facebook interfaces don't even currently support anything but the default friends list.
 	//EBPFriendsLists FriendListToGet;
+
+	int32 LocalUserID;
 
 	// The world context object in which this call is taking place
 	UObject* WorldContextObject;

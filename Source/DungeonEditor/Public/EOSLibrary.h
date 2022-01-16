@@ -53,5 +53,5 @@ class DUNGEONEDITOR_API UEOSLibrary : public UBlueprintFunctionLibrary
 
 	// Stats And Achievements
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Retrieve Achievements"))
-	bool RetrieveAchievements(int32 UserNum);
+	bool QueryAchievements(FBPUniqueNetId* UniqueNetId);
 };

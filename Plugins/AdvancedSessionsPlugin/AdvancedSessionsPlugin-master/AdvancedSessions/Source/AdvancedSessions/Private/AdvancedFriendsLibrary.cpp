@@ -104,14 +104,14 @@ void UAdvancedFriendsLibrary::SendSessionInviteToFriend(APlayerController *Playe
 	return;
 }
 
-void UAdvancedFriendsLibrary::GetFriend(APlayerController *PlayerController, const FBPUniqueNetId FriendUniqueNetId, FBPFriendInfo &Friend)
+void UAdvancedFriendsLibrary::GetFriend(int32 LocalUserNum, const FBPUniqueNetId FriendUniqueNetId, FBPFriendInfo &Friend)
 {
 
-	if (!PlayerController)
+	/*if (!PlayerController)
 	{
 		UE_LOG(AdvancedFriendsLog, Warning, TEXT("GetFriend Had a bad Player Controller!"));
 		return;
-	}
+	}*/
 
 	if (!FriendUniqueNetId.IsValid())
 	{
@@ -127,15 +127,15 @@ void UAdvancedFriendsLibrary::GetFriend(APlayerController *PlayerController, con
 		return;
 	}
 
-	ULocalPlayer* Player = Cast<ULocalPlayer>(PlayerController->Player);
+	/*ULocalPlayer* Player = Cast<ULocalPlayer>(PlayerController->Player);
 
 	if (!Player)
 	{
 		UE_LOG(AdvancedFriendsLog, Warning, TEXT("GetFriend failed to get LocalPlayer!"));
 		return;
-	}
+	}*/
 
-	TSharedPtr<FOnlineFriend> fr = FriendsInterface->GetFriend(Player->GetControllerId(), *FriendUniqueNetId.GetUniqueNetId(), EFriendsLists::ToString(EFriendsLists::Default));
+	TSharedPtr<FOnlineFriend> fr = FriendsInterface->GetFriend(LocalUserNum, *FriendUniqueNetId.GetUniqueNetId(), EFriendsLists::ToString(EFriendsLists::Default));
 	if (fr.IsValid())
 	{
 		FOnlineUserPresence pres = fr->GetPresence();
@@ -155,13 +155,13 @@ void UAdvancedFriendsLibrary::GetFriend(APlayerController *PlayerController, con
 	}
 }
 
-void UAdvancedFriendsLibrary::IsAFriend(APlayerController *PlayerController, const FBPUniqueNetId UniqueNetId, bool &IsFriend)
+void UAdvancedFriendsLibrary::IsAFriend(int32 LocalUserNum, const FBPUniqueNetId UniqueNetId, bool &IsFriend)
 {
-	if (!PlayerController)
+	/*if (!PlayerController)
 	{
 		UE_LOG(AdvancedFriendsLog, Warning, TEXT("IsAFriend Had a bad Player Controller!"));
 		return;
-	}
+	}*/
 
 	if (!UniqueNetId.IsValid())
 	{
@@ -177,15 +177,15 @@ void UAdvancedFriendsLibrary::IsAFriend(APlayerController *PlayerController, con
 		return;
 	}
 
-	ULocalPlayer* Player = Cast<ULocalPlayer>(PlayerController->Player);
+	/*ULocalPlayer* Player = Cast<ULocalPlayer>(PlayerController->Player);
 
 	if (!Player)
 	{
 		UE_LOG(AdvancedFriendsLog, Warning, TEXT("IsAFriend Failed to get LocalPlayer!"));
 		return;
-	}
+	}*/
 
-	IsFriend = FriendsInterface->IsFriend(Player->GetControllerId(), *UniqueNetId.GetUniqueNetId(), EFriendsLists::ToString(EFriendsLists::Default));
+	IsFriend = FriendsInterface->IsFriend(LocalUserNum, *UniqueNetId.GetUniqueNetId(), EFriendsLists::ToString(EFriendsLists::Default));
 }
 
 void UAdvancedFriendsLibrary::GetStoredRecentPlayersList(FBPUniqueNetId UniqueNetId, TArray<FBPOnlineRecentPlayer> &PlayersList)
@@ -220,14 +220,14 @@ void UAdvancedFriendsLibrary::GetStoredRecentPlayersList(FBPUniqueNetId UniqueNe
 	}
 }
 
-void UAdvancedFriendsLibrary::GetStoredFriendsList(APlayerController *PlayerController, TArray<FBPFriendInfo> &FriendsList)
+void UAdvancedFriendsLibrary::GetStoredFriendsList(int32 LocalUserNum, TArray<FBPFriendInfo> &FriendsList)
 {
 
-	if (!PlayerController)
+	/*if (!PlayerController)
 	{
 		UE_LOG(AdvancedFriendsLog, Warning, TEXT("GetFriendsList Had a bad Player Controller!"));
 		return;
-	}
+	}*/
 
 	IOnlineFriendsPtr FriendsInterface = Online::GetFriendsInterface();
 	
@@ -237,19 +237,19 @@ void UAdvancedFriendsLibrary::GetStoredFriendsList(APlayerController *PlayerCont
 		return;
 	}
 
-	ULocalPlayer* Player = Cast<ULocalPlayer>(PlayerController->Player);
+	/*ULocalPlayer* Player = Cast<ULocalPlayer>(PlayerController->Player);
 
 	if (!Player)
 	{
 		UE_LOG(AdvancedFriendsLog, Warning, TEXT("GetFriendsList Failed to get LocalPlayer!"));
 		return;
-	}
+	}*/
 	
-	FriendsInterface->ReadFriendsList(Player->GetControllerId(), EFriendsLists::ToString((EFriendsLists::Default)));
+	FriendsInterface->ReadFriendsList(LocalUserNum, EFriendsLists::ToString((EFriendsLists::Default)));
 	
 
 	TArray< TSharedRef<FOnlineFriend> > FriendList;
-	FriendsInterface->GetFriendsList(Player->GetControllerId(), EFriendsLists::ToString((EFriendsLists::Default)), FriendList);
+	FriendsInterface->GetFriendsList(LocalUserNum, EFriendsLists::ToString((EFriendsLists::Default)), FriendList);
 
 	for (int32 i = 0; i < FriendList.Num(); i++)
 	{

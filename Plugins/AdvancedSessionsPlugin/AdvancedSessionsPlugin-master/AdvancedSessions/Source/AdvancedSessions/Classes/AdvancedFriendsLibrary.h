@@ -40,11 +40,11 @@ public:
 
 	// Get a friend from the previously read/saved friends list (Must Call GetFriends first for this to return anything)
 	UFUNCTION(BlueprintCallable, Category = "Online|AdvancedFriends|FriendsList")
-	static void GetFriend(APlayerController *PlayerController, const FBPUniqueNetId FriendUniqueNetId, FBPFriendInfo &Friend);
+	static void GetFriend(int32 LocalUserNum, const FBPUniqueNetId FriendUniqueNetId, FBPFriendInfo &Friend);
 
 	// Get the previously read/saved friends list (Must Call GetFriends first for this to return anything)
 	UFUNCTION(BlueprintCallable, Category = "Online|AdvancedFriends|FriendsList")
-	static void GetStoredFriendsList(APlayerController *PlayerController, TArray<FBPFriendInfo> &FriendsList);
+	static void GetStoredFriendsList(int32 LocalUserNum, TArray<FBPFriendInfo> &FriendsList);
 
 	// Get the previously read/saved recent players list (Must Call GetRecentPlayers first for this to return anything)
 	UFUNCTION(BlueprintCallable, Category = "Online|AdvancedFriends|RecentPlayersList")
@@ -52,5 +52,5 @@ public:
 
 	// Check if a UniqueNetId is a friend
 	UFUNCTION(BlueprintPure, Category = "Online|AdvancedFriends|FriendsList")
-	static void IsAFriend(APlayerController *PlayerController, const FBPUniqueNetId UniqueNetId, bool &IsFriend);
+	static void IsAFriend(int32 LocalUserNum, const FBPUniqueNetId UniqueNetId, bool &IsFriend);
 };	

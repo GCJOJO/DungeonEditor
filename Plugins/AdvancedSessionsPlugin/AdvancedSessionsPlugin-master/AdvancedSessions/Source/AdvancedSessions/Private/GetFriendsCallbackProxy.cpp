@@ -12,31 +12,32 @@ UGetFriendsCallbackProxy::UGetFriendsCallbackProxy(const FObjectInitializer& Obj
 {
 }
 
-UGetFriendsCallbackProxy* UGetFriendsCallbackProxy::GetAndStoreFriendsList(UObject* WorldContextObject, class APlayerController* PlayerController)
+UGetFriendsCallbackProxy* UGetFriendsCallbackProxy::GetAndStoreFriendsList(UObject* WorldContextObject, int32 LocalUserID)
 {
 	UGetFriendsCallbackProxy* Proxy = NewObject<UGetFriendsCallbackProxy>();
-	Proxy->PlayerControllerWeakPtr = PlayerController;
+	// Proxy->PlayerControllerWeakPtr = PlayerController;
+	Proxy->LocalUserID = LocalUserID;
 	Proxy->WorldContextObject = WorldContextObject;
 	return Proxy;
 }
 
 void UGetFriendsCallbackProxy::Activate()
 {
-	if (!PlayerControllerWeakPtr.IsValid())
+	/*if (!PlayerControllerWeakPtr.IsValid())
 	{
 		// Fail immediately
 		UE_LOG(AdvancedGetFriendsLog, Warning, TEXT("GetFriends Failed received a bad player controller!"));
 		TArray<FBPFriendInfo> EmptyArray;
 		OnFailure.Broadcast(EmptyArray);
 		return;
-	}
+	}*/
 
 	IOnlineFriendsPtr Friends = Online::GetFriendsInterface();
 	if (Friends.IsValid())
 	{	
-		ULocalPlayer* Player = Cast<ULocalPlayer>(PlayerControllerWeakPtr->Player);
+		//ULocalPlayer* Player = Cast<ULocalPlayer>(PlayerControllerWeakPtr->Player);
 
-		Friends->ReadFriendsList(Player->GetControllerId(), EFriendsLists::ToString((EFriendsLists::Default)), FriendListReadCompleteDelegate);
+		Friends->ReadFriendsList(LocalUserID, EFriendsLists::ToString((EFriendsLists::Default)), FriendListReadCompleteDelegate);
 		return;
 	}
 

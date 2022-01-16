@@ -202,25 +202,25 @@ EUserLoginStatus UEOSLibrary::GetLoginStatus(int32 UserNum)
 	return EUserLoginStatus::NotLoggedIn;
 }
 
-bool UEOSLibrary::RetrieveAchievements(int32 UserNum)
+bool UEOSLibrary::QueryAchievements(FBPUniqueNetId* UniqueNetId)
 {
-	return false;
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
 	{
 		IOnlineAchievementsPtr Achievements = OSS->GetAchievementsInterface();
 		if(Achievements.IsValid())
 		{
-			/*FOnQueryAchievementsCompleteDelegate QueryComplete;
+			FOnQueryAchievementsCompleteDelegate QueryComplete;
 			QueryComplete.CreateLambda([&](FUniqueNetId& PlayerID, const bool bSuccessful)
 			{
 				DISPLAY_LOG("Finished Retrieving Achievements");
 				if(bSuccessful) { DISPLAY_LOG("Retrieving Achievements Successful !"); }
 				else { DISPLAY_LOG("Retrieving Achievements not Successful..."); }
-				
-			});*/
-			// Achievements->QueryAchievements(*PlayerUniqueNetID, QueryComplete);
-			//Achievements->QueryAchievements(*PlayerUniqueNetID);
+			});
+
+			const FUniqueNetId* PlayerID = UniqueNetId->GetUniqueNetId();
+			
+			Achievements->QueryAchievements(*PlayerID, QueryComplete);		
 			return true;
 		}
 		return false;
@@ -228,7 +228,7 @@ bool UEOSLibrary::RetrieveAchievements(int32 UserNum)
 	return false;
 }
 
-/*void GetTitleFile(FName FileName)
+void GetTitleFile(FString FileName)
 {
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
@@ -236,7 +236,8 @@ bool UEOSLibrary::RetrieveAchievements(int32 UserNum)
 		IOnlineTitleFilePtr TitleFiles = OSS->GetTitleFileInterface();
 		if(TitleFiles.IsValid())
 		{
-			TitleFiles->EnumerateFiles();
+			// TitleFiles->EnumerateFiles();
+			// TitleFiles->ReadFile(FileName);
 		}
 	}
-}*/
+}
