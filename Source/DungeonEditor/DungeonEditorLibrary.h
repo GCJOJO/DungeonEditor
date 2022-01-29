@@ -64,7 +64,6 @@ public:
 	}
 	
 };*/
-
 UENUM(BlueprintType)
 enum ELocalizationCulture 
 {
@@ -173,6 +172,41 @@ enum ECustomCameraState
 	BlendingUp,
 	BlendingDown,
 	Showing
+};
+
+
+USTRUCT(Blueprintable)
+struct FSaveData
+{
+	GENERATED_BODY()
+	UPROPERTY(BlueprintReadWrite)
+	FString SaveName;
+	UPROPERTY(BlueprintReadWrite)
+	FString SaveAuthor;
+	UPROPERTY(BlueprintReadWrite)
+	FString SaveMinVersion;
+	UPROPERTY(BlueprintReadWrite)
+	FGuid SaveGUID;
+	UPROPERTY(BlueprintReadWrite)
+	UTexture2D* SaveIcon;
+	UPROPERTY(BlueprintReadWrite)
+	bool bUseSkybox;
+	UPROPERTY(BlueprintReadWrite)
+	TEnumAsByte<HoleType> HoleType;
+	UPROPERTY(BlueprintReadWrite)
+	TEnumAsByte<SkyboxType> SkyboxType;
+	UPROPERTY(BlueprintReadWrite)
+	int32 ID;
+	UPROPERTY(BlueprintReadWrite)
+	int32 SizeX;
+	UPROPERTY(BlueprintReadWrite)
+	int32 SizeY;
+	UPROPERTY(BlueprintReadWrite)
+	int32 SizeDX;
+	UPROPERTY(BlueprintReadWrite)
+	int32 SizeDY;
+
+	
 };
 
 UCLASS()

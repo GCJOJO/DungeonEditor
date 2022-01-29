@@ -7,6 +7,7 @@
 #include "Interfaces/OnlineFriendsInterface.h"
 #include "DungeonEditor/Public/DungeonCustomGameInstance.h"
 #include "OnlineSessionSettings.h"
+#include "AdvancedSessions/Classes/AdvancedSessionsLibrary.h"
 #include "DungeonEditor/DungeonEditor.h"
 
 bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType, FString DevIP, FString DevToken )
@@ -202,7 +203,7 @@ EUserLoginStatus UEOSLibrary::GetLoginStatus(int32 UserNum)
 	return EUserLoginStatus::NotLoggedIn;
 }
 
-bool UEOSLibrary::QueryAchievements(FBPUniqueNetId* UniqueNetId)
+bool UEOSLibrary::QueryAchievements(int32 LocalUserNum)
 {
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
@@ -210,18 +211,20 @@ bool UEOSLibrary::QueryAchievements(FBPUniqueNetId* UniqueNetId)
 		IOnlineAchievementsPtr Achievements = OSS->GetAchievementsInterface();
 		if(Achievements.IsValid())
 		{
-			FOnQueryAchievementsCompleteDelegate QueryComplete;
+			/*FOnQueryAchievementsCompleteDelegate QueryComplete;
 			QueryComplete.CreateLambda([&](FUniqueNetId& PlayerID, const bool bSuccessful)
 			{
 				DISPLAY_LOG("Finished Retrieving Achievements");
 				if(bSuccessful) { DISPLAY_LOG("Retrieving Achievements Successful !"); }
 				else { DISPLAY_LOG("Retrieving Achievements not Successful..."); }
 			});
-
-			const FUniqueNetId* PlayerID = UniqueNetId->GetUniqueNetId();
 			
-			Achievements->QueryAchievements(*PlayerID, QueryComplete);		
-			return true;
+			FBPUniqueNetId PlayerID;
+			UAdvancedSessionsLibrary::GetUniqueNetIDFromLocalID(LocalUserNum, PlayerID);
+			
+			Achievements->QueryAchievements(*PlayerID.GetUniqueNetId(), QueryComplete);		
+			return true;*/
+			return false;
 		}
 		return false;
 	}
