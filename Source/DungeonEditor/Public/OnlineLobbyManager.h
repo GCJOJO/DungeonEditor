@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "Tickable.h"
+#include "Net/UnrealNetwork.h"
 #include "DungeonEditor/DungeonEditorLibrary.h"
 #include "OnlineLobbyManager.generated.h"
 
@@ -24,7 +25,7 @@ public:
 	
 	UOnlineLobbyManager();
 
-	UPROPERTY(BlueprintReadWrite, Replicated)
+	UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnSaveDataUpdated)
 	FSaveData SaveData;
 	
 	UFUNCTION(BlueprintCallable, Category = "Online Lobby")
@@ -53,16 +54,20 @@ public:
 	UFUNCTION(BlueprintGetter)
 	static FSaveData GetSaveData();
 
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Online Lobby Manager")
+	void OnSaveDataUpdated(FSaveData Data);
+	
 	// Stuff (Keep at the bottom)
 	
 	UFUNCTION(BlueprintImplementableEvent)
 	void Tick(float DeltaTime) override;
 
-	bool IsTickable() const override { return bCanTick; }
-	bool IsTickableInEditor() const override { return true; }
-	bool IsTickableWhenPaused() const override { return true; }
-	TStatId GetStatId() const override { return TStatId(); }
+	virtual bool IsTickable() const override { return bCanTick; }
+	virtual bool IsTickableInEditor() const override { return true; }
+	virtual bool IsTickableWhenPaused() const override { return true; }
+	virtual TStatId GetStatId() const override { return TStatId(); }
+
+	virtual bool IsSupportedForNetworking() const override;
+	virtual bool IsNameStableForNetworking() const override;
 	
-	bool IsSupportedForNetworking() const override;
-	bool IsNameStableForNetworking() const override;
 };

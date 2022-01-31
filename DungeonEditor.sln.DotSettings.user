@@ -2,6 +2,7 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=E0F1FF46_002D6648_002D483D_002D8873_002DCA2E0D26AF9A_002Fdl_003ASource_003A_002E_002E_003F_002E_002E_003FSource_002Fd_003ADungeonEditor_002Ff_003ADungeonEditorLibrary_002Eh/@EntryIndexedValue">ForceIncluded</s:String>
 	
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/Storage/@EntryValue">ThisComputer</s:String>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Tickable/@EntryIndexedValue">True</s:Boolean>
 	
 	
 	</wpf:ResourceDictionary>

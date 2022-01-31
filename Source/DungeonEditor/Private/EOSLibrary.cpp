@@ -155,20 +155,16 @@ void UEOSLibrary::GetPlayerFriends(int32 UserNum)
 {	
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
-	{
-		IOnlineFriendsPtr Friends = OSS->GetFriendsInterface();
-		Friends->ReadFriendsList(UserNum, EFriendsLists::ToString((EFriendsLists::Default)));
-		
-
-		Friends->OnFriendsChangeDelegates->Clear();
-		Friends->OnFriendsChangeDelegates->AddLambda([&] 
-			{
-				DISPLAY_LOG("Finished Retrieving Friends List");
-				TArray<TSharedRef<FOnlineFriend>> OutFriends;
-				Friends->GetFriendsList(UserNum, EFriendsLists::ToString((EFriendsLists::Default)), OutFriends);
-			});
-		
-	}
+    	{
+    		if (IOnlineFriendsPtr FriendsPtr = OSS->GetFriendsInterface())
+    		{
+    			FriendsPtr->ReadFriendsList(UserNum, FString(""), FOnReadFriendsListComplete::CreateLambda([&]
+    			(int32 LocalUserNum, bool bWasSuccessful, const FString& ListName, const FString& ErrorStr)
+    			{
+    				UE_LOG(LogDungeonEditor, Warning, TEXT("Friends List Read : successful ? %s"), ( bWasSuccessful ? TEXT("true") : TEXT("false") ));
+    			}));
+    		}
+    	}
 }
 
 EUserLoginStatus UEOSLibrary::GetLoginStatus(int32 UserNum)

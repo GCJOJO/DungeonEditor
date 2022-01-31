@@ -3,8 +3,6 @@
 
 #include "OnlineLobbyManager.h"
 
-#include "Net/UnrealNetwork.h"
-
 UOnlineLobbyManager* UOnlineLobbyManager::OnlineLobbyManagerInstance = nullptr;
 
 UOnlineLobbyManager::UOnlineLobbyManager()
@@ -49,6 +47,10 @@ FSaveData UOnlineLobbyManager::GetSaveData()
 {
 	return OnlineLobbyManagerInstance->SaveData;
 }
+void UOnlineLobbyManager::OnSaveDataUpdated_Implementation(FSaveData)
+{
+	UE_LOG(LogDungeonEditor, Warning, TEXT("[LOBBY MANAGER] : Save Data Changed"));
+}
 
 
 // Stuff (Keep at the bottom)
@@ -65,5 +67,7 @@ bool UOnlineLobbyManager::IsNameStableForNetworking() const
 
 void UOnlineLobbyManager::GetLifetimeReplicatedProps( TArray< FLifetimeProperty > & OutLifetimeProps ) const
 {
-	
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UOnlineLobbyManager, SaveData);
 }
