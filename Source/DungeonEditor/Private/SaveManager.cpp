@@ -3,31 +3,34 @@
 
 #include "SaveManager.h"
 
-USaveManager* USaveManager::SaveManager = nullptr;
 
-USaveManager::USaveManager()
+ASaveManager::ASaveManager()
 {
-	bCanTick = bTimerStarted = false;
+	
 }
 
-void USaveManager::CreateSaveManager(TSubclassOf<USaveManager> ClassType)
+ASaveManager::~ASaveManager()
+{
+	
+}
+
+/*void ASaveManager::CreateSaveManager(TSubclassOf<ASaveManager> ClassType)
 {
 	if(SaveManager == nullptr)
 	{
-		SaveManager = NewObject<USaveManager>(ClassType);
+		SaveManager = NewObject<ASaveManager>(ClassType);
 		SaveManager->AddToRoot();
 		SaveManager->BeginPlay();
-		SaveManager->bCanTick = SaveManager->bTimerStarted = true;
 	}
 }
 
-USaveManager* USaveManager::GetSaveManager()
+ASaveManager* ASaveManager::GetSaveManager()
 {
 	if (SaveManager != nullptr) return SaveManager;
 	return nullptr;
 }
 
-void USaveManager::DestroySaveManager()
+void ASaveManager::DestroySaveManager()
 {
 	if(SaveManager != nullptr)
 	{
@@ -36,14 +39,31 @@ void USaveManager::DestroySaveManager()
 		SaveManager->ConditionalBeginDestroy();
 		SaveManager = nullptr;
 	}
+}*/
+
+void ASaveManager::BeginPlay()
+{
+	Super::BeginPlay();
 }
 
-void USaveManager::LoadDungeon_Implementation()
+void ASaveManager::Destroyed()
+{
+	Super::Destroyed();
+}
+
+
+void ASaveManager::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+}
+
+
+void ASaveManager::LoadDungeon_Implementation(UPARAM() FString SaveName, bool& SaveExists, bool& bIsOldFormat)
 {
 	
 }
 
-void USaveManager::SaveDungeon_Implementation()
+void ASaveManager::SaveDungeon_Implementation(UPARAM() FString SaveName, bool ForceSave, bool& SaveExists)
 {
 	
 }

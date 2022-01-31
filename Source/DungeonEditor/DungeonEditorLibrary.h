@@ -175,10 +175,12 @@ enum ECustomCameraState
 };
 
 
-USTRUCT(Blueprintable)
+USTRUCT(Blueprintable, BlueprintType)
 struct FSaveData
 {
 	GENERATED_BODY()
+	UPROPERTY(BlueprintReadWrite)
+    FString SaveFormatVersion;
 	UPROPERTY(BlueprintReadWrite)
 	FString SaveName;
 	UPROPERTY(BlueprintReadWrite)
@@ -205,8 +207,8 @@ struct FSaveData
 	int32 SizeDX;
 	UPROPERTY(BlueprintReadWrite)
 	int32 SizeDY;
-
-	
+	UPROPERTY(BlueprintReadWrite)
+    TArray<FString> ActorsSaves;	
 };
 
 UCLASS()

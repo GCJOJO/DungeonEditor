@@ -3,55 +3,56 @@
 #pragma once
 
 #include "CoreMinimal.h"
-
+#include "GameFramework/Actor.h"
 #include "SaveManager.generated.h"
 
-/**
- * 
- */
-UCLASS()
-class DUNGEONEDITOR_API USaveManager : public UObject, public FTickableGameObject
+UCLASS(BlueprintType, Blueprintable)
+class DUNGEONEDITOR_API ASaveManager : public AActor
 {
+private:
 	GENERATED_BODY()
 
-private:
-	static USaveManager* SaveManager;
+	//static ASaveManager* SaveManager;
 
-	uint8 bCanTick : 1;
-	uint8 bTimerStarted : 1;
+public:	
+	
+	ASaveManager();
+	~ASaveManager();
 
-public:
-
-	USaveManager();
-
-	UFUNCTION(BlueprintCallable, Category = "Save Manager")
-	static void CreateSaveManager(TSubclassOf<USaveManager> ClassType);
+	/*UFUNCTION(BlueprintCallable, Category = "Save Manager")
+	static void CreateSaveManager(TSubclassOf<ASaveManager> ClassType);
 	
 	UFUNCTION(BlueprintCallable, Category = "Save Manager")
-	static USaveManager* GetSaveManager();
+	static ASaveManager* GetSaveManager();
 
 	UFUNCTION(BlueprintCallable, Category = "Save Manager")
-	static void DestroySaveManager();
+	static void DestroySaveManager();*/
 
-	UFUNCTION(BlueprintNativeEvent, Category = "Save Manager")
-	void SaveDungeon();
 
-	UFUNCTION(BlueprintNativeEvent, Category = "Save Manager")
-	void LoadDungeon();
-	
-	UFUNCTION(BlueprintImplementableEvent, meta = (keywords = "BeginPlay"))
-	void BeginPlay();
-	
-	UFUNCTION(BlueprintImplementableEvent,  meta = (keywords = "Destory"))
-	void OnDestroy();
-	
-	UFUNCTION(BlueprintImplementableEvent)
-	void Tick(float DeltaTime) override;
+	/**
+	 *	Save The Current Dungeon
+	 *	@param SaveName The Name Of The Save
+	 *	@param SaveExists Does The Save Exists
+	 *	@return Returns true if the save already existed or false if it did not
+	 */
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Save Manager")
+	void SaveDungeon(UPARAM() FString SaveName, bool ForceSave, bool& SaveExists);
 
-	bool IsTickable() const override { return bCanTick; }
-	bool IsTickableInEditor() const override { return true; }
-	bool IsTickableWhenPaused() const override { return true; }
-	TStatId GetStatId() const override { return TStatId(); }
+	/**
+	 *	Load the Given Dungeon
+	 *	@param SaveName The Name Of The Save
+	 *	@param SaveExists Does The Save Exists
+	 *	@param bIsOldFormat Does The Save Is In Older Format
+	 *	@return Returns if the save already existed and if it is saved in an old format
+	 */
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Save Manager")
+	void LoadDungeon(UPARAM() FString SaveName, bool& SaveExists, bool& bIsOldFormat);
+	
+	virtual void BeginPlay() override;
+	
+	virtual void Destroyed() override;
+	
+	virtual void Tick(float DeltaTime) override;
 
 	virtual bool IsSupportedForNetworking() const override { return true; }
 	virtual bool IsNameStableForNetworking() const override { return true; }

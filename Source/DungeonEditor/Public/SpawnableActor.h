@@ -10,8 +10,11 @@
 UCLASS()
 class DUNGEONEDITOR_API ASpawnableActor : public AActor, public ISaveable
 {
-	GENERATED_BODY()
+public:
 	
+private:
+	GENERATED_BODY()
+
 public:	
 	// Sets default values for this actor's properties
 	ASpawnableActor();

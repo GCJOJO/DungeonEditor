@@ -7,7 +7,7 @@
 #include "Saveable.generated.h"
 
 // This class does not need to be modified.
-UINTERFACE()
+UINTERFACE(Blueprintable, BlueprintType)
 class USaveable : public UInterface
 {
 	GENERATED_BODY()
@@ -23,12 +23,12 @@ public:
 	/**
 	*  @details This will return what the actor wants to save.
 	**/
-	UFUNCTION(BlueprintNativeEvent, Category = "Saveable Interface")
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Saveable Interface")
 	FString SaveSaveData();
 
 	/**
 	 *  @param SaveData The Data for an actor (Do not pass the class with it) 
 	 **/
-	UFUNCTION(BlueprintNativeEvent, Category = "Saveable Interface")
-	void LoadSaveData(FString SaveData);
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Saveable Interface")
+	void LoadSaveData(UPARAM() FString SaveData);
 };
