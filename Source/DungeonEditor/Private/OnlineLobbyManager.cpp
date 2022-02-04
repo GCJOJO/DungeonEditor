@@ -3,13 +3,15 @@
 
 #include "OnlineLobbyManager.h"
 
-UOnlineLobbyManager* UOnlineLobbyManager::OnlineLobbyManagerInstance = nullptr;
+//AOnlineLobbyManager* AOnlineLobbyManager::OnlineLobbyManagerInstance = nullptr;
 
-UOnlineLobbyManager::UOnlineLobbyManager()
+AOnlineLobbyManager::AOnlineLobbyManager(): SaveData()
 {
-	bCanTick = bTimerStarted = false;
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
 }
 
+/*
 void UOnlineLobbyManager::CreateLobbyManager(TSubclassOf<UOnlineLobbyManager> ClassType)
 {
 	if(OnlineLobbyManagerInstance == nullptr)
@@ -37,17 +39,18 @@ void UOnlineLobbyManager::DestroyLobbyManager()
 		OnlineLobbyManagerInstance = nullptr;
 	}
 }
+*/
 
-void UOnlineLobbyManager::SetSaveData(FSaveData NewSaveData)
+void AOnlineLobbyManager::SetSaveData(FSaveData NewSaveData)
 {
-	OnlineLobbyManagerInstance->SaveData = NewSaveData;
+	SaveData = NewSaveData;
 }
 
-FSaveData UOnlineLobbyManager::GetSaveData()
+FSaveData AOnlineLobbyManager::GetSaveData()
 {
-	return OnlineLobbyManagerInstance->SaveData;
+	return SaveData;
 }
-void UOnlineLobbyManager::OnSaveDataUpdated_Implementation(FSaveData)
+void AOnlineLobbyManager::OnSaveDataUpdated_Implementation(FSaveData)
 {
 	UE_LOG(LogDungeonEditor, Warning, TEXT("[LOBBY MANAGER] : Save Data Changed"));
 }
@@ -55,19 +58,36 @@ void UOnlineLobbyManager::OnSaveDataUpdated_Implementation(FSaveData)
 
 // Stuff (Keep at the bottom)
 
-bool UOnlineLobbyManager::IsSupportedForNetworking() const
+bool AOnlineLobbyManager::IsSupportedForNetworking() const
 {
 	return true;
 }
 
-bool UOnlineLobbyManager::IsNameStableForNetworking() const
+bool AOnlineLobbyManager::IsNameStableForNetworking() const
 {
 	return true;
 }
 
-void UOnlineLobbyManager::GetLifetimeReplicatedProps( TArray< FLifetimeProperty > & OutLifetimeProps ) const
+void AOnlineLobbyManager::GetLifetimeReplicatedProps( TArray< FLifetimeProperty > & OutLifetimeProps ) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
-	DOREPLIFETIME(UOnlineLobbyManager, SaveData);
+	DOREPLIFETIME(AOnlineLobbyManager, SaveData);
 }
+
+void AOnlineLobbyManager::BeginPlay()
+{
+	Super::BeginPlay();
+}
+
+void AOnlineLobbyManager::Destroyed()
+{
+	Super::Destroyed();
+}
+
+void AOnlineLobbyManager::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+}
+
+

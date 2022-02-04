@@ -158,11 +158,7 @@ void UEOSLibrary::GetPlayerFriends(int32 UserNum)
     	{
     		if (IOnlineFriendsPtr FriendsPtr = OSS->GetFriendsInterface())
     		{
-    			FriendsPtr->ReadFriendsList(UserNum, FString(""), FOnReadFriendsListComplete::CreateLambda([&]
-    			(int32 LocalUserNum, bool bWasSuccessful, const FString& ListName, const FString& ErrorStr)
-    			{
-    				UE_LOG(LogDungeonEditor, Warning, TEXT("Friends List Read : successful ? %s"), ( bWasSuccessful ? TEXT("true") : TEXT("false") ));
-    			}));
+    			FriendsPtr->ReadFriendsList(0, FString(""), FOnReadFriendsListComplete::CreateStatic(OnGetAllFriendsComplete));
     		}
     	}
 }
@@ -237,6 +233,30 @@ void GetTitleFile(FString FileName)
 		{
 			// TitleFiles->EnumerateFiles();
 			// TitleFiles->ReadFile(FileName);
+		}
+	}
+}
+
+void UEOSLibrary::OnGetAllFriendsComplete(int32 LocalUserNum, bool bWasSuccessful, const FString& ListName,
+	const FString& ErrorStr)
+{
+	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+	if (bWasSuccessful)
+	{
+		if (OSS)
+		{
+			if (IOnlineFriendsPtr Friends = OSS->GetFriendsInterface())
+			{
+				TArray<TSharedRef<FOnlineFriend>> FriendsList;
+				if (Friends->GetFriendsList(0, ListName, FriendsList))
+				{
+					for (TSharedRef<FOnlineFriend> Friend : FriendsList)
+					{
+						FString FriendName = Friend.Get().GetRealName();
+						DISPLAY_LOG("Friend: %s", *FriendName);
+					}
+				}
+			}
 		}
 	}
 }
