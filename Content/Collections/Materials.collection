@@ -116,6 +116,7 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/Mats/Tiles/OldDungeon/EditableTexture_M.EditableTexture_M
 /Game/Mats/Tiles/OldDungeon/ImcompleteFloor.ImcompleteFloor
 /Game/Mats/Tiles/OldDungeon/M_Bricks.M_Bricks
+/Game/Mats/Tiles/OldDungeon/M_Bricks_OneSide.M_Bricks_OneSide
 /Game/Mats/Tiles/OldDungeon/Stone_Mat.Stone_Mat
 /Game/Mats/Tiles/OldDungeon/Stone_Mat_Inst.Stone_Mat_Inst
 /Game/Mats/Tiles/OldDungeon/Stone_Mat_Inst_Emissive.Stone_Mat_Inst_Emissive
