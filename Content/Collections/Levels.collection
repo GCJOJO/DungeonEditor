@@ -20,6 +20,10 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/Levels/Dungeons/DungeonsParent.DungeonsParent
 /Game/Levels/MainMenu.MainMenu
 /Game/Levels/MainMenu_BuiltData.MainMenu_BuiltData
+/Game/Levels/Online/OnlineDungeon.OnlineDungeon
+/Game/Levels/Online/OnlineLobby.OnlineLobby
+/Game/Levels/Online/OnlineLobby_BuiltData.OnlineLobby_BuiltData
+/Game/Levels/Online/OnlineWorld.OnlineWorld
 /Game/Levels/PlayWorld.PlayWorld
 /Game/Levels/PlayWorld_BuiltData.PlayWorld_BuiltData
 /Game/Levels/Skybox/DefaultSkybox.DefaultSkybox
