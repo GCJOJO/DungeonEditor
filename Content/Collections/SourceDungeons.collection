@@ -3,6 +3,8 @@ Type:Static
 Guid:71519BCC-4CD3-60A0-A275-81B893C5BB00
 ParentGuid:00000000-0000-0000-0000-000000000000
 
+/Game/Levels/Dungeons/Dungeon1/Cinematics/SubLevel3End.SubLevel3End
+/Game/Levels/Dungeons/Dungeon1/Cinematics/SubLevel3Entry.SubLevel3Entry
 /Game/Levels/Dungeons/Dungeon1/Dungeon1.Dungeon1
 /Game/Levels/Dungeons/Dungeon1/Dungeon1_BuiltData.Dungeon1_BuiltData
 /Game/Levels/Dungeons/Dungeon1/Dungeon1NoSubLevelMesh.Dungeon1NoSubLevelMesh
