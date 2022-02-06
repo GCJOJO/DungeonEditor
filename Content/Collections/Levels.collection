@@ -21,6 +21,7 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/Levels/MainMenu.MainMenu
 /Game/Levels/MainMenu_BuiltData.MainMenu_BuiltData
 /Game/Levels/PlayWorld.PlayWorld
+/Game/Levels/PlayWorld_BuiltData.PlayWorld_BuiltData
 /Game/Levels/Skybox/DefaultSkybox.DefaultSkybox
 /Game/Levels/Skybox/SkyboxLava.SkyboxLava
 /Game/Levels/Skybox/SkyboxLava_BuiltData.SkyboxLava_BuiltData
