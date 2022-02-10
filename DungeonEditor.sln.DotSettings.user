@@ -2,6 +2,11 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=E0F1FF46_002D6648_002D483D_002D8873_002DCA2E0D26AF9A_002Fdl_003ASource_003A_002E_002E_003F_002E_002E_003FSource_002Fd_003ADungeonEditor_002Ff_003ADungeonEditorLibrary_002Eh/@EntryIndexedValue">ForceIncluded</s:String>
 	
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/Storage/@EntryValue">ThisComputer</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=41af6fd9_002Dbe73_002D4dde_002Da16c_002D376fa2fa5924/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Compile Blueprints" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;UnrealTest::9AA3160D-8703-4BFF-9D89-8E6F982DEDD8::Windows,Version=v10.0.19041::Project.Blueprints.Compile Blueprints&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Tickable/@EntryIndexedValue">True</s:Boolean>
 	
 	

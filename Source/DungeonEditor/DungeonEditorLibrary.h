@@ -149,13 +149,6 @@ enum Direction
 	NegativeZ
 };
 
-/*UENUM(BlueprintType)
-enum ChangeSubLevelMode
-{
-	Single,
-	Multiple
-};*/
-
 UENUM(BlueprintType)
 enum ChangeSubLevelMode
 {
