@@ -12,6 +12,8 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/BPs/EditorPawn.EditorPawn
 /Game/BPs/FallingTrapStopLevel.FallingTrapStopLevel
 /Game/BPs/FreeCamPawn.FreeCamPawn
+/Game/BPs/Online/BP_OnlineLobbyManager.BP_OnlineLobbyManager
+/Game/BPs/Online/PlayerLobby.PlayerLobby
 /Game/BPs/ProcedualMesh.ProcedualMesh
 /Game/BPs/Spawnalbes/Entities/EnemyParent.EnemyParent
 /Game/BPs/Spawnalbes/Functions/Activators/ActivatorParent.ActivatorParent
