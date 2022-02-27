@@ -21,13 +21,14 @@ class DUNGEONEDITOR_API ISaveable
 public:
 
 	/**
-	*  @details This will return what the actor wants to save.
+	*  This will return what the actor wants to save.
 	**/
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Saveable Interface")
 	FString SaveSaveData();
 
 	/**
-	 *  @param SaveData The Data for an actor (Do not pass the class with it) 
+	 *	This will give the data to the actor which will then initialize itself with it
+	 *  @param SaveData The Data for an actor
 	 **/
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Saveable Interface")
 	void LoadSaveData(UPARAM() FString SaveData);

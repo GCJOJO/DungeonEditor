@@ -7,7 +7,6 @@
 #include "Interfaces/OnlineFriendsInterface.h"
 #include "DungeonEditor/Public/DungeonCustomGameInstance.h"
 #include "OnlineSessionSettings.h"
-#include "AdvancedSessions/Classes/AdvancedSessionsLibrary.h"
 #include "DungeonEditor/DungeonEditor.h"
 
 bool UEOSLibrary::Login(int32 UserNum, ELoginType loginType, FString DevIP, FString DevToken )
@@ -163,6 +162,32 @@ void UEOSLibrary::GetPlayerFriends(int32 UserNum)
     	}
 }
 
+void UEOSLibrary::ShowFriendsUI(int32 LocalUserNum)
+{
+	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+	if(OSS)
+	{
+		if (IOnlineExternalUIPtr UI = OSS->GetExternalUIInterface())
+		{
+			UI->ShowFriendsUI(LocalUserNum);
+		}
+	}
+}
+
+void UEOSLibrary::ShowInviteUI(int32 LocalUserNum)
+{
+	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+	if(OSS)
+	{
+		IOnlineExternalUIPtr UI = OSS->GetExternalUIInterface();
+		IOnlineSessionPtr Session = OSS->GetSessionInterface();
+		if (UI.IsValid() && Session.IsValid())
+		{
+			UI->ShowInviteUI(LocalUserNum, NAME_GameSession);
+		}
+	}
+}
+
 EUserLoginStatus UEOSLibrary::GetLoginStatus(int32 UserNum)
 {
 	DISPLAY_LOG("Getting Status for User Num : %i", UserNum);
@@ -203,19 +228,19 @@ bool UEOSLibrary::QueryAchievements(int32 LocalUserNum)
 		IOnlineAchievementsPtr Achievements = OSS->GetAchievementsInterface();
 		if(Achievements.IsValid())
 		{
-			/*FOnQueryAchievementsCompleteDelegate QueryComplete;
-			QueryComplete.CreateLambda([&](FUniqueNetId& PlayerID, const bool bSuccessful)
-			{
-				DISPLAY_LOG("Finished Retrieving Achievements");
-				if(bSuccessful) { DISPLAY_LOG("Retrieving Achievements Successful !"); }
-				else { DISPLAY_LOG("Retrieving Achievements not Successful..."); }
-			});
+			FOnQueryAchievementsCompleteDelegate QueryComplete = FOnQueryAchievementsCompleteDelegate::CreateLambda(
+				[&](const FUniqueNetId& PlayerID, bool& bSuccessful)
+				{
+					DISPLAY_LOG("Finished Retrieving Achievements");
+					if (bSuccessful) { DISPLAY_LOG("Retrieving Achievements Successful !"); }
+					else { DISPLAY_LOG("Retrieving Achievements not Successful..."); }
+				});
 			
 			FBPUniqueNetId PlayerID;
-			UAdvancedSessionsLibrary::GetUniqueNetIDFromLocalID(LocalUserNum, PlayerID);
+			PlayerID.SetUniqueNetId(OSS->GetIdentityInterface()->GetUniquePlayerId(LocalUserNum));
 			
 			Achievements->QueryAchievements(*PlayerID.GetUniqueNetId(), QueryComplete);		
-			return true;*/
+			return true;
 			return false;
 		}
 		return false;
@@ -223,7 +248,85 @@ bool UEOSLibrary::QueryAchievements(int32 LocalUserNum)
 	return false;
 }
 
-void GetTitleFile(FString FileName)
+bool UEOSLibrary::QueryAchievementDefinitions(int32 LocalUserNum)
+{
+	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+	if (OSS)
+	{
+		IOnlineAchievementsPtr Achievements = OSS->GetAchievementsInterface();
+		if(Achievements.IsValid())
+		{
+			FBPUniqueNetId PlayerID;
+			PlayerID.SetUniqueNetId(OSS->GetIdentityInterface()->GetUniquePlayerId(LocalUserNum));
+
+			FOnQueryAchievementsCompleteDelegate QueryComplete = FOnQueryAchievementsCompleteDelegate::CreateLambda(
+			[&](const FUniqueNetId& PlayerID, bool& bSuccessful){
+					DISPLAY_LOG("Finished Retrieving Achievements Defs");
+					if (bSuccessful) { DISPLAY_LOG("Retrieving Achievements Defs Successful !"); }
+					else { DISPLAY_LOG("Retrieving Achievements Defs not Successful..."); }});
+			
+			Achievements->QueryAchievementDescriptions(*PlayerID.GetUniqueNetId(), QueryComplete);
+			return true;
+		}
+	}
+	return false;
+}
+
+void UEOSLibrary::GetCachedAchievementProgress(int32 LocalUserNum, FName AchievementID, bool& bFoundID, float& Progress)
+{
+	bFoundID = false;
+	Progress = 0.0f;
+
+	FBPUniqueNetId PlayerID;
+	
+	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+
+	if (OSS)
+	{
+		IOnlineAchievementsPtr Achievements = OSS->GetAchievementsInterface();
+		if (Achievements.IsValid())
+		{
+			PlayerID.SetUniqueNetId(OSS->GetIdentityInterface()->GetUniquePlayerId(LocalUserNum));
+			FOnlineAchievement AchievementStatus;
+			if (Achievements->GetCachedAchievement(*PlayerID.GetUniqueNetId(), AchievementID.ToString(), AchievementStatus) == EOnlineCachedResult::Success)
+			{
+				bFoundID = true;
+				Progress = AchievementStatus.Progress;
+			}
+		}
+	}
+}
+
+void UEOSLibrary::GetCachedAchievementDescription(FName AchievementID, bool& bFoundID, FText& Title,
+	FText& LockedDescription, FText& UnlockedDescription, bool& bHidden)
+{
+		bFoundID = false;
+		Title = FText::GetEmpty();
+		LockedDescription = FText::GetEmpty();
+		UnlockedDescription = FText::GetEmpty();
+		bHidden = false;
+	
+		IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
+
+		if (OSS)
+		{
+			IOnlineAchievementsPtr Achievements = OSS->GetAchievementsInterface();
+			if (Achievements.IsValid())
+			{
+				FOnlineAchievementDesc AchievementDescription;
+				if (Achievements->GetCachedAchievementDescription(AchievementID.ToString(), AchievementDescription) == EOnlineCachedResult::Success)
+				{
+					bFoundID = true;
+					Title = AchievementDescription.Title;
+					LockedDescription = AchievementDescription.LockedDesc;
+					UnlockedDescription = AchievementDescription.UnlockedDesc;
+					bHidden = AchievementDescription.bIsHidden;
+				}
+			}
+		}
+}
+
+void EnumerateTitleFile(FString FileName)
 {
 	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
 	if (OSS)
@@ -231,8 +334,8 @@ void GetTitleFile(FString FileName)
 		IOnlineTitleFilePtr TitleFiles = OSS->GetTitleFileInterface();
 		if(TitleFiles.IsValid())
 		{
-			// TitleFiles->EnumerateFiles();
-			// TitleFiles->ReadFile(FileName);
+			FPagedQuery query = FPagedQuery(0, -1);
+			TitleFiles->EnumerateFiles(query);
 		}
 	}
 }

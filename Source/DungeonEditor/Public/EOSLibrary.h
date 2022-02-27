@@ -51,10 +51,24 @@ class DUNGEONEDITOR_API UEOSLibrary : public UBlueprintFunctionLibrary
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Get Player Friends"))
 	static void GetPlayerFriends(int32 UserNum);
 
+	// UI
+	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Show Friends UI"))
+	static void ShowFriendsUI(int32 LocalUserNum);
+	
+	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Show Invite UI"))
+	static void ShowInviteUI(int32 LocalUserNum);
+	
 	// Stats And Achievements
 	UFUNCTION(BlueprintCallable, Category = "EOS", meta = (keywords = "Retrieve Achievements"))
-	bool QueryAchievements(int32 LocalUserNum);
+	static bool QueryAchievements(int32 LocalUserNum);
+	UFUNCTION(BlueprintCallable, Category= "EOS", meta = (keywords = "Retrieve Achievements Definition"))
+	static bool QueryAchievementDefinitions(int32 LocalUserNum);
 
+	UFUNCTION(BlueprintCallable, Category= "EOS", meta = (keywords = "Get Cached Achievement Progression"))
+	static void GetCachedAchievementProgress(int32 LocalUserNum, FName AchievementID, /*out*/ bool& bFoundID, /*out*/ float& Progress);
+
+	UFUNCTION(BlueprintCallable, Category= "EOS", meta = (keywords = "Get Cached Achievement Definition"))
+	static void GetCachedAchievementDescription(FName AchievementID, /*out*/ bool& bFoundID, /*out*/ FText& Title, /*out*/ FText& LockedDescription, /*out*/ FText& UnlockedDescription, /*out*/ bool& bHidden);
 
 	static void OnGetAllFriendsComplete(int32 LocalUserNum, bool bWasSuccessful, const FString& ListName, const FString& ErrorStr);
 

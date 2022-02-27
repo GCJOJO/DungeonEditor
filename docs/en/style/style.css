@@ -1,0 +1,515 @@
+ @font-face { font-family: arial; src: url('../Ressources/arial.ttf');}
+
+body {
+	background-image: url('../Ressources/IMG/background.png');
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	background-color: #222222;
+}
+
+.title{
+	font-family: arial;
+	color: white;
+	text-align: center;
+	font-size:25px;
+}
+
+.customHeader {
+    z-index: 32;
+    height: 16px;
+    padding: 32px;
+    font-size: 14px;
+    line-height: 1.5;
+    width: 100%;
+    margin-left : -3%;
+    color: hsla(0,0%,100%,.7);
+    background-color: #24292e;
+}
+
+.menu {
+	transform: translate(0%, -50%);
+	text-align: center;
+}
+
+.menuBtn{
+	display: inline-block;
+	list-style-type: none;
+}
+
+.menuBtn a {
+	outline-style: none;
+	text-decoration-line: none;
+	color : white;
+	padding: 5px;
+	font-size: 25px;
+	transition: 0.3s all;
+	font-family: arial;
+}
+
+.menuBtn a:hover {
+	color : #5dc2f5;
+	padding: 10px;
+	font-size: 30px;
+	transition: 0.3s all;
+}
+
+h1.underConstruction {
+	font-family: arial;
+	color: red;
+	text-align: center;
+	font-size:25px;
+	/*outline: 2px solid #555555;*/
+}
+
+h1.welcome {
+	font-family: arial;
+	color: white;
+	text-align: center;
+	font-size:25px;
+	/*outline: 2px solid #555555;*/
+}
+
+h1 {
+	font-family: arial;
+	color: white;
+	text-align: center;
+	font-size:30px;
+}
+
+h2 {
+	font-family: arial;
+	color: white;
+	text-align: center;
+	font-size:27px;
+}
+
+.AboutTitle {
+	font-family: arial;
+	color: white;
+	text-align: center;
+	font-size:25px;
+	/*outline: 2px solid #555555;*/
+}
+
+p {
+	font-family: arial;
+	color: white;
+	text-align: center;
+	font-size:25px;
+	/*transform: translate(-50%, -50%);/*
+	/*outline: 2px solid #555555;*/
+}
+
+div {
+display : block;
+text-align : center;
+padding: 5px;
+}
+
+.Screen1 {
+	width: 480px;
+	height: 260px;
+	
+}
+
+.Screen2 {
+	width: 480px;
+	height: 260px;
+}
+
+.Screen3 {
+	width: 480px;
+	height: 260px;
+}
+.gamePNG {
+	width: 400px;
+	height: 300px;
+	margin-left : 37%;
+	position: initial;
+}
+
+.AboutDE {
+
+	background-color: #4CAFFF;
+
+	font-family: arial;
+	text-align: center;
+	font-size: 25px;
+	padding: 10px 10px;
+	color: white;
+
+	outline-style:none;
+	border:none;
+	cursor:pointer;
+
+	position:initial;
+
+	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome, Opera and Firefox */
+
+	/* 
+	Prevent double-tapping on button from zooming page on mobile
+	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
+	*/
+	touch-action: manipulation; 
+
+	border-radius: 50px;
+	transition: 0.3s border-radius;
+}
+
+
+.github {
+
+
+	
+	font-family: arial;
+	text-align: center;
+	font-size: 25px;
+	padding: 10px 10px;
+	color: white;
+
+	outline-style:none;
+	border:none;
+	cursor:pointer;
+
+	position:initial;
+
+	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome, Opera and Firefox */
+
+	/* 
+	Prevent double-tapping on button from zooming page on mobile
+	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
+	*/
+	touch-action: manipulation; 
+	background-color: #03a60e;
+	border-radius: 50px;
+
+	
+
+	transition: 0.3s background-color ease;
+	transition: 0.1s border-radius, 0.3s background-color;
+
+}
+
+.github:hover {
+	background-color: #02c90f;
+	border-radius: 5px;
+	transition: 0.1s border-radius, 0.3s background-color;
+}
+
+.github:active {
+	background-color: #18ff03;
+	transition: 0.1s all;
+}
+
+.downloads {
+	font-family: arial;
+	color: white;
+	text-align: center;
+	font-size:25px;
+}
+
+.downloadBtn {
+	background-color: #03a60e;
+
+	font-family: arial;
+	text-align: center;
+	font-size: 25px;
+	padding: 10px 10px;
+	color: white;
+
+	outline-style:none;
+	border:none;
+	cursor:pointer;
+
+	position:initial;
+
+	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome, Opera and Firefox */
+
+	/* 
+	Prevent double-tapping on button from zooming page on mobile
+	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
+	*/
+	touch-action: manipulation; 
+
+	/*transform: translate(164.5%, 250%);*/
+	border-radius: 50px;
+	transition: 0.3s border-radius;
+}
+
+.downloadBtn:hover {
+  background-color: #02c90f;
+  border-radius: 5px;
+  transition: 0.1s border-radius linear, 0.1s background-color;
+}
+.downloadBtn:active {
+  background-color: #02c90f;
+}
+
+.downloadWindows {
+	background-color: #4CAFFF;
+
+	font-family: arial;
+	text-align: center;
+	font-size: 25px;
+	padding: 10px 10px;
+	color: white;
+
+	outline-style:none;
+	border:none;
+	cursor:pointer;
+
+	position:initial;
+
+	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome, Opera and Firefox */
+
+	/* 
+	Prevent double-tapping on button from zooming page on mobile
+	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
+	*/
+	touch-action: manipulation; 
+
+	margin : auto;
+	border-radius: 50px;
+	transition: 0.3s border-radius;
+}
+
+.downloadLauncher {
+	background-color: #4CAFFF;
+
+	font-family: arial;
+	text-align: center;
+	font-size: 25px;
+	padding: 10px 10px;
+	color: white;
+
+	outline-style:none;
+	border:none;
+	cursor:pointer;
+
+	position:initial;
+
+	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome, Opera and Firefox */
+
+	/* 
+	Prevent double-tapping on button from zooming page on mobile
+	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
+	*/
+	touch-action: manipulation; 
+
+	margin : auto;
+	border-radius: 50px;
+	transition: 0.3s border-radius;
+}
+
+.indexDownload {
+	background-color: #d6c031;
+
+	font-family: arial;
+	text-align: center;
+	font-size: 25px;
+	padding: 10px 10px;
+	color: white;
+
+	outline-style:none;
+	border:none;
+	cursor:pointer;
+
+	position:initial;
+
+	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome, Opera and Firefox */
+
+	/* 
+	Prevent double-tapping on button from zooming page on mobile
+	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
+	*/
+	touch-action: manipulation; 
+
+
+	border-radius: 50px;
+	transition: 0.3s border-radius;
+}
+
+.indexDownload:hover {
+	background-color: #edd432;
+	border-radius: 5px;
+	transition: 0.3s all;
+}
+
+.indexDownload:active {
+	background-color: #ffdd03;
+	transition: 0.3s all;
+}
+
+button:hover {
+  background-color: #5dc2f5;
+
+  border-radius: 5px;
+
+  transition: 0.3s all;
+}
+button:active {
+  background-color: #5591ff;
+  transition: 0.3s all;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+  font-size: 25px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  transition: 0.3s all;
+}
+
+.dropbtn:hover{
+	background-color: transparent;
+	color : #5dc2f5;
+	padding: 10px;
+	font-size: 30px;
+	transition: 0.3s all;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.help_dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a {background-color: #222222; color:white; font-family: arial;}
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.help_dropdown:hover .dropdown-content {display: block;}
+
+.github-btn-image
+{
+	width : 64px;
+	height: 64px;
+	margin-left: 90%;
+	transform: translateY(-125%);
+}
+
+.github-btn
+{
+	width : 64px;
+	height: 64px;
+	margin-left: 90%;
+	transform: translateY(-225%);
+	background: transparent;
+    border: none !important;
+    font-size:0;
+}
+
+.github-btn:hover
+{
+	width : 64px;
+	height: 64px;
+	margin-left: 90%;
+	transform: translateY(-225%);
+	background: transparent;
+    border: none !important;
+    font-size:0;
+}
+
+ .itch-btn-image
+ {
+	 width : 64px;
+	 height: 64px;
+	 margin-left: 85%;
+	 transform: translateY(-325%);
+ }
+
+ .itch-btn
+ {
+	 width : 64px;
+	 height: 64px;
+	 margin-left: 85%;
+	 transform: translateY(-431%);
+	 background: transparent;
+	 border: none !important;
+	 font-size:0;
+ }
+ 
+ .itch-btn:hover
+ {
+	 width : 64px;
+	 height: 64px;
+	 margin-left: 85%;
+	 transform: translateY(-431%);
+	 background: transparent;
+	 border: none !important;
+	 font-size:0;
+ }
+
+/* 
+À = Alt + 183 
+Æ = Alt + 146 
+æ = Alt + 145 
+Ç = Alt + 128 
+É = Alt + 144 
+È = Alt + 212 
+Œ = Alt + 0140 
+œ = Alt + 0156 
+Ù = Alt + 235
+*/
+
+li {
+	color : white;
+    list-style-position : inside;
+}
+
+h3{
+	font-family: arial;
+	color: white;
+	text-align: center;
+	font-size:5px;
+}

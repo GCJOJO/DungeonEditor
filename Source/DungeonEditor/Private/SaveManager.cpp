@@ -14,6 +14,15 @@ ASaveManager::~ASaveManager()
 	
 }
 
+void ASaveManager::LoadDungeonFromSaveData_Implementation(FSaveData SaveData, FString& MinSaveVer, bool& Success)
+{
+}
+
+void ASaveManager::LoadSaveDataFromFile_Implementation(FString SaveName, FSaveFileType FileType, FSaveData& SaveData,
+	bool& Success)
+{
+}
+
 void ASaveManager::BeginPlay()
 {
 	Super::BeginPlay();
@@ -31,12 +40,12 @@ void ASaveManager::Tick(float DeltaTime)
 }
 
 
-void ASaveManager::LoadDungeon_Implementation( FString SaveName, bool& SaveExists, bool& bIsOldFormat, FString& MinSaveVer)
+void ASaveManager::LoadDungeon_Implementation( FString SaveName, FSaveFileType FileType, bool& SaveExists, bool& bIsOldFormat, FString& MinSaveVer)
 {
 	
 }
 
-void ASaveManager::SaveDungeon_Implementation( FString SaveName, bool ForceSave, bool& SaveExists)
+void ASaveManager::SaveDungeon_Implementation( FString SaveName, FSaveFileType FileType, bool ForceSave, bool& SaveExists)
 {
 	
 }
