@@ -257,7 +257,49 @@ padding: 5px;
   transition: 0.1s border-radius linear, 0.1s background-color;
 }
 .downloadBtn:active {
-  background-color: #02c90f;
+  background-color: #c90202;
+}
+
+.downloadItch {
+	background-color: #c90202;
+
+	font-family: arial;
+	text-align: center;
+	font-size: 25px;
+	padding: 10px 10px;
+	color: white;
+
+	outline-style:none;
+	border:none;
+	cursor:pointer;
+
+	position:initial;
+
+	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome, Opera and Firefox */
+
+	/* 
+	Prevent double-tapping on button from zooming page on mobile
+	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
+	*/
+	touch-action: manipulation; 
+
+	/*transform: translate(164.5%, 250%);*/
+	border-radius: 50px;
+	transition: 0.3s border-radius;
+}
+
+.downloadItch:hover {
+  background-color: #c90202;
+  border-radius: 5px;
+  transition: 0.1s border-radius linear, 0.1s background-color;
+}
+.downloadItch:active {
+  background-color: #c90202;
 }
 
 .downloadWindows {
