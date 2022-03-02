@@ -4,3 +4,6 @@
  TODO :	-Menu de téléchargement de donjons
  TODO :	-Upload de donjons (nom, uid, auteur)
  TODO :	-Récupération donjons du server
+
+ Ajouter Crédits : 
+    Georgy Treshchev (Donwload File Plugin) : https://www.unrealengine.com/marketplace/en-US/profile/Georgy+Treshchev
