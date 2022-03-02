@@ -16,11 +16,13 @@ ASaveManager::~ASaveManager()
 
 void ASaveManager::LoadDungeonFromSaveData_Implementation(FSaveData SaveData, FString& MinSaveVer, bool& Success)
 {
+	
 }
 
 void ASaveManager::LoadSaveDataFromFile_Implementation(FString SaveName, FSaveFileType FileType, FSaveData& SaveData,
 	bool& Success)
 {
+	
 }
 
 void ASaveManager::BeginPlay()

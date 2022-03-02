@@ -1,7 +1,18 @@
 {
-	"Christmas" : 
+	"Event_Xmas" : 
 	{
-		"Name" : "Events.Christmas.desc",
-		"Description" : "Events.Christmas.desc"
+		"fr":
+		{
+			"name" : "Noël",
+			"desc" : "Un événement festif où les gens s'apportent des cadeaux"
+		},
+		"en" : 
+		{
+			"name" : "Christmas",
+			"desc" : "A Festif event in which people brings present to offer to others"
+		},
+		"repeat_mode" : "year",
+		"begin_date" : "15/12",
+		"end_date" : "31/12"
 	}
 }
