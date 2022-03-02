@@ -7,3 +7,6 @@
 
  Ajouter Crédits : 
     -Georgy Treshchev (Donwload File Plugin) : https://www.unrealengine.com/marketplace/en-US/profile/Georgy+Treshchev
+    -ryanjon2040 (Discord Plugin) : https://github.com/ryanjon2040
+    -Maksim Shestakov (BlueprintJson) : https://www.unrealengine.com/marketplace/en-US/profile/Maksim+Shestakov
+    -Joshua Statzer (AdvancedSessions) : https://github.com/mordentral/AdvancedSessionsPlugin
