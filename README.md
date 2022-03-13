@@ -5,4 +5,4 @@
 
 ## The Game is also on [Itch.io](https://gcjojo.itch.io/dungeon-editor)
 
-Some of the icons made by : [Flaticon](https://www.flaticon.com/)
+Some of the icons made on : [Flaticon](https://www.flaticon.com/)
