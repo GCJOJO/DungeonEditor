@@ -1,0 +1,22 @@
+[
+	{
+		"Name": "swordfighter",
+		"Desc": "NSLOCTEXT(\"[C65AAE7E4E2AC32024DFDA91A086D295]\", \"4F651A9F417055BAA2021985CBEA7723\", \"Fights with a sword\")",
+		"Icon": "None",
+		"Exponential XP Factor": 0.5,
+		"Stats":
+		{
+			"atk": 10,
+			"def": 5
+		}
+	},
+	{
+		"Name": "scientific",
+		"Desc": "NSLOCTEXT(\"[C65AAE7E4E2AC32024DFDA91A086D295]\", \"C13FEFCB4F9143A78FF541B125D4BC40\", \"He is smart\")",
+		"Icon": "None",
+		"Exponential XP Factor": 10,
+		"Stats":
+		{
+		}
+	}
+]

@@ -221,6 +221,9 @@ class DUNGEONEDITOR_API UDungeonEditorLibrary : public UBlueprintFunctionLibrary
 		UFUNCTION(BlueprintPure, Category = "Dungeons", meta = (Keywords = "Load Texture from Image"))
 		static UTexture2D* LoadTextureFromPath(const FString& Path);
 
+		UFUNCTION(BlueprintCallable, Category = "Files", meta = (Keywords = "Open File Dialog"))
+		static bool OpenFileDialog(FString InitialDir, FString Title, bool UseFilter, FString& Filepath);
+
 		UFUNCTION(BlueprintPure, Category = "User", meta = (Keywords = "Get User ID"))
 		static int32 GetUserId(const APlayerController* PlayerController)
 		{

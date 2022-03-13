@@ -15,6 +15,7 @@
 */
 
 #include "DungeonEditorLibrary.h"
+#include "FileDialog.h"
 
 void UDungeonEditorLibrary::ChangeLocalization(ELocalizationCulture culture)
 {
@@ -73,6 +74,26 @@ UTexture2D* UDungeonEditorLibrary::LoadTextureFromPath(const FString& Path)
 	if (Path.IsEmpty()) return nullptr;
 	
 	return Cast<UTexture2D>(StaticLoadObject(UTexture2D::StaticClass(), nullptr, *(Path)));
+}
+
+bool UDungeonEditorLibrary::OpenFileDialog(FString InitialDir, FString Title, bool UseFilter, FString& Filepath)
+{
+	/*FileDialog* dialog = new FileDialog();
+	dialog->FilterIndex = 1;
+	InitialDir = InitialDir.Replace(TEXT("/"), TEXT("\\"));
+	dialog->InitialDir = InitialDir.GetCharArray().GetData(); //cast FString to *TCHAR (not const *TCHAR)
+	dialog->Title = Title.GetCharArray().GetData();
+ 
+	if (UseFilter) {
+		dialog->Filter = TEXT("Samurai Files (*.sam)\0*.sam\0All Files\0*.*\0\0");
+	}
+ 
+	if (dialog->ShowOpenFileDialog()) {
+		Filepath = dialog->FileName;
+		Filepath = Filepath.Replace(_T("\\"), _T("/"));
+		return true;
+	}*/
+	return false;
 }
 
 AIAction UDungeonEditorLibrary::AIChooseSomething(int RandomInt)
