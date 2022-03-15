@@ -8,62 +8,6 @@
 #include "Async/AsyncWork.h"
 #include "DungeonEditorLibrary.generated.h"
 
-/*class FloorThreadFunctions : public FNonAbandonableTask
-{
-public:
-	FloorThreadFunctions(int floorWidth, int floodHeight)
-	{
-		this->floorWidth = floorWidth;
-		this->floorHeight = floorHeight;
-	}
-
-	int floorWidth;
-	int floorHeight;
-
-	FORCEINLINE TStatId GetStatId() const
-	{
-		RETURN_QUICK_DECLARE_CYCLE_STAT(MultiThreadedTask, STATGROUP_ThreadPoolAsyncTasks);
-	}
-
-	static void GenerateFloor()
-	{
-		UObject* FloorObjectToSpawn = Cast<UObject>(StaticLoadObject(UObject::StaticClass(), NULL, TEXT("/Game/BPs/Spawnalbes/Tiles/Floor.Floor")));
-
-		UBlueprint* GeneratedBP = Cast<UBlueprint>(FloorObjectToSpawn);
-		if (!FloorObjectToSpawn)
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Red, FString::Printf(TEXT("Cannot Spawn Floor Tiles : CANT FIND OBJECT TO SPAWN")));
-			return;
-		}
-
-		UClass* SpawnClass = FloorObjectToSpawn->StaticClass();
-		if (SpawnClass == NULL)
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Red, FString::Printf(TEXT("Cannot Spawn Floor Tiles : CLASS = NULL")));
-			return;
-		}
-
-		UWorld* World = GEngine->GetWorld();
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-
-		for(int x = 0; x < 255; x++)
-		{
-		    for(int y = 0; y < 255; y++)
-		    {
-				FVector SpawnLocation = FVector(x * 200, y * 200, -100);
-		    	const FRotator SpawnRotator = FRotator(0, 0, 0);
-		    	const FVector SpawnScale = FVector(2, 2, 2);
-
-		    	
-		    	AActor* NewActor = World->SpawnActor<AActor>(GeneratedBP->GeneratedClass, SpawnLocation, SpawnRotator, SpawnParams);
-		    	NewActor->SetActorScale3D(SpawnScale);
-		    }
-		}
-		return;
-	}
-	
-};*/
 UENUM(BlueprintType)
 enum ELocalizationCulture 
 {
@@ -167,6 +111,14 @@ enum ECustomCameraState
 	Showing
 };
 
+UENUM(BlueprintType)
+enum EAttackType
+{
+    Physical,
+    Magical,
+    Special,
+    None
+};
 
 USTRUCT(Blueprintable, BlueprintType)
 struct FSaveData

@@ -1,0 +1,12 @@
+
+dmg = dégats
+def = défense
+
+Si dmg > def, alors
+	dmg - (( def / 100) * def)
+	
+Si dmg < def, alors
+	def - ((dmg * def) / 100)
+	
+Si dmg = def, alors 
+	dmg + def - ((def / 100) * def)

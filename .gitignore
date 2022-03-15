@@ -91,3 +91,4 @@ EOS Stuff
 Events.json
 Config/DefaultCrypto.ini
 DungeonEditor.code-workspace
+!Config/Tags/*
