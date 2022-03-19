@@ -120,7 +120,7 @@ enum EAttackType
     None
 };
 
-USTRUCT(Blueprintable, BlueprintType)
+USTRUCT( BlueprintType)
 struct FSaveData
 {
 	GENERATED_BODY()
@@ -136,7 +136,7 @@ struct FSaveData
 	FGuid SaveGUID;
 	UPROPERTY(BlueprintReadWrite)
 	UTexture2D* SaveIcon;
-	UPROPERTY(BlueprintReadWrite)
+	/*UPROPERTY(BlueprintReadWrite)
 	bool bUseSkybox;
 	UPROPERTY(BlueprintReadWrite)
 	TEnumAsByte<HoleType> HoleType;
@@ -151,7 +151,7 @@ struct FSaveData
 	UPROPERTY(BlueprintReadWrite)
 	int32 SizeDX;
 	UPROPERTY(BlueprintReadWrite)
-	int32 SizeDY;
+	int32 SizeDY;*/
 	UPROPERTY(BlueprintReadWrite)
     TArray<FString> ActorsSaves;	
 };
