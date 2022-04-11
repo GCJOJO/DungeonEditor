@@ -22,4 +22,31 @@ void ASpawnableActor::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 }
 
+void ASpawnableActor::ClientReceiveEvent_Implementation(const FBlueprintJsonObject Event, const FBlueprintJsonObject EventData)
+{
+}
+
+void ASpawnableActor::ServerReceiveEvent_Implementation(const FBlueprintJsonObject Event, const FBlueprintJsonObject EventData)
+{
+}
+
+void ASpawnableActor::SendEventToServer_Implementation(const FBlueprintJsonObject Event,const FBlueprintJsonObject EventData)
+{
+	ServerReceiveEvent(Event, EventData);
+}
+
+bool ASpawnableActor::SendEventToServer_Validate(const FBlueprintJsonObject Event, const FBlueprintJsonObject EventData)
+{
+	return true;
+}
+
+void ASpawnableActor::SendEventToClient_Implementation(const FBlueprintJsonObject Event, const FBlueprintJsonObject EventData)
+{
+	ClientReceiveEvent(Event, EventData);
+}
+
+void ASpawnableActor::SendEventToAllClient_Implementation(const FBlueprintJsonObject Event, const FBlueprintJsonObject EventData)
+{
+	ClientReceiveEvent(Event, EventData);
+}
 

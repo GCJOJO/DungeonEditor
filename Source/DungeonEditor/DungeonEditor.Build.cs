@@ -8,7 +8,7 @@ public class DungeonEditor : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "SimpleUGC", "OnlineSubsystemEOS", "EOSShared", "EOSSDK", "AdvancedSessions", "GameplayAbilities", "GameplayTags", "GameplayTasks"});
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "SimpleUGC", "BlueprintJson" , "OnlineSubsystemEOS", "EOSShared", "EOSSDK", "AdvancedSessions", "GameplayAbilities", "GameplayTags", "GameplayTasks"});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
