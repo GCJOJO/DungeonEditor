@@ -19,7 +19,7 @@ void ASaveManager::LoadDungeonFromSaveData_Implementation(FSaveData SaveData, FS
 	
 }
 
-void ASaveManager::LoadSaveDataFromFile_Implementation(FString SaveName, FSaveFileType FileType, FSaveData& SaveData,
+void ASaveManager::LoadSaveDataFromFile_Implementation(UPARAM(ref) FString& SaveName, FSaveFileType FileType, FSaveData& SaveData,
 	bool& Success)
 {
 	
@@ -42,12 +42,12 @@ void ASaveManager::Tick(float DeltaTime)
 }
 
 
-void ASaveManager::LoadDungeon_Implementation( FString SaveName, FSaveFileType FileType, bool& SaveExists, bool& bIsOldFormat, FString& MinSaveVer)
+void ASaveManager::LoadDungeon_Implementation(UPARAM(ref) FString& SaveName, FSaveFileType FileType, bool& SaveExists, bool& bIsOldFormat, FString& MinSaveVer)
 {
 	
 }
 
-void ASaveManager::SaveDungeon_Implementation( FString SaveName, FSaveFileType FileType, bool ForceSave, bool& SaveExists)
+void ASaveManager::SaveDungeon_Implementation(UPARAM(ref) FString& SaveName, FSaveFileType FileType, bool ForceSave, bool& SaveExists)
 {
 	
 }

@@ -8,7 +8,7 @@ public class DungeonEditor : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "SimpleUGC", "BlueprintJson" , "OnlineSubsystemEOS", "EOSShared", "EOSSDK", "AdvancedSessions", "GameplayAbilities", "GameplayTags", "GameplayTasks"});
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "BlueprintJson" , "OnlineSubsystemEOS", "EOSShared", "EOSSDK", "AdvancedSessions", "GameplayAbilities", "GameplayTags", "GameplayTasks"});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
@@ -29,8 +29,8 @@ public class DungeonEditor : ModuleRules
 		return Target.Platform == UnrealTargetPlatform.Win64;
 	}
 
-	private bool IsWin32()
+	/*private bool IsWin32()
 	{
 		return Target.Platform == UnrealTargetPlatform.Win32;
-	}
+	}*/
 }

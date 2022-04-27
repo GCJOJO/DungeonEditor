@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{F80AD0E3-4F7F-04CD-3992-D4B6A93BECA3}",
+	"EngineAssociation": "5.0",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -18,10 +18,6 @@
 	"Plugins": [
 		{
 			"Name": "Niagara",
-			"Enabled": true
-		},
-		{
-			"Name": "NiagaraExtras",
 			"Enabled": true
 		},
 		{
@@ -115,10 +111,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "SoundVisualizations",
-			"Enabled": true
-		},
-		{
 			"Name": "EnhancedInput",
 			"Enabled": true
 		},
@@ -128,10 +120,6 @@
 		},
 		{
 			"Name": "FieldSystemPlugin",
-			"Enabled": true
-		},
-		{
-			"Name": "Ansel",
 			"Enabled": true
 		},
 		{
@@ -163,10 +151,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "NUTUnrealEngine4",
-			"Enabled": true
-		},
-		{
 			"Name": "Reflex",
 			"Enabled": true
 		},
@@ -191,7 +175,6 @@
 	"TargetPlatforms": [
 		"LinuxNoEditor",
 		"LinuxAArch64NoEditor",
-		"MacNoEditor",
 		"WindowsNoEditor",
 		"WindowsNoEditorWin32",
 		"AllDesktop",

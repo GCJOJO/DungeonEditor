@@ -37,7 +37,7 @@ public:
 	 *	@return Returns true if the save already existed or false if it did not
 	 */
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Save Manager")
-	void SaveDungeon(FString SaveName, FSaveFileType FileType, bool ForceSave, bool& SaveExists);
+	void SaveDungeon(UPARAM(ref) FString& SaveName, FSaveFileType FileType, bool ForceSave, bool& SaveExists);
 
 	/**
 	 *	Load the Given Dungeon
@@ -49,12 +49,11 @@ public:
 	 *	@return Returns if the save already existed and if it is saved in an old format
 	 */
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Save Manager")
-	void LoadDungeon(FString SaveName, FSaveFileType FileType, bool& SaveExists, bool& bIsOldFormat, FString& MinSaveVer);
+	void LoadDungeon(UPARAM(ref) FString& SaveName, FSaveFileType FileType, bool& SaveExists, bool& bIsOldFormat, FString& MinSaveVer);
 
 	/**
 	 *	Load The Given Dungeon From a Save Data
 	 *	@param SaveData The Save Data
-	 *	@param FileType The File Type of the File
 	 *	@param MinSaveVer The Minimum Save Version
 	 *	@param Success If the loading Succeeded
 	 */
@@ -69,7 +68,7 @@ public:
 	 *	@param Success If the loading succeeded 
 	 */
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Save Manager")
-	void LoadSaveDataFromFile(FString SaveName, FSaveFileType FileType, FSaveData& SaveData, bool& Success);
+	void LoadSaveDataFromFile(UPARAM(ref) FString& SaveName, FSaveFileType FileType, FSaveData& SaveData, bool& Success);
 	
 	virtual void BeginPlay() override;
 	

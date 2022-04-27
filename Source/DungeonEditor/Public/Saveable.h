@@ -31,5 +31,5 @@ public:
 	 *  @param SaveData The Data for an actor
 	 **/
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Saveable Interface")
-	void LoadSaveData(UPARAM() FString SaveData);
+	void LoadSaveData(UPARAM(ref) FString& SaveData);
 };

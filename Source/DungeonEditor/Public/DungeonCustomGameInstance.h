@@ -2,7 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
-#include <SimpleUGC/Public/UGCRegistry.h>
+//#include <SimpleUGC/Public/UGCRegistry.h>
 
 #include "AdvancedFriendsGameInstance.h"
 #include "OnlineSubsystem.h"
@@ -81,9 +81,9 @@ class DUNGEONEDITOR_API UDungeonCustomGameInstance : public UAdvancedFriendsGame
 		TArray<FFriendStruct> GetFriendsList();
 	
 	
-		// The Registry that holds information about UGC and assigned class overrides
+		/*// The Registry that holds information about UGC and assigned class overrides
 		UPROPERTY(BlueprintReadOnly, Category = "SimpleUGC")
-		UUGCRegistry* UGCRegistry;
+		UUGCRegistry* UGCRegistry;*/
 
 		UPROPERTY(BlueprintAssignable, Category = "Online", meta = (keywords = "On Friends List Updated"))
 		FFriendsListUpdatedDelegate OnFriendsListUpdatedDelegate;
