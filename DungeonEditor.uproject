@@ -170,6 +170,15 @@
 		{
 			"Name": "GameplayAbilities",
 			"Enabled": true
+		},
+		{
+			"Name": "Bridge",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"Win64",
+				"Mac",
+				"Linux"
+			]
 		}
 	],
 	"TargetPlatforms": [
@@ -178,6 +187,9 @@
 		"WindowsNoEditor",
 		"WindowsNoEditorWin32",
 		"AllDesktop",
+		"Windows",
+		"Linux",
+		"LinuxArm64",
 		"Android"
 	]
 }
