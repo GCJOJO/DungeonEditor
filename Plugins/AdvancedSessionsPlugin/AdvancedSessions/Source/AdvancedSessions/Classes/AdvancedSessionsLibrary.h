@@ -163,7 +163,10 @@ public:
 		// Get the unique net id of a network player who is assigned the the given player state
 		UFUNCTION(BlueprintPure, Category = "Online|AdvancedSessions|PlayerInfo|PlayerID")
 		static void GetUniqueNetIDFromPlayerState(APlayerState *PlayerState, FBPUniqueNetId &UniqueNetId);
-		
+
+		UFUNCTION(BlueprintPure, Category = "Online|AdvancedSessions|PlayerInfo|PlayerID")
+		static void GetUniqueNetIDFromLocalID(int32 LocalPlayerID, FBPUniqueNetId &UniqueNetId);
+	
 		// Return True if Unique Net ID is valid
 		UFUNCTION(BlueprintPure, Category = "Online|AdvancedSessions|PlayerInfo|PlayerID")
 		static bool IsValidUniqueNetID(const FBPUniqueNetId &UniqueNetId);
