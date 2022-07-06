@@ -1,4 +1,6 @@
-﻿	
+﻿-Réécrire beaucoup de code et de système qui ne fonctionne pas forcément correctement de manière très correcte...
+
+	
 -TODO : Upload\Download de donjons
  TODO :	-Serveur où on peut upload les donjons (DungeonEditorServer.exe) 
  TODO :	-Menu de téléchargement de donjons
