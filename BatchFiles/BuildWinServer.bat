@@ -1,6 +1,0 @@
-call D:/UnrealEngine/UE_4.27/UE_4.27/Engine/Build/BatchFiles/RunUAT.bat -ScriptsForProject=D:/DungeonEditor/DungeonEditor.uproject BuildCookRun -project=D:/DungeonEditor/DungeonEditor.uproject -noP4 -clientconfig=Development -serverconfig=Development -nocompileeditor -installed -ue4exe=D:\UnrealEngine\UE_4.27\UE_4.27\Engine\Binaries\Win64\UE4Editor-Cmd.exe -utf8output -server -serverplatform=Win64 -noclient -build -cook -map=CreateWorld+Entry+MainMenu+PlayWorld -unversionedcookedcontent -encryptinifiles -pak -manifests -SkipCookingEditorContent -compressed -prereqs -stage -package -cmdline=" -Messaging" -addcmdline="-SessionId=4C2FE9304ED51C607DBA6D9D490C733F -SessionOwner='Utilisateur' -SessionName='Dungeon Editor Server' " -archive -archivedirectory="D:/DungeonEditor/Saved/Packages/WinServer" -compile
-del D:\DungeonEditor\Saved\Packages\WinServer\WindowsServer\Manifest_DebugFiles_Win64.txt
-del D:\DungeonEditor\Saved\Packages\WinServer\WindowsServer\Manifest_NonUFSFiles_Win64.txt
-del D:\DungeonEditor\Saved\Packages\WinServer\WindowsServer\DungeonEditor\Binaries\Win64\DungeonEditorServer.pdb
-del D:\DungeonEditor\Saved\StagedBuilds\WindowsServer\DungeonEditor\Binaries\Win64\DungeonEditorServer.pdb
-pause

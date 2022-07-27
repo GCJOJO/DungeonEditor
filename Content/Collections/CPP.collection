@@ -1,8 +1,0 @@
-FileVersion:2
-Type:Static
-Guid:39F035D0-47C3-F2AF-411C-F9B2204F550E
-ParentGuid:00000000-0000-0000-0000-000000000000
-
-/Script/DungeonEditor.DungeonEditorChunkDownloader
-/Script/DungeonEditor.DungeonEditorLibrary
-/Script/DungeonEditor.FindFiles

@@ -1,8 +1,0 @@
-call D:/UnrealEngine/UE_4.27/UE_4.27/Engine/Build/BatchFiles/RunUAT.bat -ScriptsForProject=D:/DungeonEditor/DungeonEditor.uproject BuildCookRun -project=D:/DungeonEditor/DungeonEditor.uproject -noP4 -clientconfig=Development -serverconfig=Development -nocompileeditor -installed -ue4exe=D:\UnrealEngine\UE_4.27\UE_4.27\Engine\Binaries\Win64\UE4Editor-Cmd.exe -utf8output -platform=Win64 -targetplatform=Win64 -build -cook -map=CreateWorld+Entry+MainMenu+Village+PlayWorld+Dungeon1+Dungeon2 -unversionedcookedcontent -encryptinifiles -pak -manifests -compressed -stage -package -cmdline=" -Messaging" -addcmdline="-SessionId=976E2A2B4009963959E33A80D9B479F6 -SessionOwner='Utilisateur' -SessionName='DungeonEditor' " -archive -archivedirectory=D:/DungeonEditor/Saved/Packages/Win64/ -compile
-del D:\DungeonEditor\Saved\Packages\Win64\WindowsNoEditor\Manifest_DebugFiles_Win64.txt
-del D:\DungeonEditor\Saved\Packages\Win64\WindowsNoEditor\Manifest_NonUFSFiles_Win64.txt
-del D:\DungeonEditor\Saved\Packages\Win64\WindowsNoEditor\DungeonEditor\Binaries\Win64\DungeonEditor.pdb
-del D:\DungeonEditor\Saved\StagedBuilds\WindowsNoEditor\DungeonEditor\Binaries\Win64\DungeonEditor.pdb
-del D:\DungeonEditor\Saved\StagedBuilds\WindowsNoEditor\Manifest_DebugFiles_Win64.txt
-del D:\DungeonEditor\Saved\StagedBuilds\WindowsNoEditor\Manifest_NonUFSFiles_Win64.txt
-pause
