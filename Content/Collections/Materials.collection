@@ -3,3 +3,10 @@ Type:Static
 Guid:C1B00818-460E-B408-863E-4C853560D585
 ParentGuid:00000000-0000-0000-0000-000000000000
 
+/Game/Materials/Meshes/Cursor.Cursor
+/Game/Materials/Metal.Metal
+/Game/Materials/Tiles/BlueDoor.BlueDoor
+/Game/Materials/Tiles/Bricks.Bricks
+/Game/Materials/Tiles/Stone.Stone
+/Game/Materials/Tiles/Tile_Top.Tile_Top
+/Game/Materials/Wood.Wood

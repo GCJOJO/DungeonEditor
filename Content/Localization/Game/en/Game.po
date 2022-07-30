@@ -1,0 +1,148 @@
+﻿# Game English translation.
+# Copyright Epic Games, Inc. All Rights Reserved.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Game\n"
+"POT-Creation-Date: 2022-07-30 18:46\n"
+"PO-Revision-Date: 2022-07-30 18:46\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Key:	Common.BasicTile
+#. SourceLocation:	/Game/Resources/Strings/Common.Common
+#: /Game/Resources/Strings/Common.Common
+msgctxt "Common,Common.BasicTile"
+msgid "Tuiles Basique"
+msgstr "Basic Tiles"
+
+#. Key:	Common.GameName
+#. SourceLocation:	/Game/Resources/Strings/Common.Common
+#: /Game/Resources/Strings/Common.Common
+msgctxt "Common,Common.GameName"
+msgid "Dungeon Editor"
+msgstr "Dungeon Editor"
+
+#. Key:	Common.Inventory
+#. SourceLocation:	/Game/Resources/Strings/Common.Common
+#: /Game/Resources/Strings/Common.Common
+msgctxt "Common,Common.Inventory"
+msgid "Inventaire"
+msgstr "Inventory"
+
+#. Key:	Common.Objects
+#. SourceLocation:	/Game/Resources/Strings/Common.Common
+#: /Game/Resources/Strings/Common.Common
+msgctxt "Common,Common.Objects"
+msgid "Objets"
+msgstr "Objects"
+
+#. Key:	Common.Props
+#. SourceLocation:	/Game/Resources/Strings/Common.Common
+#: /Game/Resources/Strings/Common.Common
+msgctxt "Common,Common.Props"
+msgid "Décorations"
+msgstr "Props"
+
+#. Key:	Common.System
+#. SourceLocation:	/Game/Resources/Strings/Common.Common
+#: /Game/Resources/Strings/Common.Common
+msgctxt "Common,Common.System"
+msgid "Systèmes"
+msgstr "Systems"
+
+#. Key:	Game.DefaultSaveName
+#. SourceLocation:	/Game/Resources/Strings/Game.Game
+#: /Game/Resources/Strings/Game.Game
+msgctxt "Game,Game.DefaultSaveName"
+msgid "Mon Donjon"
+msgstr "My Dungeon"
+
+#. Key:	Game.Version
+#. SourceLocation:	/Game/Resources/Strings/Game.Game
+#: /Game/Resources/Strings/Game.Game
+msgctxt "Game,Game.Version"
+msgid "Version {version}"
+msgstr "Version {version}"
+
+#. Key:	EditorUI.Load
+#. SourceLocation:	/Game/Resources/Strings/UI.UI
+#: /Game/Resources/Strings/UI.UI
+msgctxt "UI,EditorUI.Load"
+msgid "Charger"
+msgstr "Load"
+
+#. Key:	EditorUI.LoadEmpty
+#. SourceLocation:	/Game/Resources/Strings/UI.UI
+#: /Game/Resources/Strings/UI.UI
+msgctxt "UI,EditorUI.LoadEmpty"
+msgid "Charger Donjon Vide"
+msgstr "Load Empty"
+
+#. Key:	EditorUI.Menu
+#. SourceLocation:	/Game/Resources/Strings/UI.UI
+#: /Game/Resources/Strings/UI.UI
+msgctxt "UI,EditorUI.Menu"
+msgid "Menu Principal"
+msgstr "Main Menu"
+
+#. Key:	EditorUI.Save
+#. SourceLocation:	/Game/Resources/Strings/UI.UI
+#: /Game/Resources/Strings/UI.UI
+msgctxt "UI,EditorUI.Save"
+msgid "Sauvegarder"
+msgstr "Save"
+
+#. Key:	EditorUI.SaveNewName
+#. SourceLocation:	/Game/Resources/Strings/UI.UI
+#: /Game/Resources/Strings/UI.UI
+msgctxt "UI,EditorUI.SaveNewName"
+msgid "Nouvelle sauvegarde"
+msgstr "New Save"
+
+#. Key:	EditorUI.SaveNewNameHint
+#. SourceLocation:	/Game/Resources/Strings/UI.UI
+#: /Game/Resources/Strings/UI.UI
+msgctxt "UI,EditorUI.SaveNewNameHint"
+msgid "Entrez un nom"
+msgstr "Enter a name"
+
+#. Key:	MainMenuUI.Create
+#. SourceLocation:	/Game/Resources/Strings/UI.UI
+#: /Game/Resources/Strings/UI.UI
+msgctxt "UI,MainMenuUI.Create"
+msgid "Créer"
+msgstr "Create"
+
+#. Key:	MainMenuUI.Play
+#. SourceLocation:	/Game/Resources/Strings/UI.UI
+#: /Game/Resources/Strings/UI.UI
+msgctxt "UI,MainMenuUI.Play"
+msgid "Jouer"
+msgstr "Play"
+
+#. Key:	MainMenuUI.Quit
+#. SourceLocation:	/Game/Resources/Strings/UI.UI
+#: /Game/Resources/Strings/UI.UI
+msgctxt "UI,MainMenuUI.Quit"
+msgid "Quitter"
+msgstr "Quit"
+
+#. Key:	MainMenuUI.Settings
+#. SourceLocation:	/Game/Resources/Strings/UI.UI
+#: /Game/Resources/Strings/UI.UI
+msgctxt "UI,MainMenuUI.Settings"
+msgid "Options"
+msgstr "Settings"
+
+#. Key:	UI.Return
+#. SourceLocation:	/Game/Resources/Strings/UI.UI
+#: /Game/Resources/Strings/UI.UI
+msgctxt "UI,UI.Return"
+msgid "Retour"
+msgstr "Back"
+

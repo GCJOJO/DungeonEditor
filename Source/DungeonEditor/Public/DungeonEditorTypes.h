@@ -11,8 +11,8 @@
 
 
 
-
-UENUM(Blueprintable, BlueprintType) enum GameModeTypes { Editor, PlayMode };
+//													Editor Mode | Test Mode in Editor | Basic Play mode (no Editor)
+UENUM(Blueprintable, BlueprintType) enum GameModeTypes { Editor, PlayModeEditor, PlayMode };
 UENUM(Blueprintable, BlueprintType) enum ObjectTypes { Basic, Systems, Objects, Props };
 
 UCLASS()
