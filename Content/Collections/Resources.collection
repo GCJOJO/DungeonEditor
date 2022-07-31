@@ -15,11 +15,14 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/Resources/Meshes/Tiles/Objects/Chest/chest_new_Torus.chest_new_Torus
 /Game/Resources/Meshes/Tiles/Objects/Chest/chest_new_Torus_001.chest_new_Torus_001
 /Game/Resources/Meshes/Tiles/Props/Barrel/Barrel.Barrel
+/Game/Resources/Meshes/Tiles/Systems/Lever/Lever_Idle1.Lever_Idle1
+/Game/Resources/Meshes/Tiles/Systems/Lever/Lever_Idle2.Lever_Idle2
 /Game/Resources/Meshes/Tiles/Systems/Lever/lever_new.lever_new
 /Game/Resources/Meshes/Tiles/Systems/Lever/lever_new_PhysicsAsset.lever_new_PhysicsAsset
 /Game/Resources/Meshes/Tiles/Systems/Lever/lever_new_Skeleton.lever_new_Skeleton
-/Game/Resources/Meshes/Tiles/Systems/Lever/lever_new_State1.lever_new_State1
-/Game/Resources/Meshes/Tiles/Systems/Lever/lever_new_State2.lever_new_State2
+/Game/Resources/Meshes/Tiles/Systems/Lever/Lever_State1.Lever_State1
+/Game/Resources/Meshes/Tiles/Systems/Lever/Lever_State2.Lever_State2
+/Game/Resources/Meshes/Tiles/Systems/Lever/Lever_Switch.Lever_Switch
 /Game/Resources/Strings/Common.Common
 /Game/Resources/Strings/Game.Game
 /Game/Resources/Strings/UI.UI
