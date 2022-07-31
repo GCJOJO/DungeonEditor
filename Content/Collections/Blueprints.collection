@@ -6,6 +6,7 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/Blueprints/Interfaces/Interactable.Interactable
 /Game/Blueprints/Interfaces/Saveable.Saveable
 /Game/Blueprints/Items/Item.Item
+/Game/Blueprints/Items/Torch.Torch
 /Game/Blueprints/Objects/Basic/Tile.Tile
 /Game/Blueprints/Objects/Objects/Chest.Chest
 /Game/Blueprints/Objects/Objects/Torch.Torch
