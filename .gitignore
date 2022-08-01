@@ -91,5 +91,7 @@ EOS Stuff
 Events.json
 Config/DefaultCrypto.ini
 DungeonEditor.code-workspace
+Resources/Blends/Skyboxes/*.exr
 !Config/Tags/*
 !Config/DefaultInput.ini
+!Config/DefaultGame.ini
