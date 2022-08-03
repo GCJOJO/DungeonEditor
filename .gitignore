@@ -100,5 +100,5 @@ Resources/Blends/Skyboxes/*.exr
 !Config/Tags/*
 !Config/DefaultInput.ini
 !Config/DefaultGame.ini
-!Config/DefaultEngine.ini
+Config/DefaultEngine.ini
 !Config/DefaultEditor.ini
