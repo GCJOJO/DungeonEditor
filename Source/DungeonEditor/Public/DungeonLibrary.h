@@ -13,6 +13,19 @@ UCLASS()
 class DUNGEONEDITOR_API UDungeonLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
+	UFUNCTION(BlueprintCallable, Category = "File Utilities", meta = (Keywords = "Load File"))
+	static bool LoadFile(FString Path, FString FileName, FString& Text);
+	UFUNCTION(BlueprintCallable, Category = "File Utilities", meta = (Keywords = "Save File"))
+	static bool SaveFile(FString Path, FString FileName, FString Text);
 	UFUNCTION(BlueprintCallable, Category = "Dungeons", meta = (Keywords = "Find Save Files"))
-	static bool FindSaveFiles(TArray<FString>& Files, FString RootFolderFullPath, FString Ext);
+	static bool FindFiles(TArray<FString>& Files, FString RootFolderFullPath, FString Ext);
+
+	UFUNCTION(BlueprintCallable, Category = "File Utilities", meta = (Keywords = "Write to File"))
+	static bool WriteToFile(FString Path, FString FileName, bool Overwrite, FString Text);
+
+	UFUNCTION(BlueprintPure, Category = "File Utilities")
+	static FString GetPersistentDataPath();
+
+	UFUNCTION(BlueprintCallable, Category = "Utilities", meta = (Keywords = "Log"))
+	static bool Log(FString Text, bool Overwrite, float Duration = 2.0f);
 };
