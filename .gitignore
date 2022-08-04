@@ -102,3 +102,4 @@ Resources/Blends/Skyboxes/*.exr
 !Config/DefaultGame.ini
 Config/DefaultEngine.ini
 !Config/DefaultEditor.ini
+EOS/Data/Encryption Key

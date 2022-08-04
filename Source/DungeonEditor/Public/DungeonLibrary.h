@@ -28,4 +28,7 @@ class DUNGEONEDITOR_API UDungeonLibrary : public UBlueprintFunctionLibrary
 
 	UFUNCTION(BlueprintCallable, Category = "Utilities", meta = (Keywords = "Log"))
 	static bool Log(FString Text, bool Overwrite, float Duration = 2.0f);
+
+	UFUNCTION(BlueprintPure, Category="Utilities")
+	static bool IsEditor();
 };

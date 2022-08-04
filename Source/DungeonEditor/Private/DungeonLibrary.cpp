@@ -62,3 +62,12 @@ bool UDungeonLibrary::Log(FString Text, bool Overwrite, float Duration)
 
     return WriteToFile(FPaths::ProjectSavedDir(), "Dungeon.log", Overwrite, Text + "\n");
 }
+
+bool UDungeonLibrary::IsEditor()
+{
+#if WITH_EDITOR
+    return true;
+#else
+    return false;
+#endif
+}
