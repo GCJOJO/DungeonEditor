@@ -3,6 +3,19 @@
 
 #include "DungeonLibrary.h"
 
+void UDungeonLibrary::ChangeLocalization(ELocalizationCulture culture)
+{
+    switch (culture)
+    {
+    case ELocalizationCulture::EN:
+        FInternationalization::Get().SetCurrentCulture(TEXT("en"));
+        break;
+    case ELocalizationCulture::FR:
+        FInternationalization::Get().SetCurrentCulture(TEXT("fr-FR"));
+        break;
+    }
+}
+
 bool UDungeonLibrary::LoadFile(FString Path, FString FileName, FString& Text)
 {
     return FFileHelper::LoadFileToString(Text, *(Path + FileName));
