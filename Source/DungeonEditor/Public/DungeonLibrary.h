@@ -10,6 +10,19 @@
 /**
  * 
  */
+
+
+UENUM(BlueprintType, Blueprintable) enum EMoveAxis 
+{
+	X,
+	Y,
+	Z,
+	XY,
+	YZ,
+	XZ,
+	XYZ
+};
+
 UCLASS()
 class DUNGEONEDITOR_API UDungeonLibrary : public UBlueprintFunctionLibrary
 {
