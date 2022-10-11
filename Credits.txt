@@ -8,3 +8,4 @@
 	
 	Save Icon : https://www.flaticon.com/premium-icon/save_4743125?related_id=4743125&origin=search
 	Load Icon : https://www.flaticon.com/premium-icon/download_5541552
+	Landscape Icon : https://www.flaticon.com/free-icon/mountains_852156?term=landscape&related_id=852156
