@@ -23,6 +23,15 @@ UENUM(BlueprintType, Blueprintable) enum EMoveAxis
 	XYZ
 };
 
+USTRUCT(BlueprintType, Blueprintable) struct FSkybox
+{
+	GENERATED_BODY()
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) FString Path;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) FText Name;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) UTexture2D* Icon;
+};
+
 UCLASS()
 class DUNGEONEDITOR_API UDungeonLibrary : public UBlueprintFunctionLibrary
 {
