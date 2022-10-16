@@ -90,8 +90,16 @@ Plugins/Developer/RiderLink/*
 EOS Stuff
 Events.json
 Config/DefaultCrypto.ini
+
 DungeonEditor.code-workspace
+Plugins/AdvancedSessionsPlugin/AdvancedSessions/Binaries
+Plugins/AdvancedSessionsPlugin/AdvancedSessions/Intermediate
+Plugins/AdvancedSessionsPlugin/AdvancedSteamSessions/Binaries
+Plugins/AdvancedSessionsPlugin/AdvancedSteamSessions/Intermediate
 Resources/Blends/Skyboxes/*.exr
 !Config/Tags/*
 !Config/DefaultInput.ini
 !Config/DefaultGame.ini
+Config/DefaultEngine.ini
+!Config/DefaultEditor.ini
+EOS/Data/Encryption Key
