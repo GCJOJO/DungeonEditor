@@ -16,7 +16,6 @@ void UAdvancedExternalUILibrary::ShowAccountUpgradeUI(const FBPUniqueNetId Playe
 		Result = EBlueprintResultSwitch::OnFailure;
 		return;
 	}
-
 	ExternalUIInterface->ShowAccountUpgradeUI(*PlayerRequestingAccountUpgradeUI.GetUniqueNetId());
 	Result = EBlueprintResultSwitch::OnSuccess;
 }

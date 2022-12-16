@@ -103,3 +103,5 @@ Resources/Blends/Skyboxes/*.exr
 Config/DefaultEngine.ini
 !Config/DefaultEditor.ini
 EOS/Data/Encryption Key
+JSON/
+.vsconfig

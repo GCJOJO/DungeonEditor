@@ -32,9 +32,7 @@ bool UDungeonLibrary::FindFiles(TArray<FString>& Files, FString RootFolderFullPa
     if (RootFolderFullPath.Len() < 1) return false;
 
     FPaths::NormalizeDirectoryName(RootFolderFullPath);
-
     IFileManager& FileManager = IFileManager::Get();
-
     if (Ext == "")
     {
         Ext = "*.*";
@@ -72,7 +70,6 @@ FString UDungeonLibrary::GetPersistentDataPath()
 bool UDungeonLibrary::Log(FString Text, bool Overwrite, float Duration)
 {
     GEngine->AddOnScreenDebugMessage(-1, Duration, FColor(255, 0, 0), Text);
-
     return WriteToFile(FPaths::ProjectSavedDir(), "Dungeon.log", Overwrite, Text + "\n");
 }
 
