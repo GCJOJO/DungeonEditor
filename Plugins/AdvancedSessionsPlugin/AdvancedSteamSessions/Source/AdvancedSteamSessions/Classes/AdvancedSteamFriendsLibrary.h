@@ -194,7 +194,7 @@ public:
 		}
 	}
 
-	/** Needed for TMap::GetTypeHash() */
+
 	virtual uint32 GetTypeHash() const override
 	{
 		return ::GetTypeHash(UniqueNetId);
@@ -272,6 +272,7 @@ enum class ESteamUserOverlayType : uint8
 
 static FString EnumToString(const FString& enumName, uint8 value)
 {
+	
 	const UEnum* EnumPtr = FindFirstObject<UEnum>(*enumName, EFindFirstObjectOptions::None, ELogVerbosity::Warning, TEXT("EumtoString"));
 
 	if (!EnumPtr)

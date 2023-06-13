@@ -467,20 +467,6 @@ void UAdvancedSessionsLibrary::GetUniqueNetIDFromPlayerState(APlayerState *Playe
 	return;
 }
 
-void UAdvancedSessionsLibrary::GetUniqueNetIDFromLocalID(int32 LocalID, FBPUniqueNetId& UniqueNetId)
-{
-	IOnlineSubsystem* OSS = IOnlineSubsystem::Get();
-	if(OSS)
-	{
-		UniqueNetId.SetUniqueNetId(OSS->GetIdentityInterface()->GetUniquePlayerId(LocalID));
-		if(!UniqueNetId.IsValid())
-		{
-			UE_LOG(AdvancedSessionsLog, Warning, TEXT("GetUniqueNetIdFromLocalID get the player uniquenetid!"));
-		}
-		return;
-	}
-}
-
 bool UAdvancedSessionsLibrary::IsValidUniqueNetID(const FBPUniqueNetId &UniqueNetId)
 {
 	return UniqueNetId.IsValid();
@@ -554,8 +540,7 @@ bool UAdvancedSessionsLibrary::ServerTravel(UObject* WorldContextObject, const F
 	UWorld* const World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::ReturnNull);
 	if (World)
 	{
-		World->ServerTravel(FURL, bAbsolute, bShouldSkipGameNotify);
-		return true;
+		return World->ServerTravel(FURL, bAbsolute, bShouldSkipGameNotify);
 	}
 
 	return false;

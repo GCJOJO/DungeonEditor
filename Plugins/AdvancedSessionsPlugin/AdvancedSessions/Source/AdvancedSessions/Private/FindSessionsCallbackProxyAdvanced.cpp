@@ -1,6 +1,7 @@
 // Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.
 #include "FindSessionsCallbackProxyAdvanced.h"
 
+#include "Online/OnlineSessionNames.h"
 
 //////////////////////////////////////////////////////////////////////////
 // UFindSessionsCallbackProxyAdvanced
@@ -129,21 +130,24 @@ void UFindSessionsCallbackProxyAdvanced::Activate()
 			case EBPServerPresenceSearchType::AllServers:
 			default:
 			{
-				// Only steam uses the separate searching flags currently
-				if (IOnlineSubsystem::DoesInstanceExist("STEAM"))
-				{
-					bRunSecondSearch = true;
+				//if (IOnlineSubsystem::DoesInstanceExist("STEAM"))
+				//{
+				bRunSecondSearch = true;
 
-					SearchObjectDedicated = MakeShareable(new FOnlineSessionSearch);
-					SearchObjectDedicated->MaxSearchResults = MaxResults;
-					SearchObjectDedicated->bIsLanQuery = bUseLAN;
+				SearchObjectDedicated = MakeShareable(new FOnlineSessionSearch);
+				SearchObjectDedicated->MaxSearchResults = MaxResults;
+				SearchObjectDedicated->bIsLanQuery = bUseLAN;
 
-					FOnlineSearchSettingsEx DedicatedOnly = tem;
-					tem.Set(SEARCH_PRESENCE, true, EOnlineComparisonOp::Equals);
+				FOnlineSearchSettingsEx DedicatedOnly = tem;
 
-					//DedicatedOnly.Set(SEARCH_DEDICATED_ONLY, true, EOnlineComparisonOp::Equals);
-					SearchObjectDedicated->QuerySettings = DedicatedOnly;
-				}
+				tem.Set(SEARCH_PRESENCE, true, EOnlineComparisonOp::Equals);
+
+				if (bSearchLobbies)
+					tem.Set(SEARCH_LOBBIES, true, EOnlineComparisonOp::Equals);
+
+				//DedicatedOnly.Set(SEARCH_DEDICATED_ONLY, true, EOnlineComparisonOp::Equals);
+				SearchObjectDedicated->QuerySettings = DedicatedOnly;
+				//}
 			}
 			break;
 			}
@@ -195,7 +199,7 @@ void UFindSessionsCallbackProxyAdvanced::OnCompleted(bool bSuccess)
 
 					FBlueprintSessionResult BPResult;
 					BPResult.OnlineResult = Result;
-					SessionSearchResults.Add(BPResult);
+					SessionSearchResults.AddUnique(BPResult);
 				}
 				OnSuccess.Broadcast(SessionSearchResults);
 				return;
@@ -214,7 +218,7 @@ void UFindSessionsCallbackProxyAdvanced::OnCompleted(bool bSuccess)
 
 					FBlueprintSessionResult BPResult;
 					BPResult.OnlineResult = Result;
-					SessionSearchResults.Add(BPResult);
+					SessionSearchResults.AddUnique(BPResult);
 				}
 				if (!bRunSecondSearch)
 				{

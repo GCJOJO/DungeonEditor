@@ -30,8 +30,6 @@ class ADVANCEDSESSIONS_API UAdvancedFriendsGameInstance : public UGameInstance
 	GENERATED_BODY()
 public:
 
-	UAdvancedFriendsGameInstance() {}
-	
 	UAdvancedFriendsGameInstance(const FObjectInitializer& ObjectInitializer);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AdvancedFriendsInterface)
@@ -55,7 +53,7 @@ public:
 	FDelegateHandle SessionInviteReceivedDelegateHandle;
 
 	//const FUniqueNetId& /*UserId*/, const FUniqueNetId& /*FromId*/, const FString& /*AppId*/, const FOnlineSessionSearchResult& /*InviteResult*/
-	virtual void OnSessionInviteReceivedMaster(const FUniqueNetId & PersonInvited, const FUniqueNetId & PersonInviting, const FString & AppId, const FOnlineSessionSearchResult& SessionToJoin);
+	void OnSessionInviteReceivedMaster(const FUniqueNetId & PersonInvited, const FUniqueNetId & PersonInviting, const FString & AppId, const FOnlineSessionSearchResult& SessionToJoin);
 
 	// After a session invite has been accepted by the local player this event is triggered, call JoinSession on the session result to join it
 	UFUNCTION(BlueprintImplementableEvent, Category = "AdvancedFriends")
@@ -65,7 +63,7 @@ public:
 	FOnSessionUserInviteAcceptedDelegate SessionInviteAcceptedDelegate;
 	FDelegateHandle SessionInviteAcceptedDelegateHandle;
 
-	virtual void OnSessionInviteAcceptedMaster(const bool bWasSuccessful, int32 LocalPlayer, TSharedPtr<const FUniqueNetId> PersonInviting, const FOnlineSessionSearchResult& SessionToJoin);
+	void OnSessionInviteAcceptedMaster(const bool bWasSuccessful, int32 LocalPlayer, TSharedPtr<const FUniqueNetId> PersonInviting, const FOnlineSessionSearchResult& SessionToJoin);
 
 	// After a session invite has been accepted by the local player this event is triggered, call JoinSession on the session result to join it
 	// This function is currently not hooked up in any of Epics default subsystems, it is here for custom subsystems
@@ -77,7 +75,7 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "AdvancedVoice")
 	void OnPlayerTalkingStateChanged(FBPUniqueNetId PlayerId, bool bIsTalking);
 
-	virtual void OnPlayerTalkingStateChangedMaster(TSharedRef<const FUniqueNetId> PlayerId, bool bIsTalking);
+	void OnPlayerTalkingStateChangedMaster(TSharedRef<const FUniqueNetId> PlayerId, bool bIsTalking);
 
 	FOnPlayerTalkingStateChangedDelegate PlayerTalkingStateChangedDelegate;
 	FDelegateHandle PlayerTalkingStateChangedDelegateHandle;
@@ -87,7 +85,7 @@ public:
 	UFUNCTION(BlueprintImplementableEvent , Category = "AdvancedIdentity", meta = (DisplayName = "OnPlayerLoginChanged"))
 	void OnPlayerLoginChanged(int32 PlayerNum);
 
-	virtual void OnPlayerLoginChangedMaster(int32 PlayerNum);
+	void OnPlayerLoginChangedMaster(int32 PlayerNum);
 	FOnLoginChangedDelegate PlayerLoginChangedDelegate;
 	FDelegateHandle PlayerLoginChangedDelegateHandle;
 
@@ -95,7 +93,7 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "AdvancedIdentity", meta = (DisplayName = "OnPlayerLoginStatusChanged"))
 	void OnPlayerLoginStatusChanged(int32 PlayerNum, EBPLoginStatus PreviousStatus, EBPLoginStatus NewStatus, FBPUniqueNetId NewPlayerUniqueNetID);
 
-	virtual void OnPlayerLoginStatusChangedMaster(int32 PlayerNum, ELoginStatus::Type PreviousStatus, ELoginStatus::Type NewStatus, const FUniqueNetId & NewPlayerUniqueNetID);
+	void OnPlayerLoginStatusChangedMaster(int32 PlayerNum, ELoginStatus::Type PreviousStatus, ELoginStatus::Type NewStatus, const FUniqueNetId & NewPlayerUniqueNetID);
 	FOnLoginStatusChangedDelegate PlayerLoginStatusChangedDelegate;
 	FDelegateHandle PlayerLoginStatusChangedDelegateHandle;
 

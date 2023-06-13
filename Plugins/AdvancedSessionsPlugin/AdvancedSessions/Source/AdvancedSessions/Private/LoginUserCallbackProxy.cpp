@@ -12,11 +12,10 @@ ULoginUserCallbackProxy::ULoginUserCallbackProxy(const FObjectInitializer& Objec
 {
 }
 
-ULoginUserCallbackProxy* ULoginUserCallbackProxy::LoginUser(UObject* WorldContextObject, class APlayerController* PlayerController, int32 LocalUserID, FString UserID, FString UserToken, FString AuthType)
+ULoginUserCallbackProxy* ULoginUserCallbackProxy::LoginUser(UObject* WorldContextObject, class APlayerController* PlayerController, FString UserID, FString UserToken, FString AuthType)
 {
 	ULoginUserCallbackProxy* Proxy = NewObject<ULoginUserCallbackProxy>();
 	Proxy->PlayerControllerWeakPtr = PlayerController;
-	Proxy->LocalUserID = LocalUserID;
 	Proxy->UserID = UserID;
 	Proxy->UserToken = UserToken;
 	Proxy->AuthType = AuthType;
@@ -41,8 +40,7 @@ void ULoginUserCallbackProxy::Activate()
 		return;
 	}
 
-	//auto Identity = Online::GetIdentityInterface();
-	const IOnlineIdentityPtr Identity = IOnlineSubsystem::Get()->GetIdentityInterface();
+	auto Identity = Online::GetIdentityInterface();
 
 	if (Identity.IsValid())
 	{
@@ -51,12 +49,9 @@ void ULoginUserCallbackProxy::Activate()
 		{
 			AuthType = Identity->GetAuthType();
 		}
-		DelegateHandle = Identity->AddOnLoginCompleteDelegate_Handle(LocalUserID, Delegate);
+		DelegateHandle = Identity->AddOnLoginCompleteDelegate_Handle(Player->GetControllerId(), Delegate);
 		FOnlineAccountCredentials AccountCreds(AuthType, UserID, UserToken);
-		if(Identity->Login(LocalUserID, AccountCreds))
-		{
-			UE_LOG(LogOnline, Warning, TEXT("Logging in..."));
-		}
+		Identity->Login(Player->GetControllerId(), AccountCreds);
 		return;
 	}
 
@@ -70,7 +65,6 @@ void ULoginUserCallbackProxy::OnCompleted(int32 LocalUserNum, bool bWasSuccessfu
 	{
 		ULocalPlayer* Player = Cast<ULocalPlayer>(PlayerControllerWeakPtr->Player);
 
-	
 		FUniqueNetIdRepl UniqueID(UserId.AsShared());
 
 		if (Player)
@@ -79,16 +73,15 @@ void ULoginUserCallbackProxy::OnCompleted(int32 LocalUserNum, bool bWasSuccessfu
 
 			if (Identity.IsValid())
 			{
-				Identity->ClearOnLoginCompleteDelegate_Handle(LocalUserID, DelegateHandle);
+				Identity->ClearOnLoginCompleteDelegate_Handle(Player->GetControllerId(), DelegateHandle);
 			}
 			Player->SetCachedUniqueNetId(UniqueID);
-		
+		}
 
-			if (APlayerState* State = PlayerControllerWeakPtr->PlayerState)
-			{
-				// Update UniqueId. See also ShowLoginUICallbackProxy.cpp
-				State->SetUniqueId(UniqueID);
-			}
+		if (APlayerState* State = PlayerControllerWeakPtr->PlayerState)
+		{
+			// Update UniqueId. See also ShowLoginUICallbackProxy.cpp
+			State->SetUniqueId(UniqueID);
 		}
 	}
 

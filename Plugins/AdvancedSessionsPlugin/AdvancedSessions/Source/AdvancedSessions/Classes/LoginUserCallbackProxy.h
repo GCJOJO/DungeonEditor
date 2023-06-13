@@ -22,7 +22,7 @@ class ULoginUserCallbackProxy : public UOnlineBlueprintCallProxyBase
 
 	// Logs into the identity interface
 	UFUNCTION(BlueprintCallable, meta=(BlueprintInternalUseOnly = "true", WorldContext="WorldContextObject", AdvancedDisplay = "AuthType"), Category = "Online|AdvancedIdentity")
-	static ULoginUserCallbackProxy* LoginUser(UObject* WorldContextObject, class APlayerController* PlayerController, int32 LocalUserID, FString UserID, FString UserToken, FString AuthType);
+	static ULoginUserCallbackProxy* LoginUser(UObject* WorldContextObject, class APlayerController* PlayerController, FString UserID, FString UserToken, FString AuthType);
 
 	// UOnlineBlueprintCallProxyBase interface
 	virtual void Activate() override;
@@ -35,8 +35,6 @@ private:
 private:
 	// The player controller triggering things
 	TWeakObjectPtr<APlayerController> PlayerControllerWeakPtr;
-
-	int32 LocalUserID;
 
 	// The user ID
 	FString UserID;
