@@ -1,4 +1,4 @@
-﻿# Game English translation.
+﻿# Game French translation.
 #  
 # 
 msgid ""
@@ -7,18 +7,18 @@ msgstr ""
 "POT-Creation-Date: 2023-09-07 18:24\n"
 "PO-Revision-Date: 2023-09-07 18:24\n"
 "Language-Team: \n"
-"Language: en\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Key:	Common.BasicTile
 #. SourceLocation:	/Game/Resources/Strings/Common.Common
 #: /Game/Resources/Strings/Common.Common
 msgctxt "Common,Common.BasicTile"
 msgid "Tuiles Basique"
-msgstr "Basic Tiles"
+msgstr "Tuiles Basique"
 
 #. Key:	Common.GameName
 #. SourceLocation:	/Game/Resources/Strings/Common.Common
@@ -32,35 +32,35 @@ msgstr "Dungeon Editor"
 #: /Game/Resources/Strings/Common.Common
 msgctxt "Common,Common.Inventory"
 msgid "Inventaire"
-msgstr "Inventory"
+msgstr "Inventaire"
 
 #. Key:	Common.Objects
 #. SourceLocation:	/Game/Resources/Strings/Common.Common
 #: /Game/Resources/Strings/Common.Common
 msgctxt "Common,Common.Objects"
 msgid "Objets"
-msgstr "Objects"
+msgstr "Objets"
 
 #. Key:	Common.Props
 #. SourceLocation:	/Game/Resources/Strings/Common.Common
 #: /Game/Resources/Strings/Common.Common
 msgctxt "Common,Common.Props"
 msgid "Décorations"
-msgstr "Props"
+msgstr "Décorations"
 
 #. Key:	Common.System
 #. SourceLocation:	/Game/Resources/Strings/Common.Common
 #: /Game/Resources/Strings/Common.Common
 msgctxt "Common,Common.System"
 msgid "Systèmes"
-msgstr "Systems"
+msgstr "Systèmes"
 
 #. Key:	Game.DefaultSaveName
 #. SourceLocation:	/Game/Resources/Strings/Game.Game
 #: /Game/Resources/Strings/Game.Game
 msgctxt "Game,Game.DefaultSaveName"
 msgid "Mon Donjon"
-msgstr "My Dungeon"
+msgstr "Mon Donjon"
 
 #. Key:	Game.Version
 #. SourceLocation:	/Game/Resources/Strings/Game.Game
@@ -74,35 +74,35 @@ msgstr "Version {version}"
 #: /Game/Resources/Strings/Game.Game
 msgctxt "Game,Item.Key.Description"
 msgid "Elle doit servir à ouvrir une porte mais laquelle ?"
-msgstr "It can open a door, but which one ?"
+msgstr "Elle doit servir à ouvrir une porte mais laquelle ?"
 
 #. Key:	Item.Key.Name
 #. SourceLocation:	/Game/Resources/Strings/Game.Game
 #: /Game/Resources/Strings/Game.Game
 msgctxt "Game,Item.Key.Name"
 msgid "Clé d'Argent"
-msgstr "Key"
+msgstr "Clé d'Argent"
 
 #. Key:	Item.Torch.Description
 #. SourceLocation:	/Game/Resources/Strings/Game.Game
 #: /Game/Resources/Strings/Game.Game
 msgctxt "Game,Item.Torch.Description"
 msgid "Avec cette torche vous allez pouvoir éclairer les environs. Mais ça vous le saviez déjà..."
-msgstr "With this torch you will be able to light up the area. But you already knew that."
+msgstr "Avec cette torche vous allez pouvoir éclairer les environs. Mais ça vous le saviez déjà..."
 
 #. Key:	Item.Torch.Name
 #. SourceLocation:	/Game/Resources/Strings/Game.Game
 #: /Game/Resources/Strings/Game.Game
 msgctxt "Game,Item.Torch.Name"
 msgid "Torche"
-msgstr "Torch"
+msgstr "Torche"
 
 #. Key:	Skybox.Void
 #. SourceLocation:	/Game/Resources/Strings/Game.Game
 #: /Game/Resources/Strings/Game.Game
 msgctxt "Game,Skybox.Void"
 msgid "Vide"
-msgstr "Empty"
+msgstr "Vide"
 
 #. Key:	Input.ActionCategory
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
@@ -116,42 +116,42 @@ msgstr "Actions"
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.EditorCategory"
 msgid "Éditeur"
-msgstr "Editor"
+msgstr "Éditeur"
 
 #. Key:	Input.EditorRotateClockwise
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.EditorRotateClockwise"
 msgid "Rotation (Aiguilles d'une montre)"
-msgstr "Rotate (Clockwise)"
+msgstr "Rotation (Aiguilles d'une montre)"
 
 #. Key:	Input.EditorRotateClockwiseGamepad
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.EditorRotateClockwiseGamepad"
 msgid "Rotation (Aiguilles d'une montre / manette)"
-msgstr "Rotate (Clockwise / Gamepad)"
+msgstr "Rotation (Aiguilles d'une montre / manette)"
 
 #. Key:	Input.EditorRotateCounterClockwise
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.EditorRotateCounterClockwise"
 msgid "Rotation (Inverse Aiguilles d'une montre)"
-msgstr "Rotate (Anti-Clockwise)"
+msgstr "Rotation (Inverse Aiguilles d'une montre)"
 
 #. Key:	Input.EditorRotateCounterClockwiseGamepad
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.EditorRotateCounterClockwiseGamepad"
 msgid "Rotation (Inverse Aiguilles d'une montre / manette)"
-msgstr "Rotate (Anti-Clockwise / Gamepad)"
+msgstr "Rotation (Inverse Aiguilles d'une montre / manette)"
 
 #. Key:	Input.EditorZoomGamepad
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.EditorZoomGamepad"
 msgid "Zoom (Manette)"
-msgstr "Zoom (Gamepad)"
+msgstr "Zoom (Manette)"
 
 #. Key:	Input.EditorZoomMouse
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
@@ -165,189 +165,189 @@ msgstr "Zoom"
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.InteractAction"
 msgid "Interagir"
-msgstr "Interact"
+msgstr "Interagir"
 
 #. Key:	Input.InteractGamepadAction
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.InteractGamepadAction"
 msgid "Interagir (Manette)"
-msgstr "Interact (Gamepad)"
+msgstr "Interagir (Manette)"
 
 #. Key:	Input.InventoryAction
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.InventoryAction"
 msgid "Inventaire"
-msgstr "Inventory"
+msgstr "Inventaire"
 
 #. Key:	Input.InventoryGamepadAction
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.InventoryGamepadAction"
 msgid "Inventaire (Manette)"
-msgstr "Inventory (Gamepad)"
+msgstr "Inventaire (Manette)"
 
 #. Key:	Input.JumpAction
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.JumpAction"
 msgid "Sauter"
-msgstr "Jump"
+msgstr "Sauter"
 
 #. Key:	Input.JumpGamepadAction
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.JumpGamepadAction"
 msgid "Sauter (Manette)"
-msgstr "Jump (Gamepad)"
+msgstr "Sauter (Manette)"
 
 #. Key:	Input.MoveAction
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.MoveAction"
 msgid "Se Déplacer"
-msgstr "Move"
+msgstr "Se Déplacer"
 
 #. Key:	Input.MoveBackward
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.MoveBackward"
 msgid "Reculer"
-msgstr "Walk Backward"
+msgstr "Reculer"
 
 #. Key:	Input.MoveForward
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.MoveForward"
 msgid "Avancer"
-msgstr "Walk Forward"
+msgstr "Avancer"
 
 #. Key:	Input.MoveLeft
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.MoveLeft"
 msgid "Aller à gauche"
-msgstr "Strafe Left"
+msgstr "Aller à gauche"
 
 #. Key:	Input.MovementCategory
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.MovementCategory"
 msgid "Déplacements"
-msgstr "Movements"
+msgstr "Déplacements"
 
 #. Key:	Input.MoveRight
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.MoveRight"
 msgid "Aller à droite"
-msgstr "Strafe Right"
+msgstr "Aller à droite"
 
 #. Key:	Input.Place
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.Place"
 msgid "Placer"
-msgstr "Place"
+msgstr "Placer"
 
 #. Key:	Input.PlaceGamepad
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.PlaceGamepad"
 msgid "Placer (Manette)"
-msgstr "Place (Gamepad)"
+msgstr "Placer (Manette)"
 
 #. Key:	Input.SwitchModeAction
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.SwitchModeAction"
 msgid "Changer de Mode"
-msgstr "Change Mode"
+msgstr "Changer de Mode"
 
 #. Key:	Input.SwitchModeGamepadAction
 #. SourceLocation:	/Game/Resources/Strings/Inputs.Inputs
 #: /Game/Resources/Strings/Inputs.Inputs
 msgctxt "Inputs,Input.SwitchModeGamepadAction"
 msgid "Changer de Mode (Manette)"
-msgstr "Change Mode (Gamepad)"
+msgstr "Changer de Mode (Manette)"
 
 #. Key:	EditorUI.Amount
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,EditorUI.Amount"
 msgid "Nombre"
-msgstr "Amount"
+msgstr "Nombre"
 
 #. Key:	EditorUI.Load
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,EditorUI.Load"
 msgid "Charger"
-msgstr "Load"
+msgstr "Charger"
 
 #. Key:	EditorUI.LoadEmpty
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,EditorUI.LoadEmpty"
 msgid "Charger Donjon Vide"
-msgstr "Load Empty"
+msgstr "Charger Donjon Vide"
 
 #. Key:	EditorUI.Menu
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,EditorUI.Menu"
 msgid "Menu Principal"
-msgstr "Main Menu"
+msgstr "Menu Principal"
 
 #. Key:	EditorUI.Object
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,EditorUI.Object"
 msgid "Objet"
-msgstr "Item"
+msgstr "Objet"
 
 #. Key:	EditorUI.OnWall
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,EditorUI.OnWall"
 msgid "Sur Mur ?"
-msgstr "On Wall ?"
+msgstr "Sur Mur ?"
 
 #. Key:	EditorUI.Save
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,EditorUI.Save"
 msgid "Sauvegarder"
-msgstr "Save"
+msgstr "Sauvegarder"
 
 #. Key:	EditorUI.SaveNewName
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,EditorUI.SaveNewName"
 msgid "Nouvelle sauvegarde"
-msgstr "New Save"
+msgstr "Nouvelle sauvegarde"
 
 #. Key:	EditorUI.SaveNewNameHint
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,EditorUI.SaveNewNameHint"
 msgid "Entrez un nom"
-msgstr "Enter a name"
+msgstr "Entrez un nom"
 
 #. Key:	EditorUI.Skybox
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,EditorUI.Skybox"
 msgid "Environnement"
-msgstr "Background"
+msgstr "Environnement"
 
 #. Key:	EditorUI.Targets
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,EditorUI.Targets"
 msgid "Cibles"
-msgstr "Targets"
+msgstr "Cibles"
 
 #. Key:	Inventory.Amount
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
@@ -361,70 +361,70 @@ msgstr "x{amount}"
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,InventoryUI"
 msgid "Inventaire"
-msgstr "Inventory"
+msgstr "Inventaire"
 
 #. Key:	MainMenuUI.Create
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,MainMenuUI.Create"
 msgid "Créer"
-msgstr "Create"
+msgstr "Créer"
 
 #. Key:	MainMenuUI.Online
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,MainMenuUI.Online"
 msgid "Multijoueur"
-msgstr "Multiplayer"
+msgstr "Multijoueur"
 
 #. Key:	MainMenuUI.Play
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,MainMenuUI.Play"
 msgid "Jouer"
-msgstr "Play"
+msgstr "Jouer"
 
 #. Key:	MainMenuUI.Quit
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,MainMenuUI.Quit"
 msgid "Quitter"
-msgstr "Quit"
+msgstr "Quitter"
 
 #. Key:	MainMenuUI.Settings
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,MainMenuUI.Settings"
 msgid "Options"
-msgstr "Settings"
+msgstr "Options"
 
 #. Key:	Online.CreateSession
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,Online.CreateSession"
 msgid "Créer Session"
-msgstr "Create Session"
+msgstr "Créer Session"
 
 #. Key:	Online.SessionName
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,Online.SessionName"
 msgid "Nom"
-msgstr "Name"
+msgstr "Nom"
 
 #. Key:	Online.SessionNameDefault
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,Online.SessionNameDefault"
 msgid "Ma Partie Trop Cool !"
-msgstr "My Cool Game !"
+msgstr "Ma Partie Trop Cool !"
 
 #. Key:	Online.SessionNameHint
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,Online.SessionNameHint"
 msgid "Entrez le nom de la session"
-msgstr "Enter session name"
+msgstr "Entrez le nom de la session"
 
 #. Key:	Online.SessionPlayerAmount
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
@@ -445,35 +445,35 @@ msgstr "Audio"
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,Settings.GeneralCategory"
 msgid "Général"
-msgstr "General"
+msgstr "Général"
 
 #. Key:	Settings.GraphicsCategory
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,Settings.GraphicsCategory"
 msgid "Graphismes"
-msgstr "Graphics"
+msgstr "Graphismes"
 
 #. Key:	Settings.KeybindsCategory
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,Settings.KeybindsCategory"
 msgid "Contrôles"
-msgstr "Keybinds"
+msgstr "Contrôles"
 
 #. Key:	Settings.Language
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,Settings.Language"
 msgid "Langage"
-msgstr "Language"
+msgstr "Langage"
 
 #. Key:	UI.Apply
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,UI.Apply"
 msgid "Appliquer"
-msgstr "Apply"
+msgstr "Appliquer"
 
 #. Key:	UI.FPS
 #. SourceLocation:	/Game/Resources/Strings/UI.UI
@@ -487,7 +487,7 @@ msgstr "{FPS} FPS"
 #: /Game/Resources/Strings/UI.UI
 msgctxt "UI,UI.Return"
 msgid "Retour"
-msgstr "Back"
+msgstr "Retour"
 
 #. Key:	E10947F5466E306F7F870CB5BBB5C828
 #. SourceLocation:	Config/DefaultGame.ini(6)
