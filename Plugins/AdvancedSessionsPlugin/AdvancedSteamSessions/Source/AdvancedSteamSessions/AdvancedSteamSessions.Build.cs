@@ -9,7 +9,7 @@ public class AdvancedSteamSessions : ModuleRules
         //bEnforceIWYU = true;
 
         PublicDefinitions.Add("WITH_ADVANCED_STEAM_SESSIONS=1");
-
+        CppStandard = CppStandardVersion.Cpp20;
         PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "OnlineSubsystem", "CoreUObject", "OnlineSubsystemUtils", "Networking", "Sockets", "AdvancedSessions"/*"Voice", "OnlineSubsystemSteam"*/ });
         PrivateDependencyModuleNames.AddRange(new string[] { "OnlineSubsystem", "Sockets", "Networking", "OnlineSubsystemUtils" /*"Voice", "Steamworks","OnlineSubsystemSteam"*/});
 

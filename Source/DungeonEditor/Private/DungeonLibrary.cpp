@@ -3,6 +3,10 @@
 
 #include "DungeonLibrary.h"
 
+#include "Engine/Engine.h"
+#include "Misc/FileHelper.h"
+#include "Misc/Paths.h"
+
 void UDungeonLibrary::ChangeLocalization(ELocalizationCulture culture)
 {
     switch (culture)

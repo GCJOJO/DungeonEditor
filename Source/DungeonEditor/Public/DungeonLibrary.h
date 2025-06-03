@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include <DungeonEditor/Public/DungeonEditorTypes.h>
+
+#include "Engine/Texture2D.h"
 #include "DungeonLibrary.generated.h"
 
 /**

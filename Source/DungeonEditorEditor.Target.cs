@@ -10,6 +10,7 @@ public class DungeonEditorEditorTarget : TargetRules
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
+		CppStandard = CppStandardVersion.Cpp20;
 		bOverrideBuildEnvironment = true;
         ExtraModuleNames.AddRange( new string[] { "DungeonEditor" } );
 	}
