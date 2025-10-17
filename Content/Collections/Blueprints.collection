@@ -3,6 +3,9 @@ Type:Static
 Guid:ED71BB01-4A62-64EE-5601-72ABD5E5EAE7
 ParentGuid:00000000-0000-0000-0000-000000000000
 
+/Game/Blueprints/Components/DamageComponent.DamageComponent
+/Game/Blueprints/Components/InventoryComponent.InventoryComponent
+/Game/Blueprints/Interfaces/Damageable.Damageable
 /Game/Blueprints/Interfaces/Interactable.Interactable
 /Game/Blueprints/Interfaces/Saveable.Saveable
 /Game/Blueprints/Items/Item.Item
@@ -26,12 +29,16 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 /Game/Blueprints/Objects/Systems/Lever.Lever
 /Game/Blueprints/Objects/Systems/Room.Room
 /Game/Blueprints/Objects/Systems/SettingsObject.SettingsObject
+/Game/Blueprints/Objects/Systems/Shop.Shop
 /Game/Blueprints/Objects/Systems/Spawnflag.Spawnflag
 /Game/Blueprints/Objects/Systems/VisibilityVolume.VisibilityVolume
 /Game/Blueprints/Objects/Systems/VolumeActivator.VolumeActivator
 /Game/Blueprints/Player/BP_Player.BP_Player
+/Game/Blueprints/Player/DungeonPlayerController.DungeonPlayerController
 /Game/Blueprints/System/BP_PlayerGameMode.BP_PlayerGameMode
+/Game/Blueprints/System/ClientManager.ClientManager
 /Game/Blueprints/System/DungeonGameInstance.DungeonGameInstance
+/Game/Blueprints/System/DungeonLibrary.DungeonLibrary
 /Game/Blueprints/System/DungeonSave.DungeonSave
 /Game/Blueprints/System/Editor/BP_EditorGameMode.BP_EditorGameMode
 /Game/Blueprints/System/Editor/BP_EditorPawn.BP_EditorPawn
