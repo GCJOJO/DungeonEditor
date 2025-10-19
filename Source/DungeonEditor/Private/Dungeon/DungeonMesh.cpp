@@ -121,7 +121,7 @@ void ADungeonMesh::PushVoxel(const FIntVector Position, const EVoxelBlock Block)
 
 void ADungeonMesh::PushVoxelArea(const FIntVector From, const FIntVector To, const EVoxelBlock Block)
 {
-	UE_LOG(LogTemp, Warning, TEXT("From : (%d; %d; %d), To : (%d; %d; %d)"), From.X, From.Y, From.Z, To.X, To.Y, To.Z);
+	//UE_LOG(LogTemp, Warning, TEXT("From : (%d; %d; %d), To : (%d; %d; %d)"), From.X, From.Y, From.Z, To.X, To.Y, To.Z);
 	int sizeX = To.X - From.X;
 	int sizeY = To.Y - From.Y;
 	int sizeZ = To.Z - From.Z;
