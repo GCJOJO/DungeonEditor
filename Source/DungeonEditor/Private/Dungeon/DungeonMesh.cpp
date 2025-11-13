@@ -35,6 +35,7 @@ void ADungeonMesh::BeginPlay()
 void ADungeonMesh::Setup()
 {
 	// Initialize Blocks
+	Blocks.Reset();
 	Blocks.SetNumZeroed(Size * Size * Size);
 }
 

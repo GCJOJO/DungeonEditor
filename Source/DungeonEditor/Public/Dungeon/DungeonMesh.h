@@ -27,8 +27,8 @@ public:
 	// Sets default values for this actor's properties
 	ADungeonMesh();
 
-	UPROPERTY(BlueprintReadOnly, /*BlueprintSetter = SetSize,*/ BlueprintGetter = GetSize, Category = "Dungeon")
-	int Size = 97;
+	UPROPERTY(EditAnywhere, BlueprintSetter = SetSize, BlueprintGetter = GetSize, Category = "Dungeon")
+	int Size = 98;
 
 	UPROPERTY(EditInstanceOnly, Category="Chunk")
 	TObjectPtr<UMaterialInterface> Material;
@@ -48,7 +48,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Dungeon")
 	void ApplyVoxels();
 
-	/*UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable)
 	void SetSize(int newSize)
 	{
 		Size = newSize;
@@ -56,7 +56,7 @@ public:
 		Setup();
 		GenerateMesh();
 		ApplyMesh();
-	}*/
+	}
 
 	UFUNCTION(BlueprintPure)
 	int GetSize() const
