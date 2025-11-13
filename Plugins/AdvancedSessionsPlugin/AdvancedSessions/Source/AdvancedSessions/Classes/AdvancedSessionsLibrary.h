@@ -160,6 +160,10 @@ public:
 		UFUNCTION(BlueprintPure, Category = "Online|AdvancedSessions|PlayerInfo|PlayerID")
 		static void GetUniqueNetID(APlayerController *PlayerController, FBPUniqueNetId &UniqueNetId);
 
+		// Get the unique net id of a network player attached to the given controller
+		UFUNCTION(BlueprintPure, Category = "Online|AdvancedSessions|PlayerInfo|PlayerID")
+		static void GetUniqueNetIdOfSessionOwner(FBlueprintSessionResult SessionResult, FBPUniqueNetId& UniqueNetId);
+
 		// Get the unique net id of a network player who is assigned the the given player state
 		UFUNCTION(BlueprintPure, Category = "Online|AdvancedSessions|PlayerInfo|PlayerID")
 		static void GetUniqueNetIDFromPlayerState(APlayerState *PlayerState, FBPUniqueNetId &UniqueNetId);
@@ -171,6 +175,10 @@ public:
 		/* Returns true if the values are equal (A == B) */
 		UFUNCTION(BlueprintPure, meta = (DisplayName = "Equal Unique Net ID", CompactNodeTitle = "==", Keywords = "== equal"), Category = "Online|AdvancedSessions|PlayerInfo|PlayerID")
 		static bool EqualEqual_UNetIDUnetID(const FBPUniqueNetId &A, const FBPUniqueNetId &B);
+
+		/** Converts a FBPUniqueNetID into a FUniqueNetID_Repl */
+		UFUNCTION(BlueprintPure, meta = (DisplayName = "ToUniqueNetIDRepl (Unique Net ID)", CompactNodeTitle = "->", BlueprintAutocast), Category = "Online|AdvancedSessions|PlayerInfo|PlayerID")
+			static FUniqueNetIdRepl Conv_BPUniqueIDToUniqueNetIDRepl(const FBPUniqueNetId& InUniqueID);
 
 		// Check if a UniqueNetId is a friend
 		UFUNCTION(BlueprintPure, Category = "Online|AdvancedSessions|UniqueNetId")

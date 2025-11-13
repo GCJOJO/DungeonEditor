@@ -451,6 +451,17 @@ void UAdvancedSessionsLibrary::GetUniqueNetID(APlayerController *PlayerControlle
 	}
 }
 
+void UAdvancedSessionsLibrary::GetUniqueNetIdOfSessionOwner(FBlueprintSessionResult SessionResult, FBPUniqueNetId& UniqueNetId)
+{
+	FBPUniqueNetId ReturnID;
+	if (SessionResult.OnlineResult.IsValid())
+	{
+		ReturnID.SetUniqueNetId(SessionResult.OnlineResult.Session.OwningUserId);
+	}
+
+	UniqueNetId = ReturnID;
+}
+
 void UAdvancedSessionsLibrary::GetUniqueNetIDFromPlayerState(APlayerState *PlayerState, FBPUniqueNetId &UniqueNetId)
 {
 	if (!PlayerState)
@@ -475,6 +486,11 @@ bool UAdvancedSessionsLibrary::IsValidUniqueNetID(const FBPUniqueNetId &UniqueNe
 bool UAdvancedSessionsLibrary::EqualEqual_UNetIDUnetID(const FBPUniqueNetId &A, const FBPUniqueNetId &B)
 {	
 	return ((A.IsValid() && B.IsValid()) && (*A.GetUniqueNetId() == *B.GetUniqueNetId()));
+}
+
+FUniqueNetIdRepl UAdvancedSessionsLibrary::Conv_BPUniqueIDToUniqueNetIDRepl(const FBPUniqueNetId& InUniqueID)
+{
+	return FUniqueNetIdRepl(InUniqueID.GetUniqueNetId()->AsShared());
 }
 
 void UAdvancedSessionsLibrary::SetPlayerName(APlayerController *PlayerController, FString PlayerName)
