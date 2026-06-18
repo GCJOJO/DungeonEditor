@@ -106,3 +106,4 @@ Config/DefaultEngine.ini
 EOS/Data/Encryption Key
 JSON/
 .vsconfig
+*.slnx
